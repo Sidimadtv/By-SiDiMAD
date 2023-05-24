@@ -1,0 +1,3143 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #80C6CE;
+}
+
+
+/*
+#loader-page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+}
+
+.loader-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    margin: -10px 0px 0px -52px;
+	font-size: 125%;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #002d6a;
+}
+
+.loader-circle {
+	width: 180px;
+	height: 180px;
+	box-sizing: border-box;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+    border-top:5px solid #ab1e56;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-radius: 50%;
+	margin: -90px 0px 0px -90px;
+    animation: loader 1s infinite linear;
+}
+*/
+
+.three {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #80C6CE;
+}
+
+.loader {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    border-radius: 100%;
+}
+
+#loader-2 span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 35px 5px;
+}
+
+#loader-2 span:nth-child(1) {
+    background-color: #ff3e9c;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+#loader-2 span:nth-child(2) {
+    background-color: #835844;
+    animation: bounce 1s ease-in-out 0.33s infinite;
+}
+
+#loader-2 span:nth-child(3) {
+    background-color: #caec58;
+    animation: bounce 1s ease-in-out 0.66s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    75%,
+    100% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+    25% {
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+}
+
+.airplane {
+    position: relative;
+    top: 15%;
+    right: 35%;
+    z-index: 1;
+    width: 12%;
+}
+
+.airplane-help {
+    position: relative;
+    top: 65%;
+    left: 37%;
+    z-index: 1;
+    width: 40%;
+    height: 12%;
+}
+
+
+.airplane-help .text {
+    color: #fff;
+    font-family: calibri;
+    font-size: 15px;
+}
+
+.airplane-text {
+    position: relative;
+    top: 68%;
+    left: -38%;
+    width: 80%;
+    display: none;
+}
+
+.loader-circle2 {
+    position: relative;
+    top: 41%;
+    /*
+    width: 185px;
+    height: 185px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin: -90px 0px 0px -90px;
+    animation: loader2 1s infinite linear;
+*/
+}
+
+.loader-circle2 .border {
+    width: 140%;
+    position: absolute;
+    top: -23%;
+    bottom: 0;
+    left: -25%;
+    right: 0;
+    background: transparent;
+    border-radius: 50%;
+    border-top: 2px solid #fff;
+    animation: loader2 1s infinite linear;
+    height: 148%;
+}
+
+.loader-circle2 .border2 {
+    width: 110%;
+    position: absolute;
+    top: -9%;
+    bottom: 0;
+    left: -9%;
+    right: 0;
+    background: transparent;
+    border-radius: 50%;
+    border-bottom: 2px solid #fff;
+    animation: loader3 1s infinite linear;
+    height: 118%;
+}
+
+
+
+.loader-circle3 .border3 {
+    width: 172%;
+    position: absolute;
+    top: -6%;
+    bottom: 0;
+    left: -38%;
+    background: transparent;
+    border-radius: 50%;
+    border-top: 2px solid #FFFFDD;
+    animation: loader2 1s infinite linear;
+    height: 120%;
+}
+
+.loader-circle3 .border4 {
+    width: 143%;
+    position: absolute;
+    top: 3%;
+    bottom: 0;
+    left: -23%;
+    right: 0;
+    background: transparent;
+    border-radius: 50%;
+    border-bottom: 2px solid #FFFFE0;
+    animation: loader3 1s infinite linear;
+    height: 100%;
+}
+
+.meqaat-help {
+    position: absolute;
+    top: 97%;
+    left: 16%;
+    z-index: 1;
+    width: 29.7%;
+}
+
+.meqaat-help .text2{
+    color: #fff;
+    font-family: calibri;
+    font-size: 15px;
+}
+/*
+.text2 {
+    position: absolute;
+    top: 100%;
+    width: 250%;
+    right: 60%;
+    z-index: 2;
+    color: #FFFFE0;
+    font-size: 19px;
+}
+*/
+
+
+.loader-circle4 .border5 {
+    width: 130%;
+    position: absolute;
+    top: -32%;
+    bottom: 0;
+    left: -13%;
+    background: transparent;
+    border-radius: 50%;
+    border-top: 2px solid #FFFFDD;
+    animation: loader2 1s infinite linear;
+    height: 160%;
+}
+
+.loader-circle4 .border6 {
+    width: 100%;
+    position: absolute;
+    top: -14%;
+    bottom: 0;
+    left: 1%;
+    right: 0;
+    background: transparent;
+    border-radius: 50%;
+    border-bottom: 2px solid #FFFFE0;
+    animation: loader3 1s infinite linear;
+    height: 123%;
+}
+
+.text3 {
+    position: absolute;
+    top: 99%;
+    width: 425%;
+    left: 121%;
+    z-index: 2;
+    color: #fff;
+    font-size: 15px;
+    font-family: calibri;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader2 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader3 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.hajj-map-container,
+.hajj-map,
+.hajj-map-background,
+.hajj-map-background img,
+.mozdalefah img,
+.makah img,
+.jamaraat img,
+.mina img,
+.arafaat img,
+.meqaat img,
+.airplane img,
+.ambulance img,
+.islamweb-logo img,
+.hajj-logo img,
+.cal img {
+    max-width: 100%;
+}
+
+.cal img {
+    max-height: 100%;
+}
+
+.hajj-map-container {
+    display: none;
+    position: relative;
+    background: #80C6CE;
+    -webkit-height: 100vh;
+    -moz-height: 100vh;
+    -ms-height: 100vh;
+    -o-height: 100vh;
+    -webkit-width: 100vw;
+    -moz-width: 100vw;
+    -ms-width: 100vw;
+    -o-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cloud {
+    position: absolute;
+    max-height: 20vh;
+    -webkit-max-height: 20vh;
+    -moz-max-height: 20vh;
+    -ms-max-height: 20vh;
+    -o-max-height: 20vh;
+    animation: left-to-right 9s linear;
+    animation-iteration-count: infinite;
+}
+
+.cloud1 {
+    animation-delay: -22s;
+    animation-duration: 27s;
+}
+
+.cloud2 {
+    animation-delay: -9s;
+    animation-duration: 39s;
+}
+
+.cloud3 {
+    animation-delay: -3.2s;
+    animation-duration: 33s;
+}
+
+.cloud4 {
+    animation-delay: -11.5s;
+    animation-duration: 24s;
+    max-height: 17%;
+    top: 4%;
+}
+
+.cloud5 {
+    animation-delay: -19.5s;
+    animation-duration: 40s;
+}
+
+@keyframes left-to-right {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.left-side {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    position: relative;
+    -webkit-height: 100vh;
+    -moz-height: 100vh;
+    -ms-height: 100vh;
+    -o-height: 100vh;
+    height: 100vh;
+}
+
+.portrait .left-side {
+    width: 99%;
+    height: 30%;
+    position: absolute;
+    top: 55%;
+}
+
+.hajj-logo {
+    position: absolute;
+    width: 50%;
+    top: 85%;
+    left: 20%;
+}
+
+.hajj-logo2 {
+    position: absolute;
+    width: 50%;
+    top: 75%;
+    left: 20%;
+}
+
+.portrait .hajj-logo {
+    width: 20%;
+    left: auto;
+    right: 3%;
+    top: 45%;
+}
+
+.portrait .hajj-logo2 {
+    width: 20%;
+    left: auto;
+    right: 3%;
+    top: 34%;
+}
+
+.cal-8,
+.cal-9,
+.cal-10,
+.cal-11,
+.cal-12,
+.cal-13 {
+    position: absolute;
+    height: 12%;
+    left: 35%;
+    top: 10%;
+    cursor: pointer;
+}
+
+.cal-9 {
+    top: 22%;
+}
+
+.cal-10 {
+    top: 34%;
+}
+
+.cal-11 {
+    top: 46%;
+}
+
+.cal-12 {
+    top: 58%;
+}
+
+.cal-13 {
+    top: 70%;
+}
+
+.portrait .cal-8,
+.portrait .cal-9,
+.portrait .cal-10,
+.portrait .cal-11,
+.portrait .cal-12,
+.portrait .cal-13 {
+    height: auto;
+    width: 12%;
+    left: auto;
+    right: 25%;
+    top: 40%;
+}
+
+.portrait .cal-9 {
+    right: 37%;
+    top: 40%;
+}
+
+.portrait .cal-10 {
+    right: 49%;
+    top: 40%;
+}
+
+.portrait .cal-11 {
+    right: 61%;
+    top: 40%;
+}
+
+.portrait .cal-12 {
+    right: 73%;
+    top: 40%;
+}
+
+.portrait .cal-13 {
+    right: 85%;
+    top: 40%;
+}
+
+.right-side {
+    display: inline-block;
+    width: 74%;
+    position: relative;
+    height: 100vh;
+    -webkit-height: 100vh;
+    -moz-height: 100vh;
+    -ms-height: 100vh;
+    -o-height: 100vh;
+}
+
+.portrait .right-side {
+    width: 99%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+}
+
+.top-side {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.islamweb-logo {
+    position: absolute;
+    width: 27%;
+    right: 3%;
+    top: 33%;
+}
+
+.airplane {
+    position: absolute;
+    top: 15%;
+    right: 35%;
+    z-index: 1;
+    width: 12%;
+}
+
+.airplane-text {
+    position: absolute;
+    top: 68%;
+    left: -38%;
+    width: 80%;
+    display: none;
+}
+
+.airplane-text2 {
+    position: absolute;
+    top: 68%;
+    left: 38%;
+    width: 100%;
+    display: none;
+}
+
+.airplane:hover .airplane-text2 {
+    display: block;
+}
+
+.airplane:hover .airplane-text {
+    display: block;
+}
+
+.bottom-side {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 70%;
+    margin-left: -5%;
+}
+
+.portrait .bottom-side {
+    margin-left: 0;
+}
+
+.bottom-side-container {
+    max-width: fit-content;
+    margin: auto;
+    position: relative;
+}
+
+.bottom-bg {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.hajj-map {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.makah {
+    position: absolute;
+    top: 29.5%;
+    left: 13.55%;
+    z-index: 1;
+    width: 10.33%;
+}
+
+.makah-button {
+    position: absolute;
+    top: 12%;
+    left: 6%;
+    background: transparent;
+    z-index: 2;
+    width: 76%;
+    height: 27%;
+    transform: skewY(-13deg) rotateZ(-7deg);
+}
+
+.jamaraat {
+    position: absolute;
+    top: 28.8%;
+    left: 32.6%;
+    z-index: 1;
+    width: 13.33%;
+}
+
+.jamaraat-button {
+    position: absolute;
+    top: 11%;
+    left: 26%;
+    background: transparent;
+    z-index: 2;
+    width: 46%;
+    height: 21%;
+    transform: skewY(24deg) rotateZ(-3deg);
+}
+
+.mina {
+    position: absolute;
+    top: 50.3%;
+    left: 50.52%;
+    z-index: 1;
+    width: 11.5%;
+}
+
+.mina-button {
+    position: absolute;
+    top: 8%;
+    left: 23%;
+    background: transparent;
+    z-index: 2;
+    width: 63%;
+    height: 22%;
+    transform: rotateZ(-3deg);
+}
+
+.mozdalefah {
+    position: absolute;
+    top: 44.58%;
+    left: 66.55%;
+    z-index: 1;
+    width: 12.9%;
+}
+
+.mozdalefah-button {
+    position: absolute;
+    top: 8%;
+    left: 29%;
+    background: transparent;
+    z-index: 2;
+    width: 57%;
+    height: 19%;
+    transform: rotateZ(-8deg);
+}
+
+.arafaat {
+    position: absolute;
+    top: 41.5%;
+    left: 78.5%;
+    z-index: 1;
+    width: 18%;
+}
+
+.arafaat-button {
+    position: absolute;
+    top: 5%;
+    left: 38%;
+    background: transparent;
+    z-index: 2;
+    width: 39%;
+    height: 13.5%;
+    transform: skewY(4deg);
+}
+
+.mozdalefah-button:hover,
+.makah-button:hover,
+.mina-button:hover,
+.arafaat-button:hover,
+.jamaraat-button:hover,
+.meqaat:hover,
+.airplane:hover,
+.ambulance:hover {
+    cursor: pointer;
+}
+
+.meqaat {
+    position: absolute;
+    top: 68%;
+    left: 29%;
+    z-index: 1;
+    width: 6.7%;
+}
+
+.meqaat-text {
+    max-width: 142% !important;
+    position: absolute;
+    top: 88%;
+    left: -68%;
+    display: none;
+}
+
+.meqaat:hover .meqaat-text {
+    display: block;
+}
+
+.ambulance {
+    position: absolute;
+    top: 77%;
+    left: 42%;
+    z-index: 1;
+    width: 7%;
+}
+
+.ambulance-text {
+    max-width: 200% !important;
+    position: absolute;
+    top: 57%;
+    left: 20%;
+    display: none;
+}
+
+.ambulance:hover .ambulance-text {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background: #777d;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-model {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #616161;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    padding: 10px 16px;
+    font-family: sans-serif;
+    z-index: 1000;
+}
+
+.video_player {
+    background: #444;
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1% 0px;
+    position: relative;
+}
+
+.video_player video {
+    display: inline-block;
+    width: 65%;
+}
+
+.video_player .all-videos {
+    display: inline-block;
+    width: 39%;
+    background: #151515;
+    overflow-y: auto;
+}
+
+.video_player .all-videos a {
+    text-decoration: none !important;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.video_player .all-videos a img {
+    width: 30%;
+    height: auto;
+}
+
+.video_player .all-videos a div {
+    width: 70%;
+}
+
+.video_player .all-videos a div p {
+    padding-left: 10px;
+}
+
+.no-hover {
+    display: block;
+}
+
+.on-hover {
+    display: none;
+}
+
+.hover-affect:hover .no-hover {
+    display: none;
+}
+
+.hover-affect:hover .on-hover {
+    display: block;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.text-modal {
+    background: white;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    padding: 15px;
+    width: 700px;
+    box-shadow: 0 0 5px #222;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin: 5px;
+    position: relative;
+}
+
+.text-modal h3 {
+    text-align: center;
+    color: #AB1E56;
+}
+
+.text-modal p span {
+    font-weight: bold;
+    color: #002D6A;
+}
+
+.cal-8-animation {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.cal-8-animation span {
+    width: .5%;
+    height: 1.3%;
+    border-radius: 50%;
+    background: red;
+    opacity: 0;
+    position: absolute;
+    animation: fade .2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-8-animation span:nth-of-type(1) {
+    left: 22%;
+    top: 54%;
+    animation-delay: 0s;
+}
+
+.cal-8-animation span:nth-of-type(2) {
+    left: 23%;
+    top: 56%;
+    animation-delay: .1s;
+}
+
+.cal-8-animation span:nth-of-type(3) {
+    left: 24%;
+    top: 59%;
+    animation-delay: .2s;
+}
+
+.cal-8-animation span:nth-of-type(4) {
+    left: 25.5%;
+    top: 59.5%;
+    animation-delay: .3s;
+}
+
+.cal-8-animation span:nth-of-type(5) {
+    left: 27%;
+    top: 59.3%;
+    animation-delay: .45s;
+}
+
+.cal-8-animation span:nth-of-type(6) {
+    left: 28.4%;
+    top: 60%;
+    animation-delay: .6s;
+}
+
+.cal-8-animation span:nth-of-type(7) {
+    left: 29.8%;
+    top: 61%;
+    animation-delay: .7s;
+}
+
+.cal-8-animation span:nth-of-type(8) {
+    left: 31%;
+    top: 64%;
+    animation-delay: .8s;
+}
+
+.cal-8-animation span:nth-of-type(9) {
+    left: 32.4%;
+    top: 66.8%;
+    animation-delay: .9s;
+}
+
+.cal-8-animation span:nth-of-type(10) {
+    left: 34.1%;
+    top: 69.5%;
+    animation-delay: 1s;
+}
+
+.cal-8-animation span:nth-of-type(11) {
+    left: 35.8%;
+    top: 70%;
+    animation-delay: 1.2s;
+}
+
+.cal-8-animation span:nth-of-type(12) {
+    left: 37.4%;
+    top: 68%;
+    animation-delay: 1.3s;
+}
+
+.cal-8-animation span:nth-of-type(13) {
+    left: 39.4%;
+    top: 67%;
+    animation-delay: 1.45s;
+}
+
+.cal-8-animation span:nth-of-type(14) {
+    left: 41.4%;
+    top: 68%;
+    animation-delay: 1.6s;
+}
+
+.cal-8-animation span:nth-of-type(15) {
+    left: 43.4%;
+    top: 70%;
+    animation-delay: 1.7s;
+}
+
+.cal-8-animation span:nth-of-type(16) {
+    left: 45.4%;
+    top: 72%;
+    animation-delay: 1.8s;
+}
+
+.cal-8-animation span:nth-of-type(17) {
+    left: 47.4%;
+    top: 74%;
+    animation-delay: 1.9s;
+}
+
+.cal-8-animation .arrow {
+    transform: rotate(240deg);
+    position: absolute;
+    width: 3%;
+    top: 52%;
+    left: 21%;
+    animation: makah-to-mina 1.8s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-8-animation .arrows1 {
+    width: 28%;
+    position: absolute;
+    animation: makah-to-mina 1.8s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-9-animation {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.cal-9-animation span {
+    width: .5%;
+    height: 1.3%;
+    border-radius: 50%;
+    background: red;
+    opacity: 0;
+    position: absolute;
+    animation: fade .2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-9-animation span:nth-of-type(1) {
+    left: 57%;
+    top: 79%;
+    animation-delay: 0s;
+}
+
+.cal-9-animation span:nth-of-type(2) {
+    left: 58%;
+    top: 80%;
+    animation-delay: .1s;
+}
+
+.cal-9-animation span:nth-of-type(3) {
+    left: 59.3%;
+    top: 81.4%;
+    animation-delay: .2s;
+}
+
+.cal-9-animation span:nth-of-type(4) {
+    left: 60.5%;
+    top: 82.5%;
+    animation-delay: .3s;
+}
+
+.cal-9-animation span:nth-of-type(5) {
+    left: 62%;
+    top: 83.3%;
+    animation-delay: .45s;
+}
+
+.cal-9-animation span:nth-of-type(6) {
+    left: 63.4%;
+    top: 84%;
+    animation-delay: .6s;
+}
+
+.cal-9-animation span:nth-of-type(7) {
+    left: 64.8%;
+    top: 84%;
+    animation-delay: .7s;
+}
+
+.cal-9-animation span:nth-of-type(8) {
+    left: 66%;
+    top: 83%;
+    animation-delay: .8s;
+}
+
+.cal-9-animation span:nth-of-type(9) {
+    left: 67.4%;
+    top: 81.8%;
+    animation-delay: .9s;
+}
+
+.cal-9-animation span:nth-of-type(10) {
+    left: 69.1%;
+    top: 80.5%;
+    animation-delay: 1s;
+}
+
+.cal-9-animation span:nth-of-type(11) {
+    left: 70.8%;
+    top: 80%;
+    animation-delay: 1.2s;
+}
+
+.cal-9-animation span:nth-of-type(12) {
+    left: 72.4%;
+    top: 80%;
+    animation-delay: 1.3s;
+}
+
+.cal-9-animation span:nth-of-type(13) {
+    left: 74%;
+    top: 80%;
+    animation-delay: 1.45s;
+}
+
+.cal-9-animation span:nth-of-type(14) {
+    left: 75.4%;
+    top: 80%;
+    animation-delay: 1.6s;
+}
+
+.cal-9-animation span:nth-of-type(15) {
+    left: 77%;
+    top: 81%;
+    animation-delay: 1.7s;
+}
+
+.cal-9-animation .arrow-1 {
+    transform: rotate(240deg);
+    position: absolute;
+    width: 3%;
+    top: 52%;
+    left: 21%;
+    animation: mina-to-arafaat 1.7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-9-animation span:nth-of-type(16) {
+    left: 78.4%;
+    top: 74%;
+    animation-delay: 2s;
+}
+
+.cal-9-animation span:nth-of-type(17) {
+    left: 77.3%;
+    top: 73%;
+    animation-delay: 2.2s;
+}
+
+.cal-9-animation span:nth-of-type(18) {
+    left: 76%;
+    top: 72%;
+    animation-delay: 2.4s;
+}
+
+.cal-9-animation .arrow-2 {
+    transform: rotate(20deg);
+    position: absolute;
+    width: 3%;
+    top: 71%;
+    left: 77%;
+    visibility: hidden;
+    animation: arafaat-to-mozdalefah .5s linear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.cal-9-animation .arrows2 {
+    position: absolute;
+    width: 20%;
+    animation: mina-to-arafaat 1.7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-9-animation .arrows2-1 {
+    width: 5%;
+    position: absolute;
+    visibility: hidden;
+    animation: arafaat-to-mozdalefah .5s linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.cal-10-animation {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.cal-10-animation span {
+    width: .5%;
+    height: 1.3%;
+    border-radius: 50%;
+    background: red;
+    opacity: 0;
+    position: absolute;
+    animation: fade .2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-10-animation span:nth-of-type(1) {
+    left: 66%;
+    top: 75%;
+    animation-delay: 0s;
+}
+
+.cal-10-animation span:nth-of-type(2) {
+    left: 65%;
+    top: 76.4%;
+    animation-delay: .1s;
+}
+
+.cal-10-animation span:nth-of-type(3) {
+    left: 63.9%;
+    top: 77.4%;
+    animation-delay: .2s;
+}
+
+.cal-10-animation span:nth-of-type(4) {
+    left: 62.8%;
+    top: 79%;
+    animation-delay: .3s;
+}
+
+.cal-10-animation span:nth-of-type(5) {
+    left: 61.6%;
+    top: 80.3%;
+    animation-delay: .4s;
+}
+
+.cal-10-animation span:nth-of-type(6) {
+    left: 60.4%;
+    top: 81.5%;
+    animation-delay: .45s;
+}
+
+.cal-10-animation span:nth-of-type(7) {
+    left: 59.3%;
+    top: 82.6%;
+    animation-delay: .5s;
+}
+
+.cal-10-animation span:nth-of-type(8) {
+    left: 58%;
+    top: 83%;
+    animation-delay: .55s;
+}
+
+.cal-10-animation span:nth-of-type(9) {
+    left: 56.5%;
+    top: 83%;
+    animation-delay: .6s;
+}
+
+.cal-10-animation span:nth-of-type(10) {
+    left: 55.1%;
+    top: 82.5%;
+    animation-delay: .7s;
+}
+
+.cal-10-animation span:nth-of-type(11) {
+    left: 53.5%;
+    top: 82%;
+    animation-delay: .75s;
+}
+
+.cal-10-animation span:nth-of-type(12) {
+    left: 52%;
+    top: 80.5%;
+    animation-delay: .83s;
+}
+
+.cal-10-animation span:nth-of-type(13) {
+    left: 50.4%;
+    top: 79%;
+    animation-delay: .9s;
+}
+
+.cal-10-animation span:nth-of-type(14) {
+    left: 49%;
+    top: 78%;
+    animation-delay: 1s;
+}
+
+.cal-10-animation span:nth-of-type(15) {
+    left: 47.5%;
+    top: 76%;
+    animation-delay: 1.05s;
+}
+
+.cal-10-animation span:nth-of-type(16) {
+    left: 46%;
+    top: 75%;
+    animation-delay: 1.1s;
+}
+
+.cal-10-animation span:nth-of-type(17) {
+    left: 44.3%;
+    top: 74%;
+    animation-delay: 1.2s;
+}
+
+.cal-10-animation span:nth-of-type(18) {
+    left: 42.7%;
+    top: 73%;
+    animation-delay: 1.25s;
+}
+
+.cal-10-animation span:nth-of-type(19) {
+    left: 41.3%;
+    top: 72.5%;
+    animation-delay: 1.3s;
+}
+
+.cal-10-animation span:nth-of-type(20) {
+    left: 40%;
+    top: 72%;
+    animation-delay: 1.4s;
+}
+
+.cal-10-animation span:nth-of-type(21) {
+    left: 38.5%;
+    top: 71%;
+    animation-delay: 1.5s;
+}
+
+.cal-10-animation span:nth-of-type(22) {
+    left: 37%;
+    top: 70.5%;
+    animation-delay: 1.6s;
+}
+
+.cal-10-animation span:nth-of-type(23) {
+    left: 35.4%;
+    top: 69%;
+    animation-delay: 1.65s;
+}
+
+.cal-10-animation span:nth-of-type(24) {
+    left: 34%;
+    top: 67.4%;
+    animation-delay: 1.7s;
+}
+
+.cal-10-animation span:nth-of-type(25) {
+    left: 33%;
+    top: 64%;
+    animation-delay: 1.75s;
+}
+
+.cal-10-animation span:nth-of-type(26) {
+    left: 33%;
+    top: 60%;
+    animation-delay: 1.8s;
+}
+
+.cal-10-animation span:nth-of-type(27) {
+    left: 33%;
+    top: 56%;
+    animation-delay: 1.85s;
+}
+
+.cal-10-animation .arrow-1 {
+    transform: rotate(-10deg);
+    position: absolute;
+    width: 3%;
+    top: 72%;
+    left: 65%;
+    animation: mozdalefah-to-jamaraat 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-10-animation span:nth-of-type(28) {
+    left: 31.4%;
+    top: 48%;
+    animation-delay: 2.1s;
+}
+
+.cal-10-animation span:nth-of-type(29) {
+    left: 30%;
+    top: 48%;
+    animation-delay: 2.2s;
+}
+
+.cal-10-animation span:nth-of-type(30) {
+    left: 28.6%;
+    top: 48%;
+    animation-delay: 2.25s;
+}
+
+.cal-10-animation span:nth-of-type(31) {
+    left: 27.3%;
+    top: 48%;
+    animation-delay: 2.3s;
+}
+
+.cal-10-animation span:nth-of-type(32) {
+    left: 26%;
+    top: 48%;
+    animation-delay: 2.35s;
+}
+
+.cal-10-animation span:nth-of-type(33) {
+    left: 24.6%;
+    top: 48%;
+    animation-delay: 2.4s;
+}
+
+.cal-10-animation .arrow-2 {
+    transform: rotate(10deg);
+    position: absolute;
+    width: 3%;
+    top: 71%;
+    left: 77%;
+    visibility: hidden;
+    animation: jamaraat-to-makah .5s linear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.cal-10-animation span:nth-of-type(34) {
+    left: 22%;
+    top: 54%;
+    animation-delay: 2.5s;
+}
+
+.cal-10-animation span:nth-of-type(35) {
+    left: 23%;
+    top: 56%;
+    animation-delay: 2.55s;
+}
+
+.cal-10-animation span:nth-of-type(36) {
+    left: 24%;
+    top: 59%;
+    animation-delay: 2.6s;
+}
+
+.cal-10-animation span:nth-of-type(37) {
+    left: 25.5%;
+    top: 59.5%;
+    animation-delay: 2.65s;
+}
+
+.cal-10-animation span:nth-of-type(38) {
+    left: 27%;
+    top: 59.3%;
+    animation-delay: 2.7s;
+}
+
+.cal-10-animation span:nth-of-type(39) {
+    left: 28.4%;
+    top: 60%;
+    animation-delay: 2.75s;
+}
+
+.cal-10-animation span:nth-of-type(40) {
+    left: 29.8%;
+    top: 61%;
+    animation-delay: 2.8s;
+}
+
+.cal-10-animation span:nth-of-type(41) {
+    left: 31%;
+    top: 64%;
+    animation-delay: 2.85s;
+}
+
+.cal-10-animation span:nth-of-type(42) {
+    left: 32.4%;
+    top: 66.8%;
+    animation-delay: 2.9s;
+}
+
+.cal-10-animation span:nth-of-type(43) {
+    left: 34.1%;
+    top: 69.5%;
+    animation-delay: 3s;
+}
+
+.cal-10-animation span:nth-of-type(44) {
+    left: 35.8%;
+    top: 70%;
+    animation-delay: 3.05s;
+}
+
+.cal-10-animation span:nth-of-type(45) {
+    left: 37.4%;
+    top: 68%;
+    animation-delay: 3.1s;
+}
+
+.cal-10-animation span:nth-of-type(46) {
+    left: 39.4%;
+    top: 67%;
+    animation-delay: 3.15s;
+}
+
+.cal-10-animation span:nth-of-type(47) {
+    left: 41.4%;
+    top: 68%;
+    animation-delay: 3.2s;
+}
+
+.cal-10-animation span:nth-of-type(48) {
+    left: 43.4%;
+    top: 70%;
+    animation-delay: 3.25s;
+}
+
+.cal-10-animation span:nth-of-type(49) {
+    left: 45.4%;
+    top: 72%;
+    animation-delay: 3.3s;
+}
+
+.cal-10-animation span:nth-of-type(50) {
+    left: 47.4%;
+    top: 74%;
+    animation-delay: 3.35s;
+}
+
+.cal-10-animation .arrow-3 {
+    transform: rotate(240deg);
+    position: absolute;
+    width: 3%;
+    top: 52%;
+    left: 21%;
+    visibility: hidden;
+    animation: makah-to-mina 1s linear;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.cal-10-animation .arrows3 {
+    position: absolute;
+    width: 30%;
+    animation: mozdalefah-to-jamaraat 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-10-animation .arrows3-1 {
+    position: absolute;
+    width: 13%;
+    visibility: hidden;
+    transform: rotate(-30deg);
+    animation: jamaraat-to-makah .5s linear;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-10-animation .arrows3-2 {
+    position: absolute;
+    width: 33%;
+    visibility: hidden;
+    animation: makah-to-mina2 1s linear;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.cal-11-animation span {
+    width: .5%;
+    height: 1.3%;
+    border-radius: 50%;
+    background: red;
+    opacity: 0;
+    position: absolute;
+    animation: fade .2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation span:nth-of-type(1) {
+    left: 49.3%;
+    top: 72%;
+    animation-delay: 0s;
+}
+
+.cal-11-animation span:nth-of-type(2) {
+    left: 48.3%;
+    top: 71%;
+    animation-delay: .1s;
+}
+
+.cal-11-animation span:nth-of-type(3) {
+    left: 47.3%;
+    top: 70%;
+    animation-delay: .2s;
+}
+
+.cal-11-animation span:nth-of-type(4) {
+    left: 46.2%;
+    top: 69%;
+    animation-delay: .3s;
+}
+
+.cal-11-animation span:nth-of-type(5) {
+    left: 45%;
+    top: 67.3%;
+    animation-delay: .45s;
+}
+
+.cal-11-animation span:nth-of-type(6) {
+    left: 43.8%;
+    top: 65.5%;
+    animation-delay: .6s;
+}
+
+.cal-11-animation .arrow-1 {
+    transform: rotate(61deg);
+    position: absolute;
+    width: 3%;
+    top: 69%;
+    left: 48%;
+    animation: mina-to-jamaraat .7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation span:nth-of-type(7) {
+    left: 41%;
+    top: 63%;
+    animation-delay: .7s;
+}
+
+.cal-11-animation span:nth-of-type(8) {
+    left: 40%;
+    top: 65%;
+    animation-delay: .8s;
+}
+
+.cal-11-animation span:nth-of-type(9) {
+    left: 38.4%;
+    top: 65.8%;
+    animation-delay: .9s;
+}
+
+.cal-11-animation span:nth-of-type(10) {
+    left: 37.1%;
+    top: 64.5%;
+    animation-delay: 1s;
+}
+
+.cal-11-animation span:nth-of-type(11) {
+    left: 36.5%;
+    top: 60.5%;
+    animation-delay: 1.2s;
+}
+
+.cal-11-animation .arrow-2 {
+    transform: rotate(-30deg);
+    position: absolute;
+    width: 3%;
+    top: 61%;
+    left: 39%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2 .5s linear;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation span:nth-of-type(12) {
+    left: 36%;
+    top: 55%;
+    animation-delay: 1.3s;
+}
+
+.cal-11-animation span:nth-of-type(13) {
+    left: 35%;
+    top: 58%;
+    animation-delay: 1.4s;
+}
+
+.cal-11-animation span:nth-of-type(14) {
+    left: 33.4%;
+    top: 58.8%;
+    animation-delay: 1.5s;
+}
+
+.cal-11-animation span:nth-of-type(15) {
+    left: 32.1%;
+    top: 57.5%;
+    animation-delay: 1.6s;
+}
+
+.cal-11-animation span:nth-of-type(16) {
+    left: 31.7%;
+    top: 53.5%;
+    animation-delay: 1.7s;
+}
+
+.cal-11-animation .arrow-3 {
+    transform: rotate(-30deg);
+    position: absolute;
+    width: 3%;
+    top: 54%;
+    left: 34%;
+    visibility: hidden;
+    animation: jamaraat2-to-jamaraat3 .5s linear;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation span:nth-of-type(17) {
+    left: 31.3%;
+    top: 46%;
+    animation-delay: 1.8s;
+}
+
+.cal-11-animation span:nth-of-type(18) {
+    left: 30.1%;
+    top: 47.5%;
+    animation-delay: 1.85s;
+}
+
+.cal-11-animation span:nth-of-type(19) {
+    left: 29%;
+    top: 49.6%;
+    animation-delay: 1.9s;
+}
+
+.cal-11-animation span:nth-of-type(20) {
+    left: 28.3%;
+    top: 52%;
+    animation-delay: 1.95s;
+}
+
+.cal-11-animation span:nth-of-type(21) {
+    left: 28.3%;
+    top: 55.4%;
+    animation-delay: 2s;
+}
+
+.cal-11-animation span:nth-of-type(22) {
+    left: 29.2%;
+    top: 58.4%;
+    animation-delay: 2.1s;
+}
+
+.cal-11-animation span:nth-of-type(23) {
+    left: 30.3%;
+    top: 60.4%;
+    animation-delay: 2.2s;
+}
+
+.cal-11-animation span:nth-of-type(24) {
+    left: 31.3%;
+    top: 62.4%;
+    animation-delay: 2.25s;
+}
+
+.cal-11-animation span:nth-of-type(25) {
+    left: 32.3%;
+    top: 64.4%;
+    animation-delay: 2.3s;
+}
+
+.cal-11-animation span:nth-of-type(26) {
+    left: 33.2%;
+    top: 66.4%;
+    animation-delay: 2.35s;
+}
+
+.cal-11-animation span:nth-of-type(27) {
+    left: 34.3%;
+    top: 68.4%;
+    animation-delay: 2.4s;
+}
+
+.cal-11-animation span:nth-of-type(28) {
+    left: 35.3%;
+    top: 70.4%;
+    animation-delay: 2.45s;
+}
+
+.cal-11-animation span:nth-of-type(29) {
+    left: 36.5%;
+    top: 71.4%;
+    animation-delay: 2.5s;
+}
+
+.cal-11-animation span:nth-of-type(30) {
+    left: 37.7%;
+    top: 72.7%;
+    animation-delay: 2.55s;
+}
+
+.cal-11-animation span:nth-of-type(31) {
+    left: 39.2%;
+    top: 73.6%;
+    animation-delay: 2.6s;
+}
+
+.cal-11-animation span:nth-of-type(32) {
+    left: 40.4%;
+    top: 74.4%;
+    animation-delay: 2.65s;
+}
+
+.cal-11-animation span:nth-of-type(33) {
+    left: 41.7%;
+    top: 74.4%;
+    animation-delay: 2.7s;
+}
+
+.cal-11-animation span:nth-of-type(34) {
+    left: 43%;
+    top: 74.4%;
+    animation-delay: 2.75s;
+}
+
+.cal-11-animation span:nth-of-type(35) {
+    left: 44.4%;
+    top: 74.4%;
+    animation-delay: 2.8s;
+}
+
+.cal-11-animation span:nth-of-type(36) {
+    left: 46%;
+    top: 74.4%;
+    animation-delay: 2.85s;
+}
+
+.cal-11-animation .arrow-4 {
+    transform: rotate(3deg);
+    position: absolute;
+    width: 3%;
+    top: 44%;
+    left: 30%;
+    visibility: hidden;
+    animation: jamaraat-to-mina 1.1s linear;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation .arrows4 {
+    position: absolute;
+    width: 10%;
+    animation: mina-to-jamaraat .7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation .arrows4-1 {
+    position: absolute;
+    width: 5%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2 .5s linear;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation .arrows4-2 {
+    position: absolute;
+    width: 5%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2-1 .5s linear;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.cal-11-animation .arrows4-3 {
+    position: absolute;
+    width: 22%;
+    visibility: hidden;
+    animation: jamaraat-to-mina 1.1s linear;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.cal-12-animation span {
+    width: .5%;
+    height: 1.3%;
+    border-radius: 50%;
+    background: red;
+    opacity: 0;
+    position: absolute;
+    animation: fade .2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation span:nth-of-type(1) {
+    left: 49.3%;
+    top: 72%;
+    animation-delay: 0s;
+}
+
+.cal-12-animation span:nth-of-type(2) {
+    left: 48.3%;
+    top: 71%;
+    animation-delay: .1s;
+}
+
+.cal-12-animation span:nth-of-type(3) {
+    left: 47.3%;
+    top: 70%;
+    animation-delay: .2s;
+}
+
+.cal-12-animation span:nth-of-type(4) {
+    left: 46.2%;
+    top: 69%;
+    animation-delay: .3s;
+}
+
+.cal-12-animation span:nth-of-type(5) {
+    left: 45%;
+    top: 67.3%;
+    animation-delay: .45s;
+}
+
+.cal-12-animation span:nth-of-type(6) {
+    left: 43.8%;
+    top: 65.5%;
+    animation-delay: .6s;
+}
+
+.cal-12-animation .arrow-1 {
+    transform: rotate(61deg);
+    position: absolute;
+    width: 3%;
+    top: 69%;
+    left: 48%;
+    animation: mina-to-jamaraat .7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation span:nth-of-type(7) {
+    left: 41%;
+    top: 63%;
+    animation-delay: .7s;
+}
+
+.cal-12-animation span:nth-of-type(8) {
+    left: 40%;
+    top: 65%;
+    animation-delay: .8s;
+}
+
+.cal-12-animation span:nth-of-type(9) {
+    left: 38.4%;
+    top: 65.8%;
+    animation-delay: .9s;
+}
+
+.cal-12-animation span:nth-of-type(10) {
+    left: 37.1%;
+    top: 64.5%;
+    animation-delay: 1s;
+}
+
+.cal-12-animation span:nth-of-type(11) {
+    left: 36.5%;
+    top: 60.5%;
+    animation-delay: 1.2s;
+}
+
+.cal-12-animation .arrow-2 {
+    transform: rotate(-30deg);
+    position: absolute;
+    width: 3%;
+    top: 61%;
+    left: 39%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2 .5s linear;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation span:nth-of-type(12) {
+    left: 36%;
+    top: 55%;
+    animation-delay: 1.3s;
+}
+
+.cal-12-animation span:nth-of-type(13) {
+    left: 35%;
+    top: 58%;
+    animation-delay: 1.4s;
+}
+
+.cal-12-animation span:nth-of-type(14) {
+    left: 33.4%;
+    top: 58.8%;
+    animation-delay: 1.5s;
+}
+
+.cal-12-animation span:nth-of-type(15) {
+    left: 32.1%;
+    top: 57.5%;
+    animation-delay: 1.6s;
+}
+
+.cal-12-animation span:nth-of-type(16) {
+    left: 31.7%;
+    top: 53.5%;
+    animation-delay: 1.7s;
+}
+
+.cal-12-animation .arrow-3 {
+    transform: rotate(-30deg);
+    position: absolute;
+    width: 3%;
+    top: 54%;
+    left: 34%;
+    visibility: hidden;
+    animation: jamaraat2-to-jamaraat3 .5s linear;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation span:nth-of-type(17) {
+    left: 31.3%;
+    top: 46%;
+    animation-delay: 1.8s;
+}
+
+.cal-12-animation span:nth-of-type(18) {
+    left: 30.1%;
+    top: 47.5%;
+    animation-delay: 1.85s;
+}
+
+.cal-12-animation span:nth-of-type(19) {
+    left: 29%;
+    top: 49.6%;
+    animation-delay: 1.9s;
+}
+
+.cal-12-animation span:nth-of-type(20) {
+    left: 28.3%;
+    top: 52%;
+    animation-delay: 1.95s;
+}
+
+.cal-12-animation span:nth-of-type(21) {
+    left: 28.3%;
+    top: 55.4%;
+    animation-delay: 2s;
+}
+
+.cal-12-animation span:nth-of-type(22) {
+    left: 29.2%;
+    top: 58.4%;
+    animation-delay: 2.1s;
+}
+
+.cal-12-animation span:nth-of-type(23) {
+    left: 30.3%;
+    top: 60.4%;
+    animation-delay: 2.2s;
+}
+
+.cal-12-animation span:nth-of-type(24) {
+    left: 31.3%;
+    top: 62.4%;
+    animation-delay: 2.25s;
+}
+
+.cal-12-animation span:nth-of-type(25) {
+    left: 32.3%;
+    top: 64.4%;
+    animation-delay: 2.3s;
+}
+
+.cal-12-animation span:nth-of-type(26) {
+    left: 33.2%;
+    top: 66.4%;
+    animation-delay: 2.35s;
+}
+
+.cal-12-animation span:nth-of-type(27) {
+    left: 34.3%;
+    top: 68.4%;
+    animation-delay: 2.4s;
+}
+
+.cal-12-animation span:nth-of-type(28) {
+    left: 35.3%;
+    top: 70.4%;
+    animation-delay: 2.45s;
+}
+
+.cal-12-animation span:nth-of-type(29) {
+    left: 36.5%;
+    top: 71.4%;
+    animation-delay: 2.5s;
+}
+
+.cal-12-animation span:nth-of-type(30) {
+    left: 37.7%;
+    top: 72.7%;
+    animation-delay: 2.55s;
+}
+
+.cal-12-animation span:nth-of-type(31) {
+    left: 39.2%;
+    top: 73.6%;
+    animation-delay: 2.6s;
+}
+
+.cal-12-animation span:nth-of-type(32) {
+    left: 40.4%;
+    top: 74.4%;
+    animation-delay: 2.65s;
+}
+
+.cal-12-animation span:nth-of-type(33) {
+    left: 41.7%;
+    top: 74.4%;
+    animation-delay: 2.7s;
+}
+
+.cal-12-animation span:nth-of-type(34) {
+    left: 43%;
+    top: 74.4%;
+    animation-delay: 2.75s;
+}
+
+.cal-12-animation span:nth-of-type(35) {
+    left: 44.4%;
+    top: 74.4%;
+    animation-delay: 2.8s;
+}
+
+.cal-12-animation span:nth-of-type(36) {
+    left: 46%;
+    top: 74.4%;
+    animation-delay: 2.85s;
+}
+
+.cal-12-animation .arrow-4 {
+    transform: rotate(3deg);
+    position: absolute;
+    width: 3%;
+    top: 44%;
+    left: 30%;
+    visibility: hidden;
+    animation: jamaraat-to-mina 1.1s linear;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation span:nth-of-type(37) {
+    left: 31.4%;
+    top: 48%;
+    animation-delay: 1.8s;
+}
+
+.cal-12-animation span:nth-of-type(38) {
+    left: 30%;
+    top: 48%;
+    animation-delay: 1.85s;
+}
+
+.cal-12-animation span:nth-of-type(39) {
+    left: 28.6%;
+    top: 48%;
+    animation-delay: 1.9s;
+}
+
+.cal-12-animation span:nth-of-type(40) {
+    left: 27.3%;
+    top: 48%;
+    animation-delay: 1.95s;
+}
+
+.cal-12-animation span:nth-of-type(41) {
+    left: 26%;
+    top: 48%;
+    animation-delay: 2s;
+}
+
+.cal-12-animation span:nth-of-type(42) {
+    left: 24.6%;
+    top: 48%;
+    animation-delay: 2.1s;
+}
+
+.cal-12-animation .arrow-5 {
+    transform: rotate(10deg);
+    position: absolute;
+    width: 3%;
+    top: 71%;
+    left: 77%;
+    visibility: hidden;
+    animation: jamaraat-to-makah .5s linear;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation .arrows5 {
+    position: absolute;
+    width: 10%;
+    animation: mina-to-jamaraat .7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation .arrows5-1 {
+    position: absolute;
+    width: 5%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2 .5s linear;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation .arrows5-2 {
+    position: absolute;
+    width: 5%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2-1 .5s linear;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation .arrows5-3 {
+    position: absolute;
+    width: 22%;
+    visibility: hidden;
+    animation: jamaraat-to-mina 1.1s linear;
+    animation-delay: 2.1s;
+    animation-fill-mode: forwards;
+}
+
+.cal-12-animation .arrows5-4 {
+    position: absolute;
+    transform: rotate(-30deg);
+    width: 10%;
+    visibility: hidden;
+    animation: jamaraat-to-makah2 1.1s linear;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation {
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+.cal-13-animation span {
+    width: .5%;
+    height: 1.3%;
+    border-radius: 50%;
+    background: red;
+    opacity: 0;
+    position: absolute;
+    animation: fade .2s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation span:nth-of-type(1) {
+    left: 49.3%;
+    top: 72%;
+    animation-delay: 0s;
+}
+
+.cal-13-animation span:nth-of-type(2) {
+    left: 48.3%;
+    top: 71%;
+    animation-delay: .1s;
+}
+
+.cal-13-animation span:nth-of-type(3) {
+    left: 47.3%;
+    top: 70%;
+    animation-delay: .2s;
+}
+
+.cal-13-animation span:nth-of-type(4) {
+    left: 46.2%;
+    top: 69%;
+    animation-delay: .3s;
+}
+
+.cal-13-animation span:nth-of-type(5) {
+    left: 45%;
+    top: 67.3%;
+    animation-delay: .45s;
+}
+
+.cal-13-animation span:nth-of-type(6) {
+    left: 43.8%;
+    top: 65.5%;
+    animation-delay: .6s;
+}
+
+.cal-13-animation .arrow-1 {
+    transform: rotate(61deg);
+    position: absolute;
+    width: 3%;
+    top: 69%;
+    left: 48%;
+    animation: mina-to-jamaraat .7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation span:nth-of-type(7) {
+    left: 41%;
+    top: 63%;
+    animation-delay: .7s;
+}
+
+.cal-13-animation span:nth-of-type(8) {
+    left: 40%;
+    top: 65%;
+    animation-delay: .8s;
+}
+
+.cal-13-animation span:nth-of-type(9) {
+    left: 38.4%;
+    top: 65.8%;
+    animation-delay: .9s;
+}
+
+.cal-13-animation span:nth-of-type(10) {
+    left: 37.1%;
+    top: 64.5%;
+    animation-delay: 1s;
+}
+
+.cal-13-animation span:nth-of-type(11) {
+    left: 36.5%;
+    top: 60.5%;
+    animation-delay: 1.2s;
+}
+
+.cal-13-animation .arrow-2 {
+    transform: rotate(-30deg);
+    position: absolute;
+    width: 3%;
+    top: 61%;
+    left: 39%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2 .5s linear;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation span:nth-of-type(12) {
+    left: 36%;
+    top: 55%;
+    animation-delay: 1.3s;
+}
+
+.cal-13-animation span:nth-of-type(13) {
+    left: 35%;
+    top: 58%;
+    animation-delay: 1.4s;
+}
+
+.cal-13-animation span:nth-of-type(14) {
+    left: 33.4%;
+    top: 58.8%;
+    animation-delay: 1.5s;
+}
+
+.cal-13-animation span:nth-of-type(15) {
+    left: 32.1%;
+    top: 57.5%;
+    animation-delay: 1.6s;
+}
+
+.cal-13-animation span:nth-of-type(16) {
+    left: 31.7%;
+    top: 53.5%;
+    animation-delay: 1.7s;
+}
+
+.cal-13-animation .arrow-3 {
+    transform: rotate(-30deg);
+    position: absolute;
+    width: 3%;
+    top: 54%;
+    left: 34%;
+    visibility: hidden;
+    animation: jamaraat2-to-jamaraat3 .5s linear;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation span:nth-of-type(17) {
+    left: 31.4%;
+    top: 48%;
+    animation-delay: 1.8s;
+}
+
+.cal-13-animation span:nth-of-type(18) {
+    left: 30%;
+    top: 48%;
+    animation-delay: 1.85s;
+}
+
+.cal-13-animation span:nth-of-type(19) {
+    left: 28.6%;
+    top: 48%;
+    animation-delay: 1.9s;
+}
+
+.cal-13-animation span:nth-of-type(20) {
+    left: 27.3%;
+    top: 48%;
+    animation-delay: 1.95s;
+}
+
+.cal-13-animation span:nth-of-type(21) {
+    left: 26%;
+    top: 48%;
+    animation-delay: 2s;
+}
+
+.cal-13-animation span:nth-of-type(22) {
+    left: 24.6%;
+    top: 48%;
+    animation-delay: 2.1s;
+}
+
+.cal-13-animation .arrow-4 {
+    transform: rotate(10deg);
+    position: absolute;
+    width: 3%;
+    top: 71%;
+    left: 77%;
+    visibility: hidden;
+    animation: jamaraat-to-makah .5s linear;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation .arrows6 {
+    position: absolute;
+    width: 10%;
+    animation: mina-to-jamaraat .7s linear;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation .arrows6-1 {
+    position: absolute;
+    width: 5%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2 .5s linear;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation .arrows6-2 {
+    position: absolute;
+    width: 5%;
+    visibility: hidden;
+    animation: jamaraat1-to-jamaraat2-1 .5s linear;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.cal-13-animation .arrows6-3 {
+    position: absolute;
+    transform: rotate(-30deg);
+    width: 10%;
+    visibility: hidden;
+    animation: jamaraat-to-makah2 1.1s linear;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes makah-to-mina {
+    0% {
+        visibility: hidden;
+        top: 50%;
+        right: 49%;
+    }
+    1% {
+        visibility: visible;
+        top: 50%;
+        right: 49%;
+    }
+    100% {
+        visibility: visible;
+        top: 50%;
+        right: 49%;
+    }
+    /*20%{
+		visibility:visible;
+		transform: rotate(225deg);
+		top: 55%;
+		left: 22%;
+	}
+	40%{
+		transform: rotate(230deg);
+		top: 56%;
+		left: 27%;
+	}
+	60%{
+		transform: rotate(190deg);
+		top: 67%;
+		left: 33%;
+	}
+	80%{
+		transform: rotate(207deg);
+		top: 64%;
+		left: 38%;
+	} */
+    /*100%{
+		visibility:visible;
+
+		top: 60%;
+		right: 60%;
+	}*/
+}
+
+@keyframes makah-to-mina2 {
+    0% {
+        visibility: hidden;
+        transform: rotate(-5deg);
+        top: 52%;
+        left: 19%;
+    }
+    1% {
+        visibility: visible;
+        transform: rotate(-5deg);
+        top: 52%;
+        left: 19%;
+    }
+    100% {
+        visibility: visible;
+        transform: rotate(-5deg);
+        top: 52%;
+        left: 19%;
+    }
+}
+
+@keyframes mina-to-arafaat {
+    0% {
+        top: 73%;
+        left: 60%;
+    }
+    /*40%{
+		transform: rotate(185deg);
+		top: 81%;
+		left: 62%;
+	}
+	70%{
+		transform: rotate(200deg);
+		top: 77%;
+		left: 68%;
+	}*/
+    1% {
+        top: 73%;
+        left: 60%;
+    }
+    100% {
+        top: 73%;
+        left: 60%;
+    }
+}
+
+@keyframes arafaat-to-mozdalefah {
+    0% {
+        visibility: hidden;
+        top: 63%;
+        left: 76%;
+    }
+    1% {
+        visibility: visible;
+        top: 63%;
+        left: 76%;
+    }
+    100% {
+        visibility: visible;
+        top: 63%;
+        left: 76%;
+    }
+}
+
+@keyframes mozdalefah-to-jamaraat {
+    0% {
+        top: 58%;
+        left: 38%;
+    }
+    /*25%{
+		transform: rotate(15deg);
+		top: 80.5%;
+		left: 57%;
+	}
+	50%{
+		transform: rotate(30deg);
+		top: 73%;
+		left: 46%;
+	}
+	78%{
+		transform: rotate(45deg);
+		top: 65%;
+		left: 33%;
+	}*/
+    1% {
+        top: 58%;
+        left: 38%;
+    }
+    100% {
+        top: 58%;
+        left: 38%;
+    }
+}
+
+@keyframes jamaraat-to-makah {
+    0% {
+        visibility: hidden;
+        top: 44%;
+        left: 21%;
+    }
+    1% {
+        visibility: visible;
+        top: 44%;
+        left: 21%;
+    }
+    100% {
+        visibility: visible;
+        /*		display:block;*/
+        top: 44%;
+        left: 21%;
+    }
+}
+
+@keyframes jamaraat-to-makah2 {
+    0% {
+        visibility: hidden;
+        top: 46%;
+        left: 21.5%;
+    }
+    1% {
+        visibility: visible;
+        top: 46%;
+        left: 21.5%;
+    }
+    100% {
+        visibility: visible;
+        /*		display:block;*/
+        top: 46%;
+        left: 21.5%;
+    }
+}
+
+@keyframes mina-to-jamaraat {
+    0% {
+        top: 62%;
+        left: 40%;
+    }
+    1% {
+        top: 62%;
+        left: 40%;
+    }
+    100% {
+        top: 62%;
+        left: 40%;
+    }
+}
+
+@keyframes jamaraat1-to-jamaraat2 {
+    0% {
+        visibility: hidden;
+        top: 56%;
+        left: 35%;
+    }
+    1% {
+        visibility: visible;
+        top: 56%;
+        left: 35%;
+    }
+    100% {
+        visibility: visible;
+        top: 56%;
+        left: 35%;
+    }
+    /*/25%{
+		visibility:visible;
+		transform: rotate(4deg);
+		top: 63%;
+		left: 38%;
+	}
+	50%{
+		visibility:visible;
+		transform: rotate(80deg);
+		top: 62%;
+		left: 36%;
+	}
+	75%{
+		visibility:visible;
+		transform: rotate(100deg);
+		top: 60%;
+		left: 35%;
+	}
+	100%{
+		visibility:visible;
+		transform: rotate(120deg);
+		top: 56%;
+		left: 35.5%;
+	}
+}
+@keyframes jamaraat2-to-jamaraat3{
+	0%{
+		visibility:hidden;
+		transform: rotate(-30deg);
+		top: 54%;
+		left: 34%;
+	}
+	1%{
+		visibility:visible;
+		transform: rotate(-30deg);
+		top: 54%;
+		left: 34%;
+	}
+	25%{
+		visibility:visible;
+		transform: rotate(4deg);
+		top: 56%;
+		left: 33%;
+	}
+	50%{
+		visibility:visible;
+		transform: rotate(80deg);
+		top: 55%;
+		left: 31%;
+	}
+	75%{
+		visibility:visible;
+		transform: rotate(100deg);
+		top: 53%;
+		left: 31%;
+	}*/
+}
+
+@keyframes jamaraat1-to-jamaraat2-1 {
+    0% {
+        visibility: hidden;
+        top: 50%;
+        left: 31%;
+    }
+    1% {
+        visibility: visible;
+        top: 50%;
+        left: 31%;
+    }
+    100% {
+        visibility: visible;
+        top: 50%;
+        left: 31%;
+    }
+}
+
+@keyframes jamaraat-to-mina {
+    0% {
+        visibility: hidden;
+        top: 48%;
+        left: 27.5%;
+    }
+    1% {
+        visibility: visible;
+        top: 48%;
+        left: 27.5%;
+    }
+    100% {
+        visibility: visible;
+        top: 48%;
+        left: 27.5%;
+    }
+    /*25%{
+		visibility:visible;
+		transform: rotate(-60deg);
+		top: 49%;
+    left: 27%;
+	}
+	33%{
+		visibility:visible;
+		transform: rotate(-117deg);
+		top: 53%;
+		left: 27%;
+	}
+	65%{
+		visibility:visible;
+		transform: rotate(-137deg);
+		top: 67%;
+		left: 34%;
+	}
+	83%{
+		visibility:visible;
+		transform: rotate(-153deg);
+		top: 71%;
+    left: 38%;
+	}*/
+}
+
+@media screen and (min-width: 1025px) {
+    .video_player {
+        width: 90%;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 701px) {
+    .video_player {
+        width: 100%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 700px) {
+    .modal {
+        align-items: flex-start;
+    }
+    .video_player {
+        flex-wrap: wrap;
+        overflow-y: auto;
+        width: 90%;
+        max-height: 94vh;
+        -webkit-max-height: 94vh;
+        -moz-max-height: 94vh;
+        -ms-max-height: 94vh;
+        -o-max-height: 94vh;
+    }
+    .video_player video,
+    .video_player .all-videos {
+        width: 96%;
+    }
+}
+
+@media (max-width: 500px) {
+    .video_player {
+        width: 96%;
+    }
+}
+
+@media (max-width: 769px) {
+    #hajjMap {
+        width: 87%;
+    }
+    .text-modal {
+        font-size: 21px;
+    }
+}
+
+@media (max-width:479px) {
+    .text-modal {
+        padding: 0px;
+    }
+    .text-small {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 726px) and (max-width:768px) {
+    .hajj-logo2 {
+        position: absolute;
+        width: 50%;
+        top: 80%;
+        left: 37%;
+    }
+}
+
+/*
+@media ( max-width:900px) {
+    .loader-circle2 .border {
+        width: 144%;
+        height: 148%;
+        top: -26%;
+        left: -27%
+    }
+    .loader-circle2 .border2 {
+        top: -12%;
+        left: -13%;
+        width: 114%;
+        height: 118%;
+    }
+    .loader-circle3 .border3 {
+        width: 157%;
+        height: 105%;
+        top: 1%;
+        left: -28%
+    }
+    .loader-circle3 .border4 {
+        top: 8%;
+        left: -16%;
+        width: 133%;
+        height: 90%;
+    }
+    
+    .loader-circle4 .border5 {
+    
+        height: 150%
+    }
+    
+    .loader-circle4 .border6 {
+        height: 113%
+    }
+    .text {
+        font-size: 13px;
+        width: 153%;
+        right: 115%;
+    }
+    .text2 {
+        font-size: 13px;
+        width: 271%;
+        right: 160%;
+    }
+    
+    .text3 {
+        font-size: 13px;
+        width: 259%;
+    }
+}
+
+@media ( min-width:901px) and (max-width:1199px) {
+    .loader-circle2 .border {
+        width: 144%;
+        height: 148%;
+        top: -26%;
+        left: -27%
+    }
+    .loader-circle2 .border2 {
+        top: -12%;
+        left: -13%;
+        width: 114%;
+        height: 118%;
+    }
+    .loader-circle3 .border3 {
+        width: 157%;
+        height: 105%;
+        top: 1%;
+        left: -28%
+    }
+    .loader-circle3 .border4 {
+        top: 8%;
+        left: -16%;
+        width: 133%;
+        height: 90%;
+    }
+    
+    .loader-circle4 .border5 {
+    
+        height: 150%
+    }
+    
+    .loader-circle4 .border6 {
+        height: 113%
+    }
+    .text {
+        font-size: 13px;
+        width: 153%;
+        right: 115%;
+    }
+    .text2 {
+        font-size: 13px;
+        width: 271%;
+        right: 88%;
+    }
+    
+    .text3 {
+        font-size: 13px;
+        width: 259%;
+    }
+}
+
+@media (min-width:660px) and (max-width: 768px) {
+    .loader-circle4 .border6 {
+        height: 116%;
+        width: 101%;
+        right: 141%;
+        top: -14%;
+    }
+    .text {
+        right: 133%;
+    }
+    .text2 {
+            width: 274%;
+    }
+    .text3{
+        width: 263%;
+    }
+}
+
+@media (min-width:1053px) and (max-width:1180px) {
+    .text {
+        right: 85%;
+    }
+    .text2 {
+        width: 251%;
+        right: 130%;
+    }
+}
+
+@media( min-width:1200px){
+    .text {
+        font-size: 16px;
+        width: 153%;
+    }
+    .text2 {
+        font-size: 16px;
+        width: 251%;
+        right: 45%;
+    }
+    .text3 {
+        font-size: 16px
+    }
+}
+
+
+@media (min-width:200px) and (max-width: 330px) {
+     .text2 {
+        font-size: 7px;
+        width: 364%;
+        right: 100%;
+    }
+    .text {
+        font-size: 7px;
+        width: 171%;
+        right: 136%;
+    }
+    
+    .text3 {
+            font-size: 7px;
+            width: 293%;
+    }
+    
+
+}
+@media (min-width: 331px) and (max-width: 400px) {
+    .text {
+            font-size: 11px;
+            width: 230%;
+
+    }
+    
+    .text2 {
+        font-size: 11px;
+        width: 346%;
+    }
+    
+    .text3 {
+        font-size: 11px;
+        width: 349%;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 498px) {
+    .text {
+            font-size: 11px;
+            width: 193%;
+
+    }
+    
+    .text2 {
+        font-size: 11px;
+       width: 343%;
+    }
+    
+    .text3 {
+        font-size: 11px;
+        width: 349%;
+    }
+}
+
+
+@media (min-width: 403px) and (max-width: 442px) {
+    .text {
+            font-size: 11px;
+                width: 196%;
+
+    }
+    
+    .text2 {
+        font-size: 11px;
+       width: 346%;
+    }
+    
+    .text3 {
+        font-size: 11px;
+        width: 349%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 659px) {
+    .text {
+            font-size: 11px;
+            width: 193%;
+
+    }
+    
+    .text2 {
+        font-size: 11px;
+       width: 343%;
+    }
+    
+    .text3 {
+        font-size: 11px;
+        width: 349%;
+    }
+}
+*/
+
+@media only screen and (min-width: 320px) and (max-width:768px){
+    .airplane-help .text, .meqaat-help .text2, .text3{
+        font-size : 8px;
+        font-family: calibri;
+    }
+}
+
+
+@media (min-width:538px) and (max-width:771px) {
+    .airplane-help {
+        top:85%;
+    }
+}
+
+@media ( max-width:900px) {
+    .loader-circle2 .border {
+        width: 100%;
+        height: 100%;
+        top: -6%;
+        left: -9%;
+        border-top: 0.5px solid #fff;
+    }
+    .loader-circle2 .border2 {
+           top: 8%;
+            left: 4%;
+            width: 75%;
+            height: 75%;
+            border-bottom: 0.5px solid #fff;
+    }
+    .loader-circle3 .border3 {
+        width: 126%;
+        height: 82%;
+        top: 11%;
+        left: -7%;
+        border-top: 0.5px solid #fff;
+    }
+    .loader-circle3 .border4 {
+       top: 25%;
+        left: 3%;
+        width: 100%;
+        height: 64%;
+        border-bottom: 0.5px solid #fff;
+    }
+    
+    .loader-circle4 .border5 {
+        border-top: 0.5px solid #fff;
+        height: 142%
+    }
+    
+    .loader-circle4 .border6 {
+        border-bottom: 0.5px solid #fff;
+        height: 110%;
+    }
+}
+
