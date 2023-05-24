@@ -1,0 +1,437 @@
+body{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+.hajj-map-container, .hajj-map , .hajj-map-background, .hajj-map-background img, .mozdalefah img,
+.makah img, .jamaraat img, .mina img , .arafaat img, .meqaat img, .airplane img, .ambulance img,
+.islamweb-logo img, .hajj-logo img, .cal img{
+	max-width: 100%;
+}
+
+.hajj-map-container{
+	position: relative;
+	width:100vw;
+	height:100vh;
+/*	background: #80C6CE;*/
+}
+
+/*
+
+.left-side{
+	display: block;
+    width: 100vw;
+    top: 65%;
+    right: 3%;
+    vertical-align: top;
+    position: relative;
+    height: 100vh;
+}
+.portrait .left-side{
+	width:99%;
+	height:30%;
+	position:absolute;
+	top:55%;
+}
+*/
+
+.left-side{
+	display:inline-block;
+	width:25%;
+	vertical-align: top;
+	position: relative;
+    height: 100vh;
+}
+.portrait .left-side{
+	width:99%;
+	height:30%;
+	position:absolute;
+	top:55%;
+}
+
+/*
+.left-side{
+	display:inline-block;
+	width:25%;
+	vertical-align: top;
+	position: relative;
+    height: 100vh;
+}
+*/
+/*
+
+.portrait .left-side{
+	width: 81%;
+    height: 30%;
+    position: absolute;
+    top: 68%;
+    left: 6%;
+}
+*/
+
+/*
+.portrait .left-side {
+    width: 62%;
+    height: 30%;
+    position: absolute;
+    top: 68%;
+    z-index: 2;
+    left: 8%;
+}
+*/
+
+
+/*
+
+.hajj-logo{
+	position: absolute;
+    width: 13%;
+    top: 15%;
+    left: 82%;
+}
+*/
+
+.hajj-logo{
+	position: absolute;
+    width: 50%;
+    top: 85%;
+    left: 20%;
+}
+
+.portrait .hajj-logo{
+	width: 20%;
+    left: auto;
+    right: 3%;
+    top: 45%;
+}
+
+/*
+
+.portrait .hajj-logo{
+	width: 20%;
+    left: auto;
+    right: 3%;
+    top: 45%;
+}
+*/
+
+/*
+
+.portrait .hajj-logo {
+    width: 20%;
+    left: auto;
+    right: 3%;
+    top: 49%;
+}
+*/
+
+.cal-8, .cal-9 , .cal-10, .cal-11, .cal-12, .cal-13{
+	position: absolute;
+    height: 12%;
+    left: 35%;
+    top: 10%;
+    cursor: pointer;
+}
+.cal-9{
+	top: 22%;
+}
+.cal-10{
+	top: 34%;
+}
+.cal-11{
+	top: 46%;
+}
+.cal-12{
+	top: 58%;
+}
+.cal-13{
+	top: 70%;
+}
+
+.portrait .cal-8, .portrait .cal-9 , .portrait .cal-10, .portrait .cal-11, .portrait .cal-12, .portrait .cal-13{
+	height: auto;
+    width: 12%;
+    left: auto;
+    right: 25%;
+    top: 40%;
+}
+.portrait .cal-9{
+	right: 37%;
+    top: 40%;
+}
+.portrait .cal-10{
+	right: 49%;
+    top: 40%;
+}
+.portrait .cal-11{
+	right: 61%;
+    top: 40%;
+}
+.portrait .cal-12{
+	right: 73%;
+    top: 40%;
+}
+.portrait .cal-13{
+	right: 85%;
+    top: 40%;
+}
+
+.no-hover{
+	display:block;
+}
+.on-hover{
+	display: none;
+}
+.hover-affect:hover .no-hover{
+	display: none;
+}
+.hover-affect:hover .on-hover{
+	display: block;
+}
+
+
+
+.right-side{
+	display:inline-block;
+	width:74%;
+	position:relative;	
+    height: 100vh;
+}
+
+.portrait .right-side{
+	width:99%;
+	height:70%;
+	position:absolute;
+	top:0;
+}
+.top-side{
+	position: absolute;
+	top:0;
+	width: 100%;
+	height:30%;
+}
+
+.islamweb-logo{
+	position: absolute;
+    width: 15%;
+    right: 3%;
+    top: 33%;
+}
+
+.bottom-side{
+	position: absolute;
+/*	top:30%;*/
+	width: 100%;
+	height:70%;
+	margin-left: -5%;
+}
+.portrait .bottom-side{
+	margin-left:0;
+}
+.bottom-side-container{
+	max-width: fit-content;
+	
+    margin: auto;
+    position: relative;
+}
+.bottom-bg{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.hajj-map{
+	position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.makah{
+	position: absolute;
+    top: 29.5%;
+    left: 13.55%;
+    z-index: 1;
+    width: 10.33%;
+}
+
+.makah-button{
+	position: absolute;
+    top: 12%;
+    left: 6%;
+    background: transparent;
+    z-index: 2;
+    width: 76%;
+    height: 27%;
+    transform: skewY(-13deg) rotateZ(-7deg);
+}
+
+.jamaraat{
+	position: absolute;
+    top: 28.8%;
+    left: 32.6%;
+    z-index: 1;
+    width: 13.33%;
+}
+
+.jamaraat-button{
+	position: absolute;
+    top: 11%;
+    left: 26%;
+    background: transparent;
+    z-index: 2;
+    width: 46%;
+    height: 21%;
+    transform: skewY(24deg) rotateZ(-3deg);
+}
+
+.mina{
+	position: absolute;
+    top: 50.3%;
+    left: 50.52%;
+    z-index: 1;
+    width: 11.5%;
+}
+
+.mina-button{
+	position: absolute;
+    top: 8%;
+    left: 23%;
+    background: transparent;
+    z-index: 2;
+    width: 63%;
+    height: 22%;
+    transform: rotateZ(-3deg);
+}
+
+.mozdalefah{
+	position: absolute;
+    top: 44.58%;
+    left: 66.55%;
+    z-index: 1;
+    width: 12.9%;
+}
+
+.mozdalefah-button{
+	position: absolute;
+    top: 8%;
+    left: 29%;
+    background: transparent;
+    z-index: 2;
+    width: 57%;
+    height: 19%;
+    transform: rotateZ(-8deg);
+}
+
+.arafaat{
+	position: absolute;
+    top: 41.5%;
+    left: 78.5%;
+    z-index: 1;
+    width: 18%;
+}
+
+.arafaat-button{
+	position: absolute;
+    top: 5%;
+    left: 38%;
+    background: transparent;
+    z-index: 2;
+    width: 39%;
+    height: 13.5%;
+    transform: skewY(4deg);
+}
+
+.mozdalefah-button:hover, .makah-button:hover, .mina-button:hover, .arafaat-button:hover,
+ .jamaraat-button:hover , .meqaat:hover, .airplane:hover, .ambulance:hover{
+	cursor:pointer;
+}
+
+.meqaat{
+	position: absolute;
+    top: 68%;
+    left: 29%;
+    z-index: 1;
+    width: 6.7%;
+}
+.meqaat-text{
+	max-width: 142% !important;
+    position: absolute;
+    top: 88%;
+    left: -68%;
+	display:none;
+}
+
+.meqaat:hover .meqaat-text{
+	display:block;
+}
+
+.ambulance{
+	position: absolute;
+    top: 77%;
+    left: 42%;
+    z-index: 1;
+    width: 7%;
+}
+
+.ambulance-text{
+	max-width: 200% !important;
+    position: absolute;
+    top: 57%;
+    left: 20%;
+	display:none;
+}
+
+.ambulance:hover .ambulance-text{
+	display:block;
+}
+
+/*
+.airplane{
+	position: absolute;
+    top: 15%;
+    right: 35%;
+    z-index: 1;
+    width: 12%;
+}
+
+.airplane-text{
+	position: absolute;
+    top: 68%;
+    left: -38%;
+    width: 80%;
+	display:none;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

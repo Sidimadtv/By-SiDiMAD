@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hajj Map</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--
+    <div id="loader-page">
+	   <div class="loader-name">Loading</div>
+	   <div class="loader-circle"></div>
+    </div>
+-->
+    <div id="loader-page" class="three">
+        <div class="loader" id="loader-2">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="hajj-map-container" id="hajj-map-container">
+        <img src="images/cloud1.png" class="cloud1 cloud">
+        <img src="images/cloud2.png" class="cloud2 cloud">
+        <img src="images/cloud3.png" class="cloud3 cloud">
+        <img src="images/cloud2.png" class="cloud4 cloud">
+        <img src="images/cloud3.png" class="cloud5 cloud">
+        <div class="left-side">
+            <div class="hajj-logo2 hajj-logo3">
+                <img src="images/requiredImgs/hajjMap/hajj-map-FR.png" id=hajjMap>
+            </div>
+            <div class="cal cal-8 hover-affect" onclick="openModal8()">
+                <img src="images/calender/8.png" class="no-hover">
+                <img src="images/calender/8-hover.png" class="on-hover">
+            </div>
+            <div class="cal cal-9 hover-affect" onclick="openModal9()">
+                <img src="images/calender/9.png" class="no-hover">
+                <img src="images/calender/9-hover.png" class="on-hover">
+            </div>
+            <div class="cal cal-10 hover-affect" onclick="openModal10()">
+                <img src="images/calender/10.png" class="no-hover">
+                <img src="images/calender/10-hover.png" class="on-hover">
+            </div>
+            <div class="cal cal-11 hover-affect" onclick="openModal11()">
+                <img src="images/calender/11.png" class="no-hover">
+                <img src="images/calender/11-hover.png" class="on-hover">
+            </div>
+            <div class="cal cal-12 hover-affect" onclick="openModal12()">
+                <img src="images/calender/12.png" class="no-hover">
+                <img src="images/calender/12-hover.png" class="on-hover">
+            </div>
+            <div class="cal cal-13 hover-affect" onclick="openModal13()">
+                <img src="images/calender/13.png" class="no-hover">
+                <img src="images/calender/13-hover.png" class="on-hover">
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="top-side">
+                <div class="islamweb-logo">
+                    <img src="images/islamweb-logo.png">
+                </div>
+                <div class="airplane-help">
+                        <span class="text">Cliquer pour les détails</span>
+                </div>
+                <div class="airplane">        
+                    <div class="loader-circle2">
+
+                        <div class="border">
+                        </div>
+                        <div class="border2">
+                        </div>
+
+                        <img src="images/airplane.png" onclick="openModalAirplane()">
+                    </div>
+                    <img src="images/requiredImgs/Passenger/Passenger-FR.png" class="airplane-text2" onclick="openModalAirplane()">
+                </div>
+            </div>
+            <div class="bottom-side">
+                <div class="bottom-side-container">
+                    <img src="images/bottom-bg.png" class="bottom-bg">
+                    <div class="hajj-map">
+                        <div>
+                            <div class="makah hover-affect">
+                                <img src="images/cities/makkah-fr.png" class="no-hover">
+                                <img src="images/cities/makkah-fr-hover.png" class="on-hover">
+                                <div class="makah-button" onclick="openModalMakah()"></div>
+                            </div>
+                            <div class="jamaraat hover-affect">
+                                <img src="images/cities/jamaraat-fr.png" class="no-hover">
+                                <img src="images/cities/jamaraat-fe-hover.png" class="on-hover">
+                                <div class="jamaraat-button" onclick="openModalJamaraat()"></div>
+                            </div>
+                            <div class="mina hover-affect">
+                                <img src="images/cities/mina-fr.png" class="no-hover">
+                                <img src="images/cities/mina-fr-hover.png" class="on-hover">
+                                <div class="mina-button" onclick="openModalMina()"></div>
+                            </div>
+                            <div class="mozdalefah hover-affect">
+                                <img src="images/cities/Muzdalifah-fr.png" class="no-hover">
+                                <img src="images/cities/Muzdalifah-re-hover.png" class="on-hover">
+                                <div class="mozdalefah-button" onclick="openModalMozdalefah()"></div>
+                            </div>
+                            <div class="arafaat hover-affect">
+                                <img src="images/cities/'Arafah-Area-fr.png" class="no-hover">
+                                <img src="images/cities/'Arafah-Area-fr-hover.png" class="on-hover">
+                                <div class="arafaat-button" onclick="openModalArafaat()"></div>
+                            </div>
+                            
+                            <div class="meqaat">
+                                
+                                <div class="loader-circle3">
+                                    <div class="border3">
+                                    </div>
+                                    <div class="border4">
+                                    </div>
+                                    <img src="images/meqaat.png" onclick="openModalMeqaat()">
+                                    <img src="images/requiredImgs/Meeqat/meeqat-FR.png" class="meqaat-text" onclick="openModalMeqaat()">
+                                </div>
+                            </div>
+                            <div class="meqaat-help">
+                                    <span class="text2">Cliquer pour les détails</span>
+                            </div>
+                            <div class="ambulance">
+                                <span class="text3">Cliquer pour les détails</span>
+                                <div class="loader-circle4">
+                                    <div class="border5">
+                                    </div>
+                                    <div class="border6">
+                                    </div>
+                                    <img src="images/ambulance.png" onclick="openModalAmbulance()">
+                                    <img src="images/requiredImgs/FirstAid/first_aid_FR.png" class="ambulance-text" onclick="openModalAmbulance()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal-8-animation">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/81.png" class="arrows1">
+                        </div>
+                        <div class="cal-9-animation">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/91.png" class="arrows2">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/92.png" class="arrows2-1">
+                        </div>
+                        <div class="cal-10-animation">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/101.png" class="arrows3">
+                            <img src="images/arrows/111.png" class="arrows3-1">
+                            <img src="images/arrows/103.png" class="arrows3-2">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<img src="images/red-arrow.png" class="arrow-2">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<img src="images/red-arrow.png" class="arrow-3">
+-->
+                        </div>
+                        <div class="cal-11-animation">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/111.png" class="arrows4">
+                            <img src="images/arrows/133.png" class="arrows4-1">
+                            <img src="images/arrows/133.png" class="arrows4-2">
+                            <img src="images/arrows/114.png" class="arrows4-3">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<img src="images/red-arrow.png" class="arrow-2">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<img src="images/red-arrow.png" class="arrow-3">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<img src="images/red-arrow.png" class="arrow-4">
+-->
+                        </div>
+                        <div class="cal-12-animation">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/111.png" class="arrows5">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/133.png" class="arrows5-1">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/133.png" class="arrows5-2">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/114.png" class="arrows5-3">
+                            <img src="images/arrows/131.png" class="arrows5-4">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <!--							<img src="images/red-arrow.png" class="arrow-5">-->
+                        </div>
+                        <div class="cal-13-animation">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/111.png" class="arrows6">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/133.png" class="arrows6-1">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/133.png" class="arrows6-2">
+                            <!--
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+-->
+                            <img src="images/arrows/131.png" class="arrows6-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="makah-modal" class="modal" onclick="hideModal1()">
+            <div id="video_player" class="video_player">
+                <div onclick="hideModelMakah()" class="close-model">X</div>
+                <video controls poster="videos/makah-pic/1.jpg">
+							<source src="videos/makah/1.mp4" type="video/mp4">
+						</video>
+                <div class="all-videos">
+                    <a href="videos/makah/1.mp4">
+                        <img src="videos/makah-pic/1.jpg" alt="Mekka Al-Moukarrama 1">
+                        <div>
+                            <p>Mekka Al-Moukarrama 1</p>
+                            <p>La porte de Noble Ka'aba</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/2.mp4">
+                        <img src="videos/makah-pic/2.jpg" alt="Vidéo de Mekka Al-Moukarrama 2">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 2</p>
+                            <p>La porte du Haram Al-Makki</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/3.mp4">
+                        <img src="videos/makah-pic/3.jpg" alt="Vidéo de Mekka Al-Moukarrama 3">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 3</p>
+                            <p>La porte du Haram vue de l'exterieir</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/4.mp4">
+                        <img src="videos/makah-pic/4.jpg" alt="Vidéo de Mekka Al-Moukarrama 4">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 4</p>
+                            <p>l-Haram Al-Makki de nuit vue de l'exterieur</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/5.mp4">
+                        <img src="videos/makah-pic/5.jpg" alt="Vidéo de Mekka Al-Moukarrama 5">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 5</p>
+                            <p>Le Sa'i entre Safa et Marwa 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/6.mp4">
+                        <img src="videos/makah-pic/6.jpg" alt="Vidéo de Mekka Al-Moukarrama 6">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 6</p>
+                            <p>Le Sa'i entre Safa et Marwa 2</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/7.mp4">
+                        <img src="videos/makah-pic/7.jpg" alt="Vidéo de Mekka Al-Moukarrama 7">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 7</p>
+                            <p>As-Safa et Al Marwa Deuxième étage 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/8.mp4">
+                        <img src="videos/makah-pic/8.jpg" alt="Vidéo de Mekka Al-Moukarrama 8">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 8</p>
+                            <p>As-Safa et Al Marwa Deuxième étage 2</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/9.mp4">
+                        <img src="videos/makah-pic/9.jpg" alt="As-Safa et Al Marwa Deuxième étage 2">
+                        <div>
+                            <p>As-Safa et Al Marwa Deuxième étage 2</p>
+                            <p>As-Safa et Al Marwa Deuxième étage 3</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/10.mp4">
+                        <img src="videos/makah-pic/10.jpg" alt="Vidéo Mekka Al-Moukarrama 10">
+                        <div>
+                            <p>Vidéo Mekka Al-Moukarrama 10</p>
+                            <p>As-Safa et Al Marwa Deuxième étage 4</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/11.mp4">
+                        <img src="videos/makah-pic/11.jpg" alt="Vidéo de Mekka Al-Moukarrama 11">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 11</p>
+                            <p>L’esplanade du Haram Al-Makki 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/12.mp4">
+                        <img src="videos/makah-pic/12.jpg" alt="L’esplanade du Haram Al-Makki 1">
+                        <div>
+                            <p>L’esplanade du Haram Al-Makki 1</p>
+                            <p>L’esplanade du Haram Makki 2</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/13.mp4">
+                        <img src="videos/makah-pic/13.jpg" alt="Vidéo de Mekka Al-Moukarrama 13">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 13</p>
+                            <p>Tawaf à l’esplanade du Haram Al-Makki 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/14.mp4">
+                        <img src="videos/makah-pic/14.jpg" alt="Vidéo de Mekka Al-Moukarrama 14">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 14</p>
+                            <p>Tawaf à l’esplanade du Haram Al-Makki 2</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/15.mp4">
+                        <img src="videos/makah-pic/15.jpg" alt="Vidéo de Mekka Al-Moukarrama 15">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 15</p>
+                            <p>L’esplanade du Haram Al-Makki Durant le Hadj 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/makah/16.mp4">
+                        <img src="videos/makah-pic/16.jpg" alt="Vidéo de Mekka Al-Moukarrama 16">
+                        <div>
+                            <p>Vidéo de Mekka Al-Moukarrama 16</p>
+                            <p>L’esplanade du Haram Al-Makki Durant le Hadj 2</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="jamaraat-modal" class="modal" onclick="hideModal2()">
+            <div id="video_player" class="video_player">
+                <div onclick="hideModelJamaraat()" class="close-model">X</div>
+                <video controls poster="videos/jamaraat-pic/17.jpg">
+							<source src="videos/jamaraat/17.mp4" type="video/mp4">
+						</video>
+                <div class="all-videos">
+                    <a href="videos/jamaraat/17.mp4">
+                        <img src="videos/jamaraat-pic/17.jpg" alt="Vidéo de la lapidation des Djamarat 1">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 1</p>
+                            <p>la lapidation des Djamarat 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/jamaraat/18.mp4">
+                        <img src="videos/jamaraat-pic/18.jpg" alt="Vidéo de la lapidation des Djamarat 2">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 2</p>
+                            <p>la lapidation des Djamarat 2</p>
+                        </div>
+                    </a>
+                    <a href="videos/jamaraat/19.mp4">
+                        <img src="videos/jamaraat-pic/19.jpg" alt="Vidéo de la lapidation des Djamarat 3">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 3</p>
+                            <p>La montée des pèlerins sur le pont des Djamarat</p>
+                        </div>
+                    </a>
+                    <a href="videos/jamaraat/20.mp4">
+                        <img src="videos/jamaraat-pic/20.jpg" alt="Vidéo de la lapidation des Djamarat 4">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 4</p>
+                            <p>Le déplacement des pèlerins pour la lapidation des Djamarat going to Jamaraat</p>
+                        </div>
+                    </a>
+                    <a href="videos/jamaraat/21.mp4">
+                        <img src="videos/jamaraat-pic/21.jpg" alt="Vidéo de la lapidation des Djamarat 5">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 5</p>
+                            <p>la lapidation des Djamarat 3</p>
+                        </div>
+                    </a>
+                    <a href="videos/jamaraat/22.mp4">
+                        <img src="videos/jamaraat-pic/22.jpg" alt="Vidéo de la lapidation des Djamarat 6">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 6</p>
+                            <p>la lapidation des Djamarat 4</p>
+                        </div>
+                    </a>
+                    <a href="videos/jamaraat/23.mp4">
+                        <img src="videos/jamaraat-pic/23.jpg" alt="Vidéo de la lapidation des Djamarat 7">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 7</p>
+                            <p>la lapidation des Djamarat 5</p>
+                        </div>
+                    </a>
+                    <a href="videos/jamaraat/24.mp4">
+                        <img src="videos/jamaraat-pic/24.jpg" alt="Vidéo de la lapidation des Djamarat 8">
+                        <div>
+                            <p>Vidéo de la lapidation des Djamarat 8</p>
+                            <p>la lapidation des Djamarat 6</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="mina-modal" class="modal" onclick="hideModal3()">
+            <div id="video_player" class="video_player">
+                <div onclick="hideModelMina()" class="close-model">X</div>
+                <video controls poster="videos/mina-pic/25.jpg">
+							<source src="videos/mina/25.mp4" type="video/mp4">
+						</video>
+                <div class="all-videos">
+                    <a href="videos/mina/25.mp4">
+                        <img src="videos/mina-pic/25.jpg" alt="Vidéo de la zone de Mina 1">
+                        <div>
+                            <p>Vidéo de la zone de Mina 1</p>
+                            <p>Mina au lever du soleil</p>
+                        </div>
+                    </a>
+                    <a href="videos/mina/26.mp4">
+                        <img src="videos/mina-pic/26.jpg" alt="Vidéo de la zone de Mina 2">
+                        <div>
+                            <p>Vidéo de la zone de Mina 2</p>
+                            <p>La marche des pèlerins vers Mina à partir de la frontière de Mouzdalifa</p>
+                        </div>
+                    </a>
+                    <a href="videos/mina/27.mp4">
+                        <img src="videos/mina-pic/27.jpg" alt="Vidéo de la zone de Mina 3">
+                        <div>
+                            <p>Vidéo de la zone de Mina 3</p>
+                            <p>Les pèlerins à Mina Durant les jours du Tachriq</p>
+                        </div>
+                    </a>
+                    <a href="videos/mina/28.mp4">
+                        <img src="videos/mina-pic/28.jpg" alt="Vidéo de la zone de Mina 4">
+                        <div>
+                            <p>Vidéo de la zone de Mina 4</p>
+                            <p>la lapidation des Djamarat 7</p>
+                        </div>
+                    </a>
+                    <a href="videos/mina/29.mp4">
+                        <img src="videos/mina-pic/29.jpg" alt="Vidéo de la zone de Mina 5">
+                        <div>
+                            <p>Vidéo de la zone de Mina 5</p>
+                            <p>Les jours du Tachriq 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/mina/30.mp4">
+                        <img src="videos/mina-pic/30.jpg" alt="Vidéo de la zone de Mina 6">
+                        <div>
+                            <p>Vidéo de la zone de Mina 6</p>
+                            <p>Les jours du Tachriq 2</p>
+                        </div>
+                    </a>
+                    <a href="videos/mina/31.mp4">
+                        <img src="videos/mina-pic/31.jpg" alt="Vidéo de la zone de Mina 7The Mina area 7">
+                        <div>
+                            <p>Vidéo de la zone de Mina 7</p>
+                            <p>La pluie à Mina</p>
+                        </div>
+                    </a>
+                    <a href="videos/mina/32.mp4">
+                        <img src="videos/mina-pic/32.jpg" alt="Vidéo de la zone de Mina 8">
+                        <div>
+                            <p>Vidéo de la zone de Mina 8</p>
+                            <p>Les pèlerins à Mina</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="mozdalefah-modal" class="modal" onclick="hideModal4()">
+            <div id="video_player" class="video_player">
+                <div onclick="hideModelMozdalefah()" class="close-model">X</div>
+                <video controls poster="videos/mozdalefah-pic/33.jpg">
+							<source src="videos/mozdalefah/33.mp4" type="video/mp4">
+						</video>
+                <div class="all-videos">
+                    <a href="videos/mozdalefah/33.mp4">
+                        <img src="videos/mozdalefah-pic/33.jpg" alt="Vidéo de la zone de Mouzdalifa">
+                        <div>
+                            <p>Vidéo de la zone de MouzdalifaThe Muzdalifah area</p>
+                            <p>Les pèlerins à Mouzdalifa</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="arafaat-modal" class="modal" onclick="hideModal5()">
+            <div id="video_player" class="video_player">
+                <div onclick="hideModelArafaat()" class="close-model">X</div>
+                <video controls poster="videos/arafaat-pic/34.jpg">
+							<source src="videos/arafaat/34.mp4" type="video/mp4">
+						</video>
+                <div class="all-videos">
+                    <a href="videos/arafaat/34.mp4">
+                        <img src="videos/arafaat-pic/34.jpg" alt="Vidéo de la zone de Arafat 1">
+                        <div>
+                            <p>Vidéo de la zone de Arafat 1</p>
+                            <p>Les pèlerins à Arafat 1</p>
+                        </div>
+                    </a>
+                    <a href="videos/arafaat/35.mp4">
+                        <img src="videos/arafaat-pic/35.jpg" alt="Vidéo de la zone de Arafat 2">
+                        <div>
+                            <p>Vidéo de la zone de Arafat 2</p>
+                            <p>Les pèlerins à Arafat 2</p>
+                        </div>
+                    </a>
+                    <a href="videos/arafaat/36.mp4">
+                        <img src="videos/arafaat-pic/36.jpg" alt="Vidéo de la zone de Arafat 3">
+                        <div>
+                            <p>Vidéo de la zone de Arafat 3</p>
+                            <p>Les pèlerins à Arafat 3</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="airplane-modal" class="modal" onclick="hideModal6()">
+            <div class="text-modal">
+                <div onclick="hideModelAirplane()" class="close-model">X</div>
+                <h3>L'invocation pour le voyage:</h3>
+                <p><span>L'invocation pour le voyage:</span>“En montant sa monture « Allah est Grand (trois fois) Louanges à Allah ; Gloire à Allah ; Allah est le Plus Grand. Gloire à Celui Qui a mis cette monture à notre disposition, alors que nous n'eussions
+                    pu la dominer. En vérité, nous retournons vers notre Seigneur. Seigneur, nous te demandons de nous accorder dans ce voyage-ci, la bienfaisance et la piété et de nous diriger vers les actes qui Te satisferont. Seigneur, Tu es le Compagnon
+                    de route et le Garant de la famille. Seigneur, je cherche refuge auprès de Toi contre les peines et les difficultés du voyage, contre l'apparence triste et contre la mauvaise fortune dans les biens et dans la famille”.
+                </p>
+                <!--
+						<p>Upon returning, the same supplication is recited with the following addition:
+                        “Ayaiboon, taa-iboon, `abidoon, lirabbina haamidoon.”
+                        “We return, repent, worship and praise our Lord.”
+                        </p>
+-->
+                <!--
+						<p><span>Supplication of the resident for the traveler:</span>
+                        “Astawdi`u Allaaha deenaka, wa amaanaatika, wakhawaateema a`maalika.”
+                        “I place your religion, your faithfulness and the ends of your deeds in the trust of Allaah.”
+                        </p>
+                        <p><span>Supplication of the traveler for the resident:</span>
+                        “Astawdi`ukun Allah allathe laa tadee`u wadaa-i`uhu.”
+                        “I place you in the trust of Allaah, Whose trust is never misplaced.”
+                        </p>
+-->
+            </div>
+        </div>
+        <div id="meqaat-modal" class="modal" onclick="hideModal7()">
+            <div class="text-modal">
+                <div onclick="hideModelMeqaat()" class="close-model">X</div>
+                <h3>Les Miqat</h3>
+                <p><span>Dhoul Houleifa:</span>C'est le Miqat des gens de Médine et de ceux qui empruntent le même itinéraire. Treize kilomètres séparent ce Miqat de la Mosquée Prophétique. C'est le Miqat le plus éloigné de la Mecque. Ce Miqat est appelé
+                    aujourd'hui Abyar Ali.</p>
+                <p><span>Al Dojouh'fa:</span>C'est un village proche de la ville de Rabegh mais de nos jours les gens entrent en état d'Ihram au niveau de Rabegh parce qu'elle est située légèrement avant Al Djouh'fa. Deux cents quatre-vingts kilomètres séparent
+                    ce Miqat des habitants de la Grande Syrie (Ach-Cham), de I 'Egypte, du Nord du Royaume d'Arabie Saoudite, des gens de I 'Afrique du Nord et de I 'Ouest et de ceux qui empruntent leur route.</p>
+                <p><span>Qarn Al-Manazel:</span>On l'appelle Assayl Al-Kabir. Il se trouve à soixante-dix-huit kilomètres de la Mecque. C'est le Miqat des gens de Nadjd, de tous ceux qui viennent de I 'Est, notamment du Golfe, d'Iraq, d'Iran et tous ceux
+                    qui empruntent leur chemin.</p>
+                <p><span>Yalamlam: </span>Il est appelé de nos jours As-Saadia. Il est situé à cent vingt kilomètres de la Mecque. C'est le Miqat des gens du Yémen et de ceux qui passent par leur route.</p>
+                <p><span>Dhat Irq:</span>C'est le Miqat des gens de I 'Iraq et des habitants de I 'Est. Actuellement, il n'est pas utilisé car aucune route ne permet d'y accéder. Il est situé à cent kilomètres de la Mecque. De nos jours, les pèlerins venant
+                    de I' Est entrent en état de sacralisation à Assayl Al Kabir ou bien à Dhoul Houleifa. Ceux qui se trouvent en 'deçà de ces points, se mettent en état d'Ihram à partir de leur résidence, les mecquois se mettent en état d'Ihram de la
+                    Mecque par exemple
+                </p>
+                <!--
+						<p><span>The Meeqaat of the people of Makkah: </span>The people of Makkah- as well as those who reside in it and who are not originally from Makkah- should assume the state of Ihram for Hajj from their homes, as regards for 'Umrah, they should assume the state of Ihram outside the boundaries of Makkah, like at At-Tan'eem.
+                        However, the people who do not live within the Meeqaat, like the people of Jeddah, then they should assume the state of Ihram from their homes or from where they initiate the intention of Hajj. 
+                        </p>
+-->
+            </div>
+        </div>
+        <div id="ambulance-modal" class="modal" onclick="hideModal8()">
+            <div class="text-modal">
+                <div onclick="hideModelAmbulance()" class="close-model">X</div>
+                <h3>Les soins médicaux</h3>
+                <p><span>Le coup de soleil:Le moyen essentiel dans la prévention des atteintes thermique est de ne pas s'exposer au soleil pendant de longues durées et d'utiliser une ombrelle en cas de déplacement. Boire des quantités suffisantes de liquides aide à éviter les atteintes thermiques</span>
+                    <p>
+                        <p><span>Les maladies contagieuses:</span>Nous te conseillions, cher pèlerin, de te vacciner contre les principales maladies contagieuses, de ne manger qu'après avoir bien lavé tes mains et nécessairement de ne boire que de l'eau
+                            saine et en grande quantité</p>
+                        <p><span>Les maladies cardiaques, rénales, le diabète et le rhumatisme:</span>Nous conseillons dans ce genre de maladie de faire ce qui suit.Consulter son médecin traitant et préparer une quantité suffisante de médicaments pour toute
+                            la durée du pèlerinage. Porter une carte médicale. Eviter la fatigue, les émotions, le stress ainsi que les moments d'encombrement et s'abstenir de monter la montagne.</p>
+                        <p><span>Les premiers soins: </span>Nous conseillons à tout pèlerin de préparer une petite trousse médicale ou pharmaceutique contentant les médicaments dont il peut avoir besoin au cours de l'accomplissement des rites du Hajj. Il
+                            y a deux types de médicaments utilisés pour certaines maladies chroniques dont souffre le pèlerin et les médicaments génériques qui peuvent être nécessaires pour le traitement de certaines maladies simples et à caractère provisoire,
+                            auxquels le pèlerin peut être nécessaires pour le traitement de certaines maladies et à caractère provisoire, auxquels le pèlerin peut être exposé et ce en attendant de se présenter à une médecine, ou à un centre de santé.
+                            Les principaux que doit contenir la trousse médicale sont : les sels compensatoires par voie orale, les antipyrétiques et les analgésiques tels que "paracétamol", l'anti toux et le répulsif des expectorations, ainsi que les
+                            médicaments du froid et que les médicaments contre la grippe, pommades pour les brûlures, crèmes palliatives pour les inflammations et les coups de soleil gaze de coton et de laine et antiseptique pour les blessures, tels que
+                            I'Aldettol.
+                        </p>
+            </div>
+        </div>
+
+        <div id="cal-8-modal" class="modal" onclick="hideModal9()">
+            <div class="text-modal">
+                <div onclick="hideModel8()" class="close-model">X</div>
+                <br>
+                <h3>Le huitième jour de Dhoul-Hijjah</h3>
+                <ul>
+                    <li>Se laver et se parfumer avant de rentrer en état de sacralisation (AI-ihram) en ce qui concerne le Mout mati’.</li>
+                    <li>Entrer en état de sacralisation avant Le Zawal (le déclin du soleil de son zénite).</li>
+                    <li>Formuler l'intention d'accomplir le Hadj et dire (Labaykallahouma Hadjan : Me voilà, ô Seigneur, pour [accomplir] le Hadj). S'il a peur qu'un empêchement l'empêche de terminer son Hadj, il convient qu'il le conditionne en disant :
+                        (Si je suis empêché mon lieu de désacralisation sera là où Tu me retiendras). S'il ne craint rien, il ne doit pas poser cette condition.</li>
+                    <li>Se rendre à Mina le jour d'At-Tarwiya (le Sème jour), y passer la nuit qui précède le 9ème jour, y accomplir cinq prières et ne la quitter qu'après le lever du soleil du 9ème jour.</li>
+                    <li>Multiplier les formulations de la Talbiya (Labbayka Allahouma Labbayk, Labbayka La Charika Laka Labbayk, Irina Al Hamda wa An-Niïmata Laka wal Moulk, La Charika lak ce qui signifie : Me voici Seigneur, me voici, me voici ! Tu n'as
+                        aucun associé. Me voici ! A Toi la Louange, la Grâce et la Souveraineté), et ce jusqu'à lancer les pierres contre Jamarat AI Aqaba le 10ème jour).</li>
+                    <!--							<li>قصر الصلاة الرباعية اثنتين (الظهر والعصر والعشاء).</li>-->
+                    <li>Réduire de moitié les prières qui comprennent 4 Rak'a (Dhohr, 'Asr, 'Icha)</li>
+                </ul>
+            </div>
+        </div>
+        <div id="cal-9-modal" class="modal" onclick="hideModal10()">
+            <div class="text-modal">
+                <div onclick="hideModel9()" class="close-model">X</div>
+                <br>
+                <h3>Le neuvième jour de Dhoul-Hijjah</h3>
+                <ul>
+                    <li>Partir à 'Arafa après le lever du soleil.</li>
+                    <li>Regrouper et raccourcir le Dohr et 'Asr et les accomplir dans le temps du premier Faire beaucoup d'invocations, évoquer Allah, se repentir en ce jour.</li>
+                    <!--							<li>صلاة الظهر والعصر جمعاً وقصراً (جمع تقديم).</li>-->
+                    <li>Rester à 'Arafat jusqu'au coucher du soleil.</li>
+                    <li>Quitter Arafat après le coucher du Soleil en marchant doucement, en toute sérénité et décence, sans se hâter de peur qu'il ne nuise à quelqu'un et se diriger vers Mouzdalifah.</li>
+                    <li>Regrouper et raccourcir le Maghreb et le 'Icha (3+2) en faisant un seul Adhan et deux lqama..</li>
+                    <!--							<li>السير من عرفة إلى مزدلفة بعد مغيب الشمس بسكينة وخشوع.</li>-->
+                    <li>Dormir très Tôt .</li>
+                    <!--							<li>المسارعة إلى النوم بعد الصلاة وعدم الانشغال بشيء.</li>-->
+                    <li>Passer cette nuit à Mouzdalifah est l'une des obligations du Hajj, sauf que les gens qui ont une excuse (hommes ou femmes) qui sont autorisés à la quitter en fin de nuit. Ceux qui n'ont pas une excuse doivent rester à Mouzdalifa et
+                        y prier le Fajr car le Prophète (Salla Allahou 'Alaihi wa Sallam) a fait ainsi.</li>
+                    <li>Accomplir la prière du Fajr au début de son temps, se diriger vers le Mach'ar Al-Haram y invoquer Allah, multiplier le le Tahlil et le Takbir jusqu'à que le soleil soit sur le point de se lever</li>
+                </ul>
+            </div>
+        </div>
+        <div id="cal-10-modal" class="modal" onclick="hideModal11()">
+            <div class="text-modal">
+                <div onclick="hideModel10()" class="close-model">X</div>
+                <br>
+                <h3>Le dixième jour de Dhoul-Hijjah</h3>
+                <ul>
+                    <li>Se diriger vers Mina avant le lever du soleil en marchant doucement, en toute sérénité et décence.</li>
+                    <li>Hâter légèrement le pas en passant par la vallée de Mouhassir.</li>
+                    <li>Multiplier la Talbiya et ne cesser de la faire qu'une fois arrivé à Djamrate Al Aqaba.</li>
+                    <li>Le jet de Djamrate Al Aqaba .</li>
+                    <li>L'égorgement de l'offrande Il n'est obligatoire que pour celui qui pratique un Hadj du type Tamattou'ou du type Qiran..</li>
+                    <li>Le rasage ou le raccourcissement des cheveux et le rasage est meilleur. La femme doit, également, couper ses cheveux mais seulement de la mesure d'une phalangette.</li>
+                    <li>A cette étape le pèlerin quitte partiellement l'état de consécration rituelle. Tout ce qui lui a été interdit durant l'Ihram, lui deviendra permis, sauf la copulation qui lui sera permise dès qu'il accomplira le Tawaf du déferlement
+                        (lfadha).
+                    </li>
+                    <li>Tawaf Al lfadha.</li>
+                    <!--							<li>إن قدم النحر على الرمي أو الطواف عليهما أو الحلق أجزأه ذلك فيفعل الحاج الأرفق.</li>-->
+                    <li>Le Saây (pour celui qui ne s'en est déjà pas acquitté).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="cal-11-modal" class="modal" onclick="hideModal12()">
+            <div class="text-modal">
+                <div onclick="hideModel11()" class="close-model">X</div>
+                <br>
+                <h3>Le onzième jour de Dhoul-Hijjah</h3>
+                <ul>
+                    <li>A Mina, en ce jour, le pèlerin doit lancer les cailloux contre les trois Dja-marates. Suivant la Sunna, il doit commencer par la petite Djamra, puis la moyenne et enfin la grande (celle appelée Al Aqaba). Il lance sept cailloux contre
+                        chaque Djamra, en disant à chaque jet « Au nom d'Allah. Allah est le plus Grand.»</li>
+                    <li>Il est recommandé de faire des invocations après le jet des cailloux contre chaque Djamra, à l'exception de celle d'Al Aqaba qui est la plus grande.</li>
+                    <li>Le temps consacré au jet des cailloux commence dès la déclinaison du soleil (le temps du midi) jusqu'au lever de l'aube du jour suivant.</li>
+                    <li>En jetant les cailloux à Djamrate Al Aqaba, le pèlerin doit lui faire face, en ayant Mina à sa droite et la route menant à La Mecque à sa gauche. - Passer la nuit à Mina est l'une des obligations du Hajj.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="cal-12-modal" class="modal" onclick="hideModal13()">
+            <div class="text-modal">
+                <div onclick="hideModel12()" class="close-model">X</div>
+                <br>
+                <h3>Le douzième jour de Dhoul-Hijjah</h3>
+                <ul>
+                    <li>Lancer les cailloux contre les trois Djamarates. Suivant la Sunna, il doit commencer par la petite Djamra, puis la moyenne et enfin la grande (celle appelée Al Aqaba). Il lance sept cailloux contre chaque Djamra, en disant à chaque
+                        jet « Au nom d'Allah. Allah est le plus Grand. »</li>
+                    <li>Il est recommandé de faire des invocations après le jet des cailloux contre chaque Djamra, à l'exception de celle d'Al Aqaba qui est la plus grande.</li>
+                    <li>S'il est pressé, il peut quitter Mina ce jour avant le coucher du soleil.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="cal-13-modal" class="modal" onclick="hideModal14()">
+            <div class="text-modal">
+                <div onclick="hideModel13()" class="close-model">X</div>
+                <br>
+                <h3>Le treizième jour de Dhoul-Hijjah</h3>
+                <ul>
+                    <li>Le pèlerin qui n'a pas quitté Mina le douzième jour avant le coucher du soleil doit lancer les cailloux contre les trois Djamarates. Suivant la Sunna, il doit commencer par la petite Djamra, puis la moyenne et enfin la grande (celle
+                        appelée Al Aqaba). Il lance sept cailloux contre chaque Djamra, en disant à chaque jet : « Au nom d'Allah. Allah est le plus Grand.»</li>
+                    <li>Il est recommandé de faire des invocations après le jet des cailloux contre chaque Djamra, à l'exception de celle d'AI Aqaba qui est la plus grande..</li>
+                    <li>Avant de quitter Mekka, le pèlerin doit accomplir Tawaf al-wada' (le tawaf d'adieu). Ce Tawaf est le dernier acte que doit accomplir le pèlerin.</li>
+                    <!--                            <li>Women in their menstrual or postnatal period are exempted from this Tawaaf.</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
