@@ -62,7 +62,7 @@ function loadSurah(indx) {
 
                     const surahHtml = `
                     <div class="surah-body">
-                        <a href="/" id="back-btn"> ${backSvg}</a>
+                        <a href="http://www.sidimad.ml/quran/index.html" id="back-btn"> ${backSvg}</a>
                         <h1>${suraData.name_simple}</h1>
                         <div class="imfo">${suraData.revelation_place}</div>
                         <div id="translation-imfo"></div>
@@ -98,14 +98,14 @@ function translations(index) {
                     let bnT = res.data;
 
                     console.log(enT.translations);
-                    console.log(bnT.translations);
+                   
 
                     const elements =
                         document.querySelectorAll(".aya-translation");
                     elements.forEach((item, indx) => {
                         item.innerHTML = `
                     <p class="en-trans">${enT.translations[indx].text}</p>
-                    <p class="bn-trans">${bnT.translations[indx].text}</p>
+                    
                     `;
                     });
                 });
