@@ -1,0 +1,22 @@
+p
+{
+    color: white;
+    font-size: 20px;
+    text-align:center;
+}
+.text
+{
+    background-color: rgba(255, 166, 0, 0.548);
+    font-size: 20px;
+}
+h1
+{
+    color: white;
+    text-align:center;
+    font-size: 38px;
+}
+
+div.scrollmenu a
+{
+    margin-right: 25%;
+}
