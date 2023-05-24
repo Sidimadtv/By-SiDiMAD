@@ -32,7 +32,7 @@ homeModule.config([
 
                     var templateUrl = "https?://github.com/.+/.+";
                     var downloadUrlInfix = "#/home?url=";
-                    var downloadUrlPrefix = "https://sidimadtv-backup-sites.on.drv.tw/git/"+downloadUrlInfix;
+                    var downloadUrlPrefix = "https://www.sidimad.ml/git/"+downloadUrlInfix;
 
                     if ($routeParams.url) {
                         $scope.url = $routeParams.url;
