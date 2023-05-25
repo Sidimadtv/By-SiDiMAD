@@ -92,7 +92,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #149225;
+    background-color: #a00;
     border-radius: 50%;
     font-size: 22px;
     transition: .2s bottom ease-in-out;
@@ -207,7 +207,7 @@ body{
 .footer{
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-color: green;
+    background-color: #32a1ce;
     color: #fff;
     margin-top: 10em;
 }
@@ -246,7 +246,7 @@ body{
     transition: .3s all;
 }
 .copyright { 
-    background-color: rgb(2, 99, 2);
+    background-color: #32a1ce;
     font-family: 'rabar';
     letter-spacing: 1px;
 }
