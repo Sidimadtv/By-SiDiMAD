@@ -11,8 +11,9 @@ body{
     margin-top: 3em;
 }
 .name-title{
-    color: #2d8933;
+    color: #a00;
     font-family: 'hala';
+text-decoration: #32a1ce underline;
     margin-top: 1em;
 }
 .name p{
@@ -29,12 +30,12 @@ body{
 }
 .down{
     font-size: 25px;
-    color: #038d51;
+    color: #a00;
     text-decoration: none;
     transition: all .5s !important;
 }
 .down:hover{
-    color: #038d51;
+    color: #f3ab65;
     transition: all .5s !important;
 }
 .down:hover::before{
@@ -45,7 +46,7 @@ body{
     border: 1px solid black;
     border-radius: 7px;
     padding: 6px;
-    background: #038d51;
+    background: #a00;
     margin: 5px;
     transition: all .5s ease-in-out !important;
     font-family: 'assaf';
@@ -207,7 +208,7 @@ body{
 .footer{
     padding-top: 3rem;
     padding-bottom: 3rem;
-    background-color: #32a1ce;
+    background-color: #131722;
     color: #fff;
     margin-top: 10em;
 }
