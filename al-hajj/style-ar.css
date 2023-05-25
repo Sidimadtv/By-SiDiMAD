@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	padding:0;
-	overflow:hidden;
+	overflow-x:hidden;
     background: #9DAEC6;
 }
 
@@ -511,7 +511,7 @@ position: absolute;
 	position: absolute;
     width: 27%;
     right: 3%;
-    top: 33%;
+    top: 4%;
 }
 */
 
