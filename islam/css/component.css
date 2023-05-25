@@ -1,0 +1,274 @@
+
+/* back button */
+.cta {
+    position: relative;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+}
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+.cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+.cta:hover svg {
+    transform: translateX(0);
+}
+.cta:active {
+    transform: scale(0.95);
+}
+/* Name of Section */
+.title{
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-family: 'made';
+}
+/* Cards Img */
+.akeda-img{
+    margin-left: 0.6em;
+    background: #008cffcf;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.feka-img{
+    background: #a86ff3;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.sera-img{
+    background: #f69072;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.hadith-img{
+    background: #F57492;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.adab-img{
+    background: #E0963F;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.tafseer-img{
+    background: #4f3c05;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.akhla-img{
+    background: #F59173;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.monoat-img{
+    background: #0091a0;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.adeya-img{
+    background: #425aa1;
+    margin-left: 0.5em;
+    width: 50px;
+    border-radius: 8px;
+    height: 50px;
+}
+.h3{
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+}
+
+/* Question Section */
+.content__article {
+    direction: rtl;
+    text-align: right;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+}
+.verse {
+    color: var(--purple-color) !important;
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Othmani' !important;
+    line-height: 32px;
+}
+.hadith {
+    color: var(--green-color);
+}
+.ref {
+    color: var(--gray-color);
+}
+.content__text {
+    line-height: 2 !important;
+}
+.scroll-to{
+    text-decoration: none;
+}
+.scroll-to:hover{
+    text-decoration: none;
+}
+.content__text.items__grid .item__content {
+    box-shadow: 0px 3px 5px #39393929;
+    border-radius: 15px;
+    padding: 15px 0;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.content__text.items__grid .item__content .collapsible {
+    cursor: pointer;
+    padding-right: 30px;
+    position: relative;
+    background: transparent;
+}
+.content__text .item__content .item__header .scroll-to::before{
+    content: '+';
+    margin-top: -25px !important;
+    font-size: 2.5em;
+    width: 15px;
+    height: 2px;
+    transition: all 0.5s ease;
+    position: absolute;
+    right: 0;
+}
+.content__text .item__content .item__header.active .scroll-to::before{
+    content: '-';
+    transition: all 0.5s ease;
+} 
+#akeda .content__text .item__content .item__header .scroll-to::before{
+    color: #008cffcf;
+}
+#feka .content__text .item__content .item__header .scroll-to::before{
+    color: #a86ff3;
+}
+#sera .content__text .item__content .item__header .scroll-to::before{
+    color: #f69072;
+}
+#hadith .content__text .item__content .item__header .scroll-to::before{
+    color: #F57492;
+}
+#adab .content__text .item__content .item__header .scroll-to::before{
+    color: #E0963F;
+}
+#akhla .content__text .item__content .item__header .scroll-to::before{
+    color: #F59173;
+}
+#adeya .content__text .item__content .item__header .scroll-to::before{
+    color: #425aa1; 
+}
+#monoat .content__text .item__content .item__header .scroll-to::before{
+    color: #0091a0; 
+}
+.content__text.items__grid .item__content .item__answer {
+    /*    height: 0 !important;*/
+    overflow: hidden;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: all 0.25s ease-out;
+    opacity: 0;
+
+}
+.content__text.items__grid .item__content.open .item__answer {
+    opacity: 1;
+}
+.content__text.items__grid .item__content .item__answer .answer_wrap {
+    /*    background: #f2f2f2;*/
+    padding: 40px;
+}
+.content__text.items__grid .item__content h4 {
+    font-size: 26px;
+    margin: 0 !important;
+    color: #7e7d7d;
+}
+.content__text.items__grid .item__content p:first-of-type {
+    margin-top: 0 !important;
+}
+.content__text.items__grid .item__content p:last-of-type {
+    margin-bottom: 0 !important;
+}
+.content__text.items__grid .item__content .sub__title_h4 {
+    font-size: 21px !important;
+    color: var(--color-note);
+    margin-top: 4px !important;
+    display: inline-block;
+    width: 100%;
+}
+.content__text.items__grid .item__content h5 {
+    font-size: 22px !important;
+    color: var(--color-note);
+}
+.content__text.items__grid .item__content h5 + p {
+    margin-top: 0 !important;
+}
+.content__text.items__grid .item__content:first-of-type {
+    border: 0;
+}
+.col-2.rev .item__content:first-of-type {
+    background-color: transparent !important;
+}
+.col-2.rev .item__content:nth-of-type(2) {
+    background-color: #f2f2f2 !important;
+}
+.col-2 .item__content {
+    flex-basis: 50%;
+    max-width: 50%;
+    border: 0 !important;
+    padding: 90px !important;
+}
+.col-2 .item__content:first-of-type {
+    background: #f2f2f2;
+}

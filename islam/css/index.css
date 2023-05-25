@@ -1,0 +1,313 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* Name Section */
+.name{
+    text-align: center;
+    margin-top: 3em;
+}
+.name-title{
+    color: #2d8933;
+    font-family: 'hala';
+    margin-top: 1em;
+}
+.name p{
+    font-family:  'rabar';
+    color: rgba(0, 0, 0, 0.542);
+}
+.name-img{
+    width: 12em;
+}
+/* Download Button */
+.download{
+    border: 0;
+    background: transparent;
+}
+.down{
+    font-size: 25px;
+    color: #038d51;
+    text-decoration: none;
+    transition: all .5s !important;
+}
+.down:hover{
+    color: #038d51;
+    transition: all .5s !important;
+}
+.down:hover::before{
+    content: 'Download';
+    display: flex;
+    color: #ffffff;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 6px;
+    background: #038d51;
+    margin: 5px;
+    transition: all .5s ease-in-out !important;
+    font-family: 'assaf';
+    box-shadow: 0.5px 0.5px 12.5px 5px #d3d3d3;
+}
+.down:hover:after{
+    content: '';
+    position: absolute;
+    margin: -5px;
+    margin-left: -17px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5px 0 5px;
+    border-color: rgb(48, 47, 47) transparent transparent transparent;
+    transition: all .5s  ;
+}
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-height: 90px; /* Set a default minimum height */
+    min-width: 290px; /* Set a default minimum width */
+    margin-left: -150px; /* Divide value of min-width by 2 */
+    background: url(https://i.pinimg.com/564x/33/c2/0c/33c20c7a003b975c0133b057f54c109a.jpg); /* Black background img */
+    background-repeat: round;
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 40px 0 40px 0; /* Rounded borders */
+    padding: 32px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 50%; /* 30px from the bottom */
+    font-size: 23px;
+    font-family: 'rsail';
+}
+.snack-btn{
+    direction: rtl;
+    position: fixed;
+    right: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #149225;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: .2s bottom ease-in-out;
+    bottom: 20px;
+    border: 1px #fff solid;
+}
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    transition: .5s all;
+}
+  /* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50%; opacity: 1;}
+}
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50%; opacity: 1;}
+}
+/* Section Card */
+.islamic-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin-top: 7%;
+    margin-bottom: 4em;
+}
+.title{
+    text-align: right;
+    font-family:  'rabar';
+    font-weight: 600;
+}
+.cards-img{
+    width: 5em;
+}
+.btn-card:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+.btn-card{
+    width: 19em;
+    height: 12em;
+    box-shadow: 0px 3px 15px #97a8b729;
+    display: flex;
+    text-decoration: none;
+    padding: 20px;
+    color: #fff;
+    border-radius: 20px;
+    min-height: 140px;
+    min-width: 201px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    font-size: 17px;
+    margin-top: 45px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.btn-card:hover{
+    transform: scale(0.98);
+    border-radius: 20px;
+    transform: translateY(-15px);
+    transition: 1s all ease-in-out;
+    box-shadow: 0px 0px 30px 1px rgba(139, 139, 139, 0.9);
+}
+.cards.akeda > a{
+    background: linear-gradient(244deg, #74C3F5 0%, #7398F5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.feka > a{
+    background: transparent linear-gradient(244deg, #AB74F5 0%, #737CF5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.sera > a{
+    background: transparent linear-gradient(244deg, #F59173 0%, #EC73F5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.tafseer > a{
+    background: transparent linear-gradient(244deg, #6f6767 0%, #4f3c05 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.hadeeth > a{
+    background: transparent linear-gradient(244deg, #F57492 0%, #73B4F5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.adab > a{
+    background: transparent linear-gradient(244deg, #E0963F 0%, #be9292 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.akhla > a{
+    background: transparent linear-gradient(244deg, #F59173 0%, #ff9b9b 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.adeya > a{
+    background: transparent linear-gradient(90deg, #644680 0%, #425aa1 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.monaoe > a{
+    background: transparent linear-gradient(90deg, #038d51 0%, #0091a0 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+
+/* Footer */
+.footer{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: green;
+    color: #fff;
+    margin-top: 10em;
+}
+.btn-social{
+    border-radius: 0px 20px 0 20px;
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    justify-content: center;
+    align-items: center;
+}
+#face:hover{
+    color: #fff;
+    background: #425aa1;
+    transition: .3s all;
+}
+#porto:hover{
+    color: #fff;
+    background: #008763;
+    transition: .3s all;
+}
+#insta:hover{
+    color: #fff;
+    background: rgb(224, 39, 76);
+    transition: .3s all;
+}
+#linked:hover{
+    color: #fff;
+    background: #0091a0;
+    transition: .3s all;
+}
+#github:hover{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.638);
+    transition: .3s all;
+}
+.copyright { 
+    background-color: rgb(2, 99, 2);
+    font-family: 'rabar';
+    letter-spacing: 1px;
+}
+.lead{
+    font-family: sans-serif;
+}
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    background-size: 400%;
+    color: rgb(6, 146, 39);
+    margin-top: 1em;
+    border: 1px #fff solid;
+}
+.button:hover {
+    color: #fff !important;
+}
+.button:hover::before {
+    transform: scaleX(1);
+}
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    color: #fff;
+    background: linear-gradient( 82.3deg, rgb(2, 168, 46) 10.8%, rgb(3, 117, 28) 94.3% );
+    transition: all 0.475s;
+}
+
+
+@media (min-width: 576px) { 
+    .container {
+        max-width: 540px;
+    }   
+    
+}
+
+@media (min-width: 768px){ 
+.container {
+    max-width: 750px;
+    }
+    
+}
+
+@media (min-width: 1000px){ 
+    .container {
+        max-width: 1050px;
+        }
+        
+}
