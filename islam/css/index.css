@@ -262,12 +262,14 @@ text-decoration: #32a1ce underline;
     border-radius: 1.5rem;
     background: #ffffff;
     background-size: 400%;
-    color: rgb(6, 146, 39);
+    color: #a00;
     margin-top: 1em;
     border: 1px #fff solid;
+font-family: 'hala';
 }
 .button:hover {
     color: #fff !important;
+font-family: 'hala';
 }
 .button:hover::before {
     transform: scaleX(1);
@@ -275,6 +277,7 @@ text-decoration: #32a1ce underline;
 .button-content {
     position: relative;
     z-index: 1;
+font-family: 'hala';
 }
 .button::before {
     content: '';
@@ -287,8 +290,10 @@ text-decoration: #32a1ce underline;
     height: inherit;
     border-radius: inherit;
     color: #fff;
-    background: linear-gradient( 82.3deg, rgb(2, 168, 46) 10.8%, rgb(3, 117, 28) 94.3% );
-    transition: all 0.475s;
+    background: #a00;
+    font-family: 'hala';
+transition: all 0.475s;
+
 }
 
 
