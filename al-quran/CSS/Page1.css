@@ -3,7 +3,7 @@
 }
 
 .header{
-    background:linear-gradient(to top, rgb(0,0,0,0.5)70%, rgb(0,0,0,0.5)30%),url(/photo/1731-2.jpg);
+    background-color: #131722;
     box-sizing: border-box;
     scroll-behavior: smooth;
     width: 100%;
@@ -25,7 +25,7 @@
     transition: .5s all ease-in-out;
 }
 .nav.active{
-    background-color: #000;
+    background-color: #a00;
 }
 .nav.active .container-fluid{
     height: 80px;
@@ -49,6 +49,12 @@
 .nav-link{
     color: white;
     transition: .4s ease;
+}
+
+.navbar-link:hover{
+    color: white;
+    transition: .4s ease;
+border: 2px solid #a00;
 }
 .nav-item{
     font-size: 20px;
@@ -97,7 +103,7 @@ ul{
     margin-right: 70px;
     margin-top: 7px;
     font-size: 60px ;
-    color: green;
+    color:#a00;
 }
 
 .h5{
@@ -113,6 +119,8 @@ ul{
     position:relative;
     transform: translateY(-50%);
     direction: rtl;
+color: #32a1ce;
+text-decoration: #a00 underline;
 }
 .h1{
     color: white;
@@ -122,7 +130,7 @@ ul{
     background-color: transparent;
     color: white;
     margin-top: 12px;
-    border: 2px rgb(255, 255, 255) solid;
+    border: 2px #a00 solid;
     border-radius: 10px;
     transition: .5s all ease-in-out;
     font-family: Arial, Helvetica, sans-serif;
@@ -134,11 +142,11 @@ ul{
 
 }
 .btn:hover{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #a00;
 } 
 span{
-    color: green;
+    color: #32a1ce;
     font-size: 50px;
 }
 
@@ -156,15 +164,16 @@ span{
     padding: 50px 20px;
     margin-top: 45px;
     color: rgb(11, 71, 11); 
-    border-bottom: 10px #00000075 solid;         
+    border-bottom: 10px #a00 solid;         
 }
 
 .name{
     text-align: center;
-    color: #247429;
+    color: #32a1ce;
     margin: 3em 0 1.5em 0;
     font-family: 'katibeh';
     font-size: 36px;
+text-decoration: #a00 underline;
 }
 .pray .cards{
     display: flex;
@@ -224,18 +233,18 @@ span{
 
 .footer{
     padding: 0;
-    background: rgb(255, 255, 255);
+     background-color: #131722;
     
 }
 .footer svg{
-    fill: #247429;
+    fill: #32a1ce;
     transform: translateY(10px);
 }
 .footer .social{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #247429;
+   
 }
 .footer .social a{
     margin: 15px;
@@ -276,7 +285,7 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #43a047;
+    background-color: #a00;
     border-radius: 50%;
     font-size: 20px;
     transition: .2s bottom ease-in-out;
