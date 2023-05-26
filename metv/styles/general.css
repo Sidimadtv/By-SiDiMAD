@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "WII";
+  src: url("../fonts/wii.otf");
+}
+
+@font-face {
+  font-family: "LAIN";
+  src: url("../fonts/lain.ttf");
+}
+
+/* General styles */
+
+/* Normal Base */
+html {
+  /* size */
+  height: 100%;
+  width: 100%;
+  
+  /* creates the stripes/scanline effect */ 
+  background: linear-gradient(
+    to bottom,
+    #e4e4e4,
+    #e4e4e4 75%,
+    #f5f5f5 25%,
+    #f5f5f5
+  );
+  
+  overflow: hidden;
+  background-size: 100% 5px;
+}     
+
+/* Settings Base */
+#htmlSettings {
+  /* creates the stripes/scanline effect */ 
+  background: linear-gradient(
+    to bottom,
+    #1e1e1e,
+    #1e1e1e 75%,
+    #000000 25%,
+    #000000
+  );
+  background-size: 100% 9px;
+  height: 100%;
+}
+
+/* Body for index */
+#MainContainer {
+  /* structure */
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto 40%;
+  
+  /* size */
+  height: 100%;
+  width: 100%;
+}   
+
+/* Body for play and add */
+#body {
+  /* structure */
+  padding-top: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto 40%;
+
+  /* size */
+  height: 100%;
+  width: 100%;
+}
+
+/* Body for play channels/playlists */
+.playVid {
+  height: 100%;
+  min-width: none;
+  display: grid;
+  padding-bottom: 5%;
+  margin-top: .3%;
+  grid-template-columns: auto;
+  grid-template-rows: 65% 35%;
+}
+
+/* Channel Container */
+#channelWrapper {
+  height: 100%;
+  width: 80%;
+  margin-top: .8%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+
+/* All bodies */
+body {
+  overflow: hidden;
+
+  /* size */
+  height: 100%;
+  width: 100%;
+
+  /* removes gap on side */
+  margin: 0%;
+  padding: 0%;
+}
+
+/* Footer for options */
+#bButtonWrapper {
+  /* border */
+  border-top: solid;
+  border-color: #ffffff;
+
+  /* position */
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 0%;
+  margin-top: 5%;
+      
+  /* size */
+  min-height: 20%;
+  max-height: 20%;
+  height: 25%;
+  min-width: 100%;
+  width: 100%;
+
+  /* background */
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(41,41,41,1) 100%);
+}
+
+/* Header for options */
+#settingsTop {
+  position: relative;
+  
+  /* Border */
+  border-bottom: solid;
+  border-color: #ffffff;
+  
+  /* Size */
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-height: 100% !important;
+  width: 100%;
+  
+  /* Background */
+  background-color: #000000;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 0%, rgba(41,41,41,1) 100%);
+}
+
+#remChannelWrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: 150px;
+  height: auto;
+  max-height: 620px;
+  overflow-y: scroll;
+  padding-bottom: 2%;
+}
+
+#remBody {
+  /* Structure */
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20% 60% 20%;
+
+  /* Size */
+  height: 100%;
+}
+
+#settingsButtonWrapper {
+  height: 96%;
+  max-height: 96% !important;
+  width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15%;
+  display: grid;
+  grid-template-rows: 5(1fr);
+}
+
+.splashControls {
+  display: block;
+  animation: visible 2s;   
+  width: 100vw;
+  height: 100vh;
+  padding: 2vh 0 0 1vw;
+  opacity: 0;
+  position: absolute;
+  text-shadow: 0 0 10px #59aeff, 0 0 20px #59aeff, 0 0 30px #59aeff;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  font-family: lain;
+  font-size: 3vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 1200ms;
+  background-image: url(../misc/splashBg.png);
+  color: #59aeff;
+}
+
+.splashControls > span:hover{
+  text-shadow: 0 0 10px #f36666, 0 0 20px #f36666, 0 0 30px #f36666;
+}
+
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
