@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<videoLister>
+  <!--video list for sign1-->
+  <list>
+    <item>
+      <title>
+        <![CDATA[Video Meca 1]]>
+      </title>
+      <description>
+        <![CDATA[Puerta de la Ka’bah]]>
+      </description>
+      <thumbnailPath>pictures/1.jpg</thumbnailPath>
+      <moviePath>videos/1.flv</moviePath>
+      <picturePath>pictures/1.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 2]]>
+      </title>
+      <description>
+        <![CDATA[Puerta de la Mezquita del Haram]]>
+      </description>
+      <thumbnailPath>pictures/2.jpg</thumbnailPath>
+      <moviePath>videos/2.flv</moviePath>
+      <picturePath>pictures/2.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 3]]>
+      </title>
+      <description>
+        <![CDATA[Puerta de la Mezquita del Haram por fuera]]>
+      </description>
+      <thumbnailPath>pictures/3.jpg</thumbnailPath>
+      <moviePath>videos/3.flv</moviePath>
+      <picturePath>pictures/3.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 4]]>
+      </title>
+      <description>
+        <![CDATA[La Mezquita del Haram por fuera y de noche]]>
+      </description>
+      <thumbnailPath>pictures/4.jpg</thumbnailPath>
+      <moviePath>videos/4.flv</moviePath>
+      <picturePath>pictures/4.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 5]]>
+      </title>
+      <description>
+        <![CDATA[El recorrido entre Safa y Marwah 1]]>
+      </description>
+      <thumbnailPath>pictures/5.jpg</thumbnailPath>
+      <moviePath>videos/5.flv</moviePath>
+      <picturePath>pictures/5.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 6]]>
+      </title>
+      <description>
+        <![CDATA[El recorrido entre Safa y Marwah 2]]>
+      </description>
+      <thumbnailPath>pictures/6.jpg</thumbnailPath>
+      <moviePath>videos/6.flv</moviePath>
+      <picturePath>pictures/6.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 7]]>
+      </title>
+      <description>
+        <![CDATA[Safa y Marwah, segundo piso 1]]>
+      </description>
+      <thumbnailPath>pictures/7.jpg</thumbnailPath>
+      <moviePath>videos/7.flv</moviePath>
+      <picturePath>pictures/7.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 8]]>
+      </title>
+      <description>
+        <![CDATA[Safa y Marwah, segundo piso 2]]>
+      </description>
+      <thumbnailPath>pictures/8.jpg</thumbnailPath>
+      <moviePath>videos/8.flv</moviePath>
+      <picturePath>pictures/8.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 9]]>
+      </title>
+      <description>
+        <![CDATA[Safa y Marwah, segundo piso 3]]>
+      </description>
+      <thumbnailPath>pictures/9.jpg</thumbnailPath>
+      <moviePath>videos/9.flv</moviePath>
+      <picturePath>pictures/9.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 10]]>
+      </title>
+      <description>
+        <![CDATA[Safa y Marwah, segundo piso 4]]>
+      </description>
+      <thumbnailPath>pictures/10.jpg</thumbnailPath>
+      <moviePath>videos/10.flv</moviePath>
+      <picturePath>pictures/10.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 11]]>
+      </title>
+      <description>
+        <![CDATA[?rea descubierta interna de la Mezquita del Haram 1]]>
+      </description>
+      <thumbnailPath>pictures/11.jpg</thumbnailPath>
+      <moviePath>videos/11.flv</moviePath>
+      <picturePath>pictures/11.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 12]]>
+      </title>
+      <description>
+        <![CDATA[?rea descubierta interna de la Mezquita del Haram 2]]>
+      </description>
+      <thumbnailPath>pictures/12.jpg</thumbnailPath>
+      <moviePath>videos/12.flv</moviePath>
+      <picturePath>pictures/12.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 13]]>
+      </title>
+      <description>
+        <![CDATA[Tawaf en el ?rea interna descubierta de la Mezquita del Haram 1]]>
+      </description>
+      <thumbnailPath>pictures/13.jpg</thumbnailPath>
+      <moviePath>videos/13.flv</moviePath>
+      <picturePath>pictures/13.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 14]]>
+      </title>
+      <description>
+        <![CDATA[Tawaf en el ?rea interna descubierta de la Mezquita del Haram 2]]>
+      </description>
+      <thumbnailPath>pictures/14.jpg</thumbnailPath>
+      <moviePath>videos/14.flv</moviePath>
+      <picturePath>pictures/14.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 15]]>
+      </title>
+      <description>
+        <![CDATA[?rea interna de la Mezquita del Haram en el Hayy 1]]>
+      </description>
+      <thumbnailPath>pictures/15.jpg</thumbnailPath>
+      <moviePath>videos/15.flv</moviePath>
+      <picturePath>pictures/15.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video Meca 16]]>
+      </title>
+      <description>
+        <![CDATA[?rea interna de la Mezquita del Haram en el Hayy 2]]>
+      </description>
+      <thumbnailPath>pictures/16.jpg</thumbnailPath>
+      <moviePath>videos/16.flv</moviePath>
+      <picturePath>pictures/16.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+  </list>
+  <!--video list for sign2-->
+  <list>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 1]]>
+      </title>
+      <description>
+        <![CDATA[Lanzamiento de la piedritas 1]]>
+      </description>
+      <thumbnailPath>pictures/17.jpg</thumbnailPath>
+      <moviePath>videos/17.flv</moviePath>
+      <picturePath>pictures/17.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 2]]>
+      </title>
+      <description>
+        <![CDATA[Lanzamiento de la piedritas 2]]>
+      </description>
+      <thumbnailPath>pictures/18.jpg</thumbnailPath>
+      <moviePath>videos/18.flv</moviePath>
+      <picturePath>pictures/18.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 3]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos subiendo el puente que lleva a los Yamarat]]>
+      </description>
+      <thumbnailPath>pictures/19.jpg</thumbnailPath>
+      <moviePath>videos/19.flv</moviePath>
+      <picturePath>pictures/19.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 4]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos dirigiéndose hacia los Yamarat]]>
+      </description>
+      <thumbnailPath>pictures/20.jpg</thumbnailPath>
+      <moviePath>videos/20.flv</moviePath>
+      <picturePath>pictures/20.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 5]]>
+      </title>
+      <description>
+        <![CDATA[Lanzamiento de la piedritas 3]]>
+      </description>
+      <thumbnailPath>pictures/21.jpg</thumbnailPath>
+      <moviePath>videos/21.flv</moviePath>
+      <picturePath>pictures/21.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 6]]>
+      </title>
+      <description>
+        <![CDATA[Lanzamiento de la piedritas 4]]>
+      </description>
+      <thumbnailPath>pictures/22.jpg</thumbnailPath>
+      <moviePath>videos/22.flv</moviePath>
+      <picturePath>pictures/22.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 7]]>
+      </title>
+      <description>
+        <![CDATA[Lanzamiento de la piedritas 5]]>
+      </description>
+      <thumbnailPath>pictures/23.jpg</thumbnailPath>
+      <moviePath>videos/23.flv</moviePath>
+      <picturePath>pictures/23.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video de los Yamarat 8]]>
+      </title>
+      <description>
+        <![CDATA[Lanzamiento de la piedritas 6]]>
+      </description>
+      <thumbnailPath>pictures/24.jpg</thumbnailPath>
+      <moviePath>videos/24.flv</moviePath>
+      <picturePath>pictures/24.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+  </list>
+  <!--video list for sign3-->
+  <list>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 1]]>
+      </title>
+      <description>
+        <![CDATA[Mina al atardecer]]>
+      </description>
+      <thumbnailPath>pictures/25.jpg</thumbnailPath>
+      <moviePath>videos/25.flv</moviePath>
+      <picturePath>pictures/25.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 2]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos dirigiéndose de Muzdalifah a Mina]]>
+      </description>
+      <thumbnailPath>pictures/26.jpg</thumbnailPath>
+      <moviePath>videos/26.flv</moviePath>
+      <picturePath>pictures/26.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 3]]>
+      </title>
+      <description>
+        <![CDATA[Los peregrinos en Mina durante los d?as del Tashriq]]>
+      </description>
+      <thumbnailPath>pictures/27.jpg</thumbnailPath>
+      <moviePath>videos/27.flv</moviePath>
+      <picturePath>pictures/27.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 4]]>
+      </title>
+      <description>
+        <![CDATA[Lanzamiento de la piedritas 7]]>
+      </description>
+      <thumbnailPath>pictures/28.jpg</thumbnailPath>
+      <moviePath>videos/28.flv</moviePath>
+      <picturePath>pictures/28.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 5]]>
+      </title>
+      <description>
+        <![CDATA[D?as del Tashriq 1]]>
+      </description>
+      <thumbnailPath>pictures/29.jpg</thumbnailPath>
+      <moviePath>videos/29.flv</moviePath>
+      <picturePath>pictures/29.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 6]]>
+      </title>
+      <description>
+        <![CDATA[D?as del Tashriq 2]]>
+      </description>
+      <thumbnailPath>pictures/30.jpg</thumbnailPath>
+      <moviePath>videos/30.flv</moviePath>
+      <picturePath>pictures/30.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 7]]>
+      </title>
+      <description>
+        <![CDATA[Lluvia en Mina]]>
+      </description>
+      <thumbnailPath>pictures/31.jpg</thumbnailPath>
+      <moviePath>videos/31.flv</moviePath>
+      <picturePath>pictures/31.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Mina 8]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos en Mina]]>
+      </description>
+      <thumbnailPath>pictures/32.jpg</thumbnailPath>
+      <moviePath>videos/32.flv</moviePath>
+      <picturePath>pictures/32.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+  </list>
+  <!--video list for sign4-->
+  <list>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de Muzdalifah]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos en Muzdalifah]]>
+      </description>
+      <thumbnailPath>pictures/33.jpg</thumbnailPath>
+      <moviePath>videos/33.flv</moviePath>
+      <picturePath>pictures/33.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+  </list>
+  <!--video list for sign5-->
+  <list>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de ‘Arafat 1 ]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos en ‘Arafat 1]]>
+      </description>
+      <thumbnailPath>pictures/34.jpg</thumbnailPath>
+      <moviePath>videos/34.flv</moviePath>
+      <picturePath>pictures/34.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de ‘Arafat 2]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos en ‘Arafat 2]]>
+      </description>
+      <thumbnailPath>pictures/35.jpg</thumbnailPath>
+      <moviePath>videos/35.flv</moviePath>
+      <picturePath>pictures/35.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+    <item>
+      <title>
+        <![CDATA[Video ?rea de ‘Arafat 3]]>
+      </title>
+      <description>
+        <![CDATA[Peregrinos en ‘Arafat 3]]>
+      </description>
+      <thumbnailPath>pictures/36.jpg</thumbnailPath>
+      <moviePath>videos/36.flv</moviePath>
+      <picturePath>pictures/36.jpg</picturePath>
+      <commercialMoviePath />
+      <subtitlesXML />
+    </item>
+  </list>
+</videoLister>
