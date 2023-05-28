@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-TW" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="heitang512">
+  <title>ShortYou ฅ•ω•ฅ</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/cover.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/load.css" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <!-- header -->
+    <header class="mb-auto">
+      <div style="font-family: 'Changa', sans-serif;">
+        <h3 class="float-md-start mb-0">ShortYou</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link active" aria-current="page" href="https://purr.tw">URL</a>
+          <a class="nav-link" href="https://blog.purr.tw">Blog</a>
+          <a class="nav-link" href="https://github.com/HeiTang">Github</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- content -->
+
+    <!-- <div class="flex-center position-ref full-height"> -->
+    <div class="flex-center full-height">
+      <div class="mask load" id="loader">
+        <div class="a" style="--n: 5">
+          <div class="dot" style="--i: 0"></div>
+          <div class="dot" style="--i: 1"></div>
+          <div class="dot" style="--i: 2"></div>
+          <div class="dot" style="--i: 3"></div>
+          <div class="dot" style="--i: 4"></div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="title hide-in-mobile" style="font-family: 'Indie Flower', cursive;">
+          Just Shorten It ヽ(‘ ∇‘ )ノ
+        </div>
+        <div class="subtitle m-b-md">
+          <p class="mfc-title-center" style="font-family: 'Indie Flower', cursive;">
+            <span class="txt-rotate hide-in-mobile" data-period="1000"
+              data-rotate="[&quot;Too Long ? &quot;, &quot;Too Height ? &quot;, &quot;Too Fat ? &quot;, &quot;Too Ugly ? &quot;, &quot;30cm ? &quot;]">
+              <span class="wrap">You</span>
+            </span>
+            Shorten it !
+          </p>
+        </div>
+        <div class="form-group">
+          <input id="url" type="text" class="form-control inputStyle" style="text-align: center;"
+            placeholder="Begin with 'http'" autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <input id="alias" type="text" class="form-control inputStyle" style="text-align: center; display: none;"
+            placeholder="Customize link (Select)" autocomplete="off" />
+        </div>
+       
+ <div class="form-group">
+          <div id="recaptcha" style="display: none;" class="g-recaptcha"
+     data-sitekey="6LfIDUomAAAAANSlFp3GIxCEJ8tRCdv1gI8GVZCJ"        data-theme="dark" data-size="normal"
+            data-callback="verifyCallback">
+          </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+          <button id="btn" class="btn btn-primary btn-block none">Shorten URL</button>
+        </div>
+        <div class="form-group">
+          <p id="result"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="mt-auto text-white-50">
+      <p class="text">Copyright © 2021 <a href="https://github.com/HeiTang" class="text-white">Heitang512</a>. All
+        rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="javascript/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- Google reCAPTCHA  -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S5PPZHQ0HJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-S5PPZHQ0HJ');
+  </script>
+</body>
+
+</html>
