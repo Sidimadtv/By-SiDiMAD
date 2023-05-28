@@ -1,0 +1,26 @@
+p
+{
+    color: white;
+    font-size: 20px;
+}
+.text
+{
+    background-color: rgba(255, 166, 0, 0.548);
+    font-size: 20px;
+}
+h1
+{
+    background-color: rgba(255, 255, 255, 0.521);
+    color: rgb(245, 241, 0);
+    
+}
+h2
+{
+    background-color: rgba(255, 166, 0, 0.548);
+    text-align: center;
+}
+h3
+{
+    background-color: rgba(0, 128, 0, 0.555);
+    color: greenyellow;
+}

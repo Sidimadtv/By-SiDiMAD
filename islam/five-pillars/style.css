@@ -1,0 +1,170 @@
+@import "https://fonts.googleapis.com/css2?family=Amiri&family=Aref+Ruqaa&family=Markazi+Text&family=Scheherazade&display=swap";
+body{
+    
+    /* direction: rtl; */
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+}
+
+ul
+{
+    font-size: 28px;
+    color: blanchedalmond;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+h1
+{
+    font-size: 38px;
+    text-align: center;
+    background-size: 24px 10px;
+    margin: auto;
+}
+
+h2
+{
+    color: white;
+}
+
+.c1
+{
+    color: white;
+    font-size: 24px;
+    font-family: sans-serif;
+}
+
+video {
+  width: 50%;
+  height: auto;
+  margin: 1% 25% 1% 10%;
+  border-radius: 24px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* unvisited link */ 
+a:link { color: blue;
+    font-size: 24px;
+}
+/* visited link */ 
+a:visited { color: purple;
+    font-size: 24px;
+}
+/* mouse over link */ 
+a:hover { color: hotpink;
+    /* font-size: 28px; */
+}
+/* selected link */ 
+a:active { color: white;
+    font-size: 24px;
+}
+
+li
+{
+    color: white;
+}
+.button/* الصفحات الخمسة  */
+{
+    width: 100%;
+    background-color: gold;
+    font-size: 18px;
+    width: 230px;  
+    padding: 12px 0px 12px 5px; 
+    margin: 8px ; 
+    border: black; 
+    border-radius: 50px;
+}
+.button:hover
+{
+    background-color: rgba(255, 217, 0, 0.404);
+    cursor: pointer;
+}
+
+
+
+div.scrollmenu {
+    direction: rtl;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    background-color: gray;
+    border-radius: 18px;
+    border: black;
+    border-left-width: 30%;
+    text-align: center;
+    padding: 14px;
+    text-decoration:dashed;
+    text-decoration-color: white;
+  }
+  
+  div.scrollmenu a:hover {
+    background-color: rgb(68, 68, 68);
+    
+  }
+
+  
+/* Dropdown Button */
+
+
+.dropbtn {
+    direction: ltr;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(114, 114, 114);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgb(109, 109, 109)}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
