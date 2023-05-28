@@ -1,0 +1,26 @@
+.column {
+  max-height: 100vh;
+}
+
+img {
+  display: block;
+  width: 50%;
+  max-width: 50em;
+  box-sizing: border-box;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+}
+.box {
+  background-color: #131722;
+color: #ffffff;
+  margin-top: 10px;
+border: thick double #32a1ce;
+text-decoration: #a00 underline;
+height:100%;
+}
+
+.label {
+  margin-top: 8px;
+color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */
