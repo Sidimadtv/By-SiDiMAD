@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Hajj Map</title>
+	<style>
+	#video_player {
+	display: table;
+	line-height: 0;
+	font-size: 0;
+	background: #000;
+	position:absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+#video_player video,
+	#video_player figcaption {
+		display: table-cell;
+		vertical-align: top;
+}
+#video_player figcaption {
+	width: 25%;
+}
+#video_player figcaption a {
+	display: block;
+	opacity: .5;
+	transition: 1s opacity;
+}
+#video_player figcaption a img,
+	figure video {
+		width: 100%;
+		height: auto;
+}
+#video_player figcaption a:hover {
+	opacity: 1;
+}
+@media (max-width: 700px) {
+	#video_player video,
+		#video_player figcaption {
+			display: table-row;
+		}
+#video_player figcaption a {
+	display: inline-block;
+	width: 33.33%;
+}
+}
+#modal{
+	display:none;
+	position:absolute;
+	background: #777d;
+	width:100%;
+	height:100%;
+}
+#hover-light:hover{
+	animation: light .8s;
+	animation-fill-mode: both;
+}
+@keyframes light{
+	0% {
+		background: red;
+	}40% {
+		background: orange;
+	}50% {
+		background: red;
+	}100% {
+		background: orange;
+	}
+}
+	</style>
+</head>
+<body>
+	<div>
+		<object type="application/x-shockwave-flash" id="hajjmap" name="hajjmap" data="HajjMap-ar.swf" width="850" height="600"><param name="scale" value="noscale"><param name="allowFullScreen" value="true"><param name="menu" value="false"><param name="bgcolor" value="#FFFFFF"><param name="flashvars" value="stageW=850&amp;stageH=600"></object>
+	</div>
+	
+	<div style="width:800px; height: 600px; background:green; position:relative;">
+		<div id="hover-light" style="width:100px; height: 60px; background:red; position:absolute; left:50%; top:30%; cursor:pointer;" onclick="openModal()"></div>
+		<div id="modal" >
+		<div onclick="hideModel()" style="position:absolute; right: 10px; top: 10px; background:black;cursor:pointer; color: white;border-radius:50%;">X</div>
+		<figure id="video_player" style="max-width: 400px;">
+			<video controls poster="nambia1.jpg">
+				<source src="nambia1.mp4" type="video/mp4">
+				<source src="nambia1.webm" type="video/webm">
+			</video>
+			<figcaption>
+				<a href="nambia1.mp4"><img src="nambia1.jpg" alt="Nambia Timelapse 1"></a>
+				<a href="nambia2.mp4"><img src="nambia2.jpg" alt="Nambia Timelapse 2"></a>
+				<a href="nambia3.mp4"><img src="nambia3.jpg" alt="Nambia Timelapse 3"></a>
+			</figcaption>
+		</figure>
+		</div>
+	</div>
+	
+	<!-- <figure id="video_player" style="max-width: 600px;">
+	<video controls poster="nambia1.jpg">
+		<source src="nambia1.mp4" type="video/mp4">
+		<source src="nambia1.webm" type="video/webm">
+	</video>
+	<figcaption>
+		<a href="nambia1.mp4"><img src="nambia1.jpg" alt="Nambia Timelapse 1"></a>
+		<a href="nambia2.mp4"><img src="nambia2.jpg" alt="Nambia Timelapse 2"></a>
+		<a href="nambia3.mp4"><img src="nambia3.jpg" alt="Nambia Timelapse 3"></a>
+	</figcaption>
+</figure> -->
+
+<script>
+var video_player = document.getElementById("video_player"),
+links = video_player.getElementsByTagName('a');
+for (var i=0; i<links.length; i++) {
+	links[i].onclick = handler;
+}
+function handler(e) {
+	e.preventDefault();
+	videotarget = this.getAttribute("href");
+	filename = videotarget.substr(0, videotarget.lastIndexOf('.')) || videotarget;
+	video = document.querySelector("#video_player video");
+	// video.removeAttribute("controls");
+	video.removeAttribute("poster");
+	source = document.querySelectorAll("#video_player video source");
+	source[0].src = filename + ".mp4";
+	source[1].src = filename + ".webm";
+	video.load();
+	video.play();    
+}
+function openModal(){
+	document.getElementById('modal').style.display = 'block';
+}
+function hideModel() {
+	document.getElementById('modal').style.display = 'none';
+	document.querySelector("#video_player video").pause();
+}
+</script>
+</body>
