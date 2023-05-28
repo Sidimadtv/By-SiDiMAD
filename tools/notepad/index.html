@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is a totaly free web application, which is used to write text and access from anywhere in the world and download it as .txt file in our devices.">
+	<meta name="keywords" content="rishikesh verma,Rishikesh verma,notepad,online editor,online notepad,rishikesh verma notepad,text editor,free nodepad,online Download">
+	<meta name="author" content="Rishikesh Verma">
+	<title>Online Notepad</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="javascript.js"></script>
+
+</head>
+<body>
+	<center>
+		<span><h1>Online Notepad</h1></span><br>
+	    
+	</center>
+	<center>
+	<div>
+		<input type="text"  id="textDocName" placeholder="Text file name">.txt &nbsp
+
+		<input type="button" id="button" name="text-btn" value="Download" onclick="textFileDownload()"><br>
+
+		<input type="text" id="wordDocName" placeholder="Word file name">.doc &nbsp
+
+		<input type="button" id="button" name="word-btn" value="Download" onclick="wordFileDownload()"><br>
+
+
+	    <label for="Font">Select text size: </label>
+	    <select id="optn" onchange="fontSizeSet()">
+	    <option value="10px">1</option>
+	    <option value="13px">2</option>
+	    <option value="16px">3</option>
+		<option value="20px">4</option>
+		<option value="25px">5</option>
+		<option value="30px">6</option>
+	    <option value="36px">7</option>
+	    <option value="44px">8</option>
+		<option value="51px">9</option>
+		<option value="60px">10</option>
+		</select><br><br>
+	    <textarea placeholder="Start writing from here... Made by - S!D!M@D" id="textInput"></textarea>
+	</div>	
+	</center> 
+</body>
+</html>
