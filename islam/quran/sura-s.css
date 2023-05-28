@@ -1,0 +1,72 @@
+.surah-body {
+    font-family: "Source Sans Pro", sans-serif;
+    /* margin: 0.5rem 1rem; */
+}
+
+.surah-body h1 {
+    margin: 0.7rem 0 0.5rem 1rem;
+}
+
+.surah-body .imfo {
+    text-transform: uppercase;
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+.surah-body .verse-key {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.surah-body .aya {
+    border-top: 1px solid rgb(85, 85, 85);
+    border-bottom: 1px solid black;
+    background-color: rgba(241, 241, 241, 0.452);
+    padding: 0.5rem 1rem;
+}
+
+.surah-body .aya-text {
+    font-family: arabic-c-font;
+    text-align: right;
+    font-size: 2.3rem;
+    margin-top: 0.5rem;
+}
+
+.surah-body .bn-trans {
+    font-family: bangla-font, sans-serif;
+}
+
+.surah-body #back-btn {
+    text-decoration: none;
+    text-align: center;
+    color: inherit;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    background-color: rgba(53, 128, 128, 0.431);
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    transition: background-color 400ms ease-in-out;
+}
+
+.surah-body #back-btn:hover {
+    background-color: rgba(38, 64, 64, 0.5);
+}
+
+.surah-body #back-btn svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+}
+
+@media (min-width: 768px) {
+    .surah-body .aya {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
