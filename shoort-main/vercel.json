@@ -1,9 +1,0 @@
-{
-	"redirects": [
-		{
-			"source": "/l/:path", 
-			"destination": "/?link=:path", 
-			"permanent": true
-		}
-	]
-}
