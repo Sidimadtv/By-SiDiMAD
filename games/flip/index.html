@@ -1,0 +1,968 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>👑-S!D!M@D-GAMES-FLIP</title>
+  <link rel="icon" type="image/ico" href="../pic/flip.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+   
+ <link href="https://fonts.googleapis.com/css2?family=Mada:wght@900&family=Righteous&display=swap" rel="stylesheet">
+
+</head>
+  <style>
+   
+.sidimad-sticker {
+  width: 12.1em;
+  height: 12.1em;
+ background-color: transparent !important;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 14px;
+  text-decoration: none;
+  text-indent: -999999px;
+}
+
+.sidimad-sticker.fixed {
+  position: fixed;
+}
+
+.sidimad-sticker:hover, .sidimad-sticker:active {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.sidimad-sticker:before, .sidimad-sticker:after {
+ 
+  position: absolute;
+  display: block;
+  width: 15.38em;
+  height: 1.54em;
+
+  top: 0.23em;
+  right: -3.23em;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sidimad-sticker:before {
+  content: "";
+
+ 
+  padding: .38em 0;
+
+  
+  background-color: #a00;
+
+  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+
+  /* Add a drop shadow */
+  -webkit-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+
+  pointer-events: auto;
+}
+
+.sidimad-sticker:after {
+  /* Set the text from the data-ribbon attribute */
+  content: attr(data-ribbon);
+
+  /* Set the text properties */
+  color: #f3ab65;
+  font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.54em;
+  text-decoration: none;
+  text-shadow: 0 -.08em rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-indent: 0;
+
+  /* Set the layout properties */
+  padding: .15em 0;
+  margin: .15em 0;
+
+  /* Add "stitching" effect */
+  border-width: .08em 0;
+  border-style: dotted;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.sidimad-sticker.left-top, .sidimad-sticker.left-bottom {
+  right: auto;
+  left: 0;
+}
+
+.sidimad-sticker.left-bottom, .sidimad-sticker.right-bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.sidimad-sticker.left-top:before, .sidimad-sticker.left-top:after, .sidimad-sticker.left-bottom:before, .sidimad-sticker.left-bottom:after {
+  right: auto;
+  left: -3.23em;
+}
+
+.sidimad-sticker.left-bottom:before, .sidimad-sticker.left-bottom:after, .sidimad-sticker.right-bottom:before, .sidimad-sticker.right-bottom:after {
+  top: auto;
+  bottom: 3.23em;
+}
+
+.sidimad-sticker.left-top:before, .sidimad-sticker.left-top:after, .sidimad-sticker.right-bottom:before, .sidimad-sticker.right-bottom:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+      
+    </style>       
+
+
+
+<body>
+  
+
+ <a
+      class="sidimad-sticker right-top fixed"
+    
+      data-ribbon="--------🏠-HOMEPAGE"
+      title="--------🏠-HOMEPAGE"
+     href=../mygames.html
+      >--------🏠-HOMEPAGE</a
+    >
+
+  <div id="app">
+        <div class="sticky top-0">
+            <div class="h-safe-area-inset-top" :class="{ 'bg-black':  background-color: !#031634|| (transparent && scrollTop > 0) }">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                <style>
+
+                    /*GAME SCREEN*/
+#g{margin-top:4px}
+
+
+/* card styles */
+/* #g .found{display:inline-block;
+    width:100px;
+    height:100px;
+
+
+} */
+.card{
+    /* display:inline-block; */
+ 
+
+ -webkit-perspective:1000;
+    -moz-perspective:1000;}
+
+
+.card .b::before{
+    content:attr(data-f);
+    /* display:block; */
+ 
+position:absolute;
+
+}
+
+/* flip cards */
+
+
+.f, .b {align-items: center;height:100%;width:100%;background-size: 100%;background-color:#f3ab65 !important;position:absolute;top:0;left:0;box-shadow:inset 0 0 0 1px #333;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden}
+
+
+/*Grouped for easy prefixing*/
+.card, .flipper, .logo .b{align-items: center;height:100%;width:100%;background-size: 100%; background-color:#e60e23 !important;transition:400ms;-ms-transition:400ms;-webkit-transition:400ms;-moz-transition:400ms;-o-transition:400ms}
+.card.active .flipper, .b {height:100%; align-items:center;width:100%;background-size: 80%;background-color:#e60e23;transform:rotateY(180deg);-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-ms-transform:rotateY(180deg);-o-transform:rotateY(180deg)}
+.logo .f, .card .b::before, .pause::before{align-items: center;height:100%;width:100%;background-size: 100%; background-color:transparent !important;-webkit-text-stroke: 1px #fff} /*webkit only*/
+
+.scaleone { 
+scale:0.25;
+}
+.winpair {
+    
+   
+    transform:rotateY(180deg);-webkit-transform:rotateY(180deg);-moz-transform:rotateY(180deg);-ms-transform:rotateY(180deg);-o-transform:rotateY(180deg)}
+
+
+
+
+                    body,
+                    html {
+                        text-transform: uppercase !important;
+                        margin: 0;
+                        /* font: normal 0/0 Arial, Helvetica, sans-serif; */
+                        background-color: #031634;
+                        overflow: hidden;
+                        color: #fff;
+                        -webkit-touch-callout: none;
+                        -webkit-user-select: none;
+                        -khtml-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        font: bold 20px/60px 'Trebuchet MS';
+                        text-align: center;
+                 align-items: center;
+   }
+
+
+                    body,
+                    html,
+                    .flipper,
+                    .f,
+                    .b,
+                    #g {
+                        width: 100%;
+                        height: 100%;
+                        position: fixed;
+              items-align: center;
+ }
+
+                    /* font-face */
+                    @font-face {
+                        font-family: "GeneralFoundicons";
+                        font-weight: normal;
+                        font-style: normal;
+                        src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/60583/general_foundicons.eot");
+                        src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/60583/general_foundicons.eot?#iefix") format("embedded-opentype"),
+                            url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/60583/general_foundicons.woff") format("woff"),
+                            url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/60583/general_foundicons.ttf") format("truetype"),
+                            url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/60583/general_foundicons.svg#GeneralFoundicons") format("svg");
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        display: block;
+                        font: bold 18px/75px 'Trebuchet MS';
+                        text-transform: uppercase;
+                        text-align: center;
+                        padding: 0;
+                        margin: 0 1px;
+                   background-color: #031634;
+  }
+
+                    a:hover {
+                        color: #fff;
+                        background: rgba(255, 255, 255, .1)
+                    }
+
+                    /* FRONT SCREEN */
+                    .logo {
+                        width: 450px;
+                        height: 450px;
+                        position: absolute;
+                        top: 20%;
+                        left: 50%;
+                        margin: -225px 0 0 -225px
+                    }
+
+                    .logo .card {
+                        width: 50%;
+                        height: 20%;
+                        cursor: default;
+                        position: relative
+                    }
+
+
+                                     .winpair {
+                        z-index: 2;
+                             /* margin-left: -100%; */
+                    }
+
+                    .logo .card.left.active {
+                        z-index: 2
+                    }
+
+                    .logo .card.left.active+.card {
+                        opacity: 0
+                    }
+
+                    .logo .card.left.active .b {
+                        margin-left: -100%
+                    }
+
+                    .logo .f {
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+
+                    .logo .c2 {
+                        transform: scale(-1, 1);
+                        -webkit-transform: scale(-1, 1);
+                        -moz-transform: scale(-1, 1);
+                        -ms-transform: scale(-1, 1)
+                    }
+
+                    .logo .contentbox {
+                        width: 200%;
+                        text-align: left
+                    }
+
+                    .logo .contentbox.levels {
+                        width: 100%
+                    }
+
+                    .logo .contentbox .padded {
+                        padding: 0 15px;
+                    }
+
+                    .logo .contentbox {
+                        font-size: 1rem;
+                        padding: 0;
+                        margin: 28px 0;
+                        text-transform: uppercase
+                    }
+
+                    .logo .contentbox p {
+                        /* line-height: 14px; */
+                        margin: 14px 0
+                    }
+
+                   
+
+
+
+
+
+ #stats h2 i {
+                        margin-right: 10px;
+                        vertical-align: top;
+                        /* font: italic normal 9px/8px 'Trebuchet MS'; */
+                        color: #031634;
+                    }
+
+                    #stats ul {
+                        width: 50%;
+                        display: inline-block;
+                        margin: 0;
+                        padding: 0;
+                        list-style-type: none;
+                        vertical-align: top;
+                        /* line-height: 22px */
+                    }
+
+                    #stats li {
+                        display: block;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    #stats li b {
+                        display: inline-block;
+                        /* font-size: 12px; */
+                        width: 95px
+                    }
+
+                    #stats a {
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+
+                    }
+
+                    .logo .info {
+                        /* font-size: 11px; */
+                        /* line-height: 16px; */
+                        text-align: center;
+                        color: rgba(255, 255, 255, .3);
+                        padding: 52px 25px 0px 12px;
+
+                    }
+
+                    /*GAME SCREEN*/
+                    #g {
+                        margin-top: 4px
+                    }
+
+                    #g .timer {
+                        width: 0%;
+                        height: 8px;
+                        position: absolute;
+                        top: -18px;
+                         background-color:#e60e23;
+                        z-index: 1;
+                        border: rgb(229, 139, 43);
+                        border-width: 4px;
+                        border-style: solid;
+                        border-radius: 12px;
+                    }
+
+
+
+                    @-webkit-keyframes timer {
+                        5% {
+                            width: 85%;
+                        }
+                    }
+
+
+                    @keyframes timer {
+                        5% {
+                            width: 85%;
+                        }
+                    }
+
+
+                    @-webkit-keyframes timer {
+                        100% {
+                            width: 100%;
+                        }
+                    }
+
+
+
+                    @keyframes timer {
+                        100% {
+                            width: 100%;
+                        }
+                    }
+
+                    .pause {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        z-index: 100;
+                        background: rgba(51, 51, 51, 0.78)
+                    }
+
+                    .pause::before {
+                        content: 'PAUSED';
+                        width: 100%;
+                        position: absolute;
+                        top: 50%;
+                        background: #C0392B;
+                        color: #fff;
+align-items: center;
+                        display: block;
+                        text-align: center;
+                    }
+
+                    /* card styles */
+                    #g .found {
+                    
+ display: inline-block
+                    
+
+
+
+
+}
+
+                    .card {
+  background-color:#031634;                       
+display: inline-block;
+                        -webkit-perspective: 1000;
+                  
+ }
+
+                    .card:not(.active):hover {
+                        opacity: .8
+                    }
+
+                    .card .b::before {
+                        content: attr(data-f);
+                        /* display: inline-block; */
+                        /* font-display: swap; */
+                        /* vertical-align: middle; */
+                    
+                        /* margin: auto; */
+                        /* font-size-adjust: calc(5vh / 3); */
+
+   
+
+
+
+
+
+
+ /* display: inline-block; */
+    display: inline-block;
+position: absolute;
+left:-22px;
+ height: 100%;
+width: 100%;
+background-color:#f3ab65;
+    background-size: 400px;      
+ 
+              /* color: #eb34a0; */
+                        color: #031634;
+
+                        text-shadow:
+                            0 0 10px #ffffff,
+                            0 0 41px #ffffff,
+                            0 0 42px rgb(255, 138, 214);
+
+                    }
+
+
+                    .card .b::before {
+                        font: normal 11vh "GeneralFoundicons";
+                        margin-top: 3.9vh;
+                        /* left: 25%; */
+                        margin-left: 1.25vw;
+                        text-align: center;
+                    }
+
+                    #g.medium .card .b::before {
+                        font: normal 6.5vh "GeneralFoundicons";
+                        margin-top: 1.75vh;
+                        /* left: 25%; */
+                            margin-left: 2vw;
+                    }
+
+                    
+
+
+
+
+
+#g.hard .card .b::before {
+                        font: normal 5vh "GeneralFoundicons";
+                        margin-top: 1.90vh;
+                        /* left: 27%; */
+                    margin-left: 1.20vw;
+                    }
+
+
+
+
+
+                    /* flip cards */
+                    .flipper {
+                        position: relative;
+                        -webkit-transform-style: preserve-3d;
+                    }
+
+                    .f,
+                    .b {
+                        border-radius: 8px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        box-shadow: inset 0 0 0 1px #333;
+
+                    }
+
+                    .f {
+                        /* background: #16A085; */
+                        z-index: 1;
+
+                        background: #e60e23;
+                    }
+
+                    .b {
+                        /* background: #e57729; */
+                        opacity: 0;
+                        background: #e60e23;
+
+                    }
+
+                    .card.active .b {
+                        z-index: 2;
+                        opacity: 1
+                    }
+   .winpair .b {
+                        z-index: 2;
+                        opacity: 1;
+                        scale: 2.5;
+                    }
+
+
+                       .windance  {
+                                   transform: rotateZ(720deg);
+                        -webkit-transform: rotateZ(720deg);
+                                          transform: rotateX(720deg);
+                        -webkit-transform: rotateX(720deg);
+                                             border: none;
+                                                border-radius: 50%;
+                        scale:35%;
+                        padding:0;
+                          -webkit-text-stroke: none;
+box-shadow: inset 0 0 0 0 #ffffffff;
+
+
+
+
+                    }
+     .windance .b {
+                                   transform: rotateZ(720deg);
+                        -webkit-transform: rotateZ(720deg);
+                                   transform: rotateX(720deg);
+                        -webkit-transform: rotateX(720deg);
+                    }
+
+
+               .winpair {
+                        z-index: 2;
+                        opacity: 1;
+                                    transform: rotateY(720deg);
+                        -webkit-transform: rotateY(720deg);
+                    }
+
+                    /*Grouped for easy prefixing*/
+                    .card,
+                    .flipper,
+                    .logo .b {
+                        transition: 300ms;
+                        -ms-transition: 300ms;
+                    }
+
+                    .winpair {
+                            transition: 1100ms;
+                        -ms-transition: 1100ms;
+                        /* background-color: #eed443; */
+                        background-color: #e60e23;
+                        border-radius:50%;
+
+                    }
+
+                    .card.active .flipper,
+                    .b {
+                        transform: rotateY(180deg);
+                        -webkit-transform: rotateY(180deg);
+                    }
+
+
+                         .winpair .flipper {
+                        transform: rotateY(180deg);
+                        -webkit-transform: rotateY(180deg);
+                    }
+
+                    .logo .f,
+                    .card .b::before,
+                    .pause::before {
+                        -webkit-text-stroke: 1px #e43;
+
+                    }
+
+                    /*webkit only*/
+                </style>
+
+
+                <div id="g" style="margin-bottom:80px;margin-top:20px;height:95%;"></div>
+
+                <div class="logo">
+                    <p class="info"> </p>
+                    <br>
+                   <a style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:26px; border:2px solid #e60e23;border-radius:8px;color:#031634; width:auto;background:#f3ab65" href="javascript:;" data-level="8" class="play">EASY</a>
+                   <br>
+  <a style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:26px; border:2px solid #e60e23;border-radius:8px;color:#031634; width:auto;background:#f3ab65" href="javascript:;" data-level="18" class="play">MEDIUM</a>
+                   <br> 
+<a style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:26px; border:2px solid #e60e23;border-radius:8px;color:#031634; width:auto;background:#f3ab65" href="javascript:;" data-level="32" class="play">HARD</a>
+
+                    <div class="" id="stats">
+                        <div class="padded" style="opacity: 0.5;">
+                            <ul>
+                                <li style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:20px; color:#f3ab65; width:auto;"><b style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:20px; color:#f3ab65; width:auto;">Found:</b> <span id="found">0</span></li>
+                                <li style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:20px; color:#f3ab65; width:auto;"><b style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:20px; color:#f3ab65; width:auto;">Total:</b> <span id="total">0</span></li>
+                                <li style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:20px; color:#f3ab65; width:auto;"><b style="text-decoration:#e60e23 underline;font-family: 'Righteous', cursive;font-size:20px; color:#f3ab65; width:auto;">Time:</b> <span id="time">0</span></li>
+
+
+</div>
+            </div>
+
+
+            <script>
+
+
+
+
+
+
+                $(function () {
+
+                    // function set(key, value) { 
+                    //       window.localStorage.setItem(key, value); }
+                    // function get(key) { return window.localStorage.getItem(key); 
+                    //  }
+                    function set(name, value, days = 90) {
+                        var expires = "";
+                        if (days) {
+                            var date = new Date();
+                            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                            expires = "; expires=" + date.toUTCString();
+                        }
+                        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+                    }
+
+                    function get(name) {
+                        var nameEQ = name + "=";
+                        var ca = document.cookie.split(';');
+                        for (var i = 0; i < ca.length; i++) {
+                            var c = ca[i];
+                            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                        }
+                        return null;
+                    }
+
+                    function increase(el) {
+
+                        set(el, parseInt(get(el)) + 1);
+                    }
+                    function decrease(el) {
+                        set(el, parseInt(get(el)) - 1);
+                    }
+
+                    var toTime = function (nr) {
+                        if (nr == '-:-') return nr;
+                        else { var n = ' ' + nr / 1000 + ' '; return n.substr(0, n.length - 1) + 's'; }
+                    };
+
+                    function updateStats() {
+                        $('#stats').html('<div class="padded"><p>Figures: <span>' +
+                            '<b>' + get('flip_won') + '</b><i>Won</i>' +
+                            '<b>' + get('flip_lost') + '</b><i>Lost</i>' +
+                            '<b>' + get('flip_abandoned') + '</b><i>Abandoned</i></span></p>' +
+                            '<ul><li><b>Best Casual:</b> <span>' + toTime(get('flip_casual')) + '</span></li>' +
+                            '<li><b>Best Medium:</b> <span>' + toTime(get('flip_medium')) + '</span></li>' +
+                            '<li><b>Best Hard:</b> <span>' + toTime(get('flip_hard')) + '</span></li></ul>' +
+                            '<ul><li><b>Total Flips:</b> <span>' + parseInt((parseInt(get('flip_matched')) + parseInt(get('flip_wrong'))) * 2) + '</span></li>' +
+                            '<li><b>Matched Flips:</b> <span>' + get('flip_matched') + '</span></li>' +
+                            '<li><b>Wrong Flips:</b> <span>' + get('flip_wrong') + '</span></li></ul></div>');
+                    };
+
+                    function shuffle(array) {
+                        var currentIndex = array.length, temporaryValue, randomIndex;
+                        while (0 !== currentIndex) {
+                            randomIndex = Math.floor(Math.random() * currentIndex);
+                            currentIndex -= 1;
+                            temporaryValue = array[currentIndex];
+                            array[currentIndex] = array[randomIndex];
+                            array[randomIndex] = temporaryValue;
+                        }
+                        return array;
+                    };
+
+                    function startScreen(text) {
+                        $('#g').removeAttr('class').empty();
+                        $('.logo').fadeIn(550);
+
+                        $('.c1').text(text);
+
+                        // If won game
+                        if (text == 'nice') {
+                            increase('flip_won');
+                            decrease('flip_abandoned');
+                        }
+
+                        // If lost game
+                        else if (text == 'fail') {
+                            increase('flip_lost');
+                            decrease('flip_abandoned');
+                        }
+
+                        // Update stats
+                        updateStats();
+                    };
+
+                    /* LOAD GAME ACTIONS */
+
+                    // Init window.localStorage
+                    if (!get('flip_won') && !get('flip_lost') && !get('flip_abandoned')) {
+                        //Overall Game stats
+                        set('flip_won', 0);
+                        set('flip_lost', 0);
+                        set('flip_abandoned', 0);
+                        //Best times
+                        set('flip_casual', '-:-');
+                        set('flip_medium', '-:-');
+                        set('flip_hard', '-:-');
+                        //Cards stats
+                        set('flip_matched', 0);
+                        set('flip_wrong', 0);
+                    }
+
+                    // Fill stats
+                    if (get('flip_won') > 0 || get('flip_lost') > 0 || get('flip_abandoned') > 0) { updateStats(); }
+
+                    // Toggle start screen cards
+                    $('.logo .card:not(".twist .winpair")').on('click', function (e) {
+                        $(this).toggleClass('active').siblings().not('.twist').removeClass('active');
+                        if ($(e.target).is('.playnow')) { $('.logo .card').last().addClass('active'); }
+                    });
+
+                    // Start game
+                    $('.play').on('click', function () {
+                        increase('flip_abandoned');
+                        $('.info').fadeOut();
+
+                        var difficulty = '',
+                            timer = 550,
+                            level = $(this).data('level');
+
+                        // Set game timer and difficulty   
+                        if (level == 8) { difficulty = 'casual'; timer *= level * 12; }
+                        else if (level == 18) { difficulty = 'medium'; timer *= level * 14; }
+                        else if (level == 32) { difficulty = 'hard'; timer *= level * 16; }
+
+                        $('#g').addClass(difficulty);
+
+                        $('.logo').fadeOut(30, function () {
+                            var startGame = $.now(),
+                                obj = [];
+
+                            // Create and add shuffled cards to game
+                            for (i = 0; i < level; i++) { obj.push(i); }
+
+                            var shu = shuffle($.merge(obj, obj)),
+                                cardSize = 100 / Math.sqrt(shu.length);
+
+                            for (i = 0; i < shu.length; i++) {
+                                var code = shu[i];
+                                if (code < 10) code = "0" + code;
+                                if (code == 30) code = 10;
+                                if (code == 31) code = 21;
+                                $('<div class="card" style="width:' + cardSize + '%;height:' + cardSize + '%;">' +
+                                    '<div class="flipper"><div class="f"></div><div class="b" data-f="&#xf0' + code + ';"></div></div>' +
+                                    '</div>').appendTo('#g');
+                            }
+
+                            // Set card actions
+                            $('#g .card').on({
+                                'mousedown': function () {
+                                    if ($('#g').attr('data-paused') == 1) { return; }
+                                    var data = $(this).addClass('active').find('.b').attr('data-f');
+
+                                    if ($('#g').find('.card.active').length > 1) {
+                                        setTimeout(function () {
+                                            var thisCard = $('#g .active .b[data-f=' + data + ']');
+
+                                            if (thisCard.length > 1) {
+
+                                                thisCard.addClass('winpair').addClass('windance').parents('.card').fadeTo("slow", 0.9).addClass('winpair').addClass('scaleone').parents('.card').addClass('winpair').addClass('scaleone'); //yey
+                                              //  thisCard.parents('.card').toggleClass('active card found').empty(); //yey
+                                                increase('flip_matched');
+
+                                                // Win game
+                                                if (!$('#g .card').length) {
+                                                    var time = $.now() - startGame;
+                                                    if (get('flip_' + difficulty) == '-:-' || get('flip_' + difficulty) > time) {
+                                                        set('flip_' + difficulty, time); // increase best score
+                                                    }
+
+
+                                                    updateStats();
+                                                    startScreen('nice');
+                                                }
+                                            }
+                                            else {
+                                                $('#g .card.active').removeClass('active'); // fail
+                                                increase('flip_wrong');
+                                            }
+                                        }, 301);
+                                    }
+                                }
+                            });
+
+                            // Add timer bar
+                            $('<i class="timer"></i>')
+                                .prependTo('#g')
+                                .css({
+                                    'animation': 'timer ' + timer + 'ms linear'
+                                })
+                                .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (e) {
+                                    startScreen('fail'); // fail game
+                                });
+
+                            // Set keyboard (p)ause and [esc] actions
+                            $(window).off().on('keyup', function (e) {
+                                // Pause game. (p)
+                                if (e.keyCode == 80) {
+                                    if ($('#g').attr('data-paused') == 1) { //was paused, now resume
+                                        $('#g').attr('data-paused', '0');
+                                        $('.timer').css('animation-play-state', 'running');
+                                        $('.pause').remove();
+                                    }
+                                    else {
+                                        $('#g').attr('data-paused', '1');
+                                        $('.timer').css('animation-play-state', 'paused');
+                                        $('<div class="pause"></div>').appendTo('body');
+                                    }
+                                }
+                                // Abandon game. (ESC)
+                                if (e.keyCode == 27) {
+                                    startScreen('flip');
+                                    // If game was paused
+                                    if ($('#g').attr('data-paused') == 1) {
+                                        $('#g').attr('data-paused', '0');
+                                        $('.pause').remove();
+                                    }
+                                    $(window).off();
+                                }
+                            });
+                        });
+                    });
+
+                });
+            </script>
+            <style>
+                .h-safe-area-inset-top {
+                    height: 100%;
+                }
+
+                .bg-black {
+                    background-color: #444;
+                }
+            </style>
+            <script>
+                $({
+                    data() {
+                        return {
+                            scrollTop: 0
+                        }
+                    },
+                    props: {
+                        transparent: {
+                            type: Boolean,
+                            default: false
+                        }
+                    },
+                    methods: {
+                        scrollListener(e) {
+                            this.scrollTop = e.target.scrollTop;
+                        }
+                    },
+                    mounted() {
+                        window.addEventListener('scroll', this.scrollListener);
+                    }
+                });
+            </script>
+            <div class="c1">    </div>
+       
+
+
+
+
+
+
+</body>
