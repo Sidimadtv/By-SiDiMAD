@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+	<head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    	
+ <title>👑-S!D!M@D-ن سيربح المليون</title>
+  <link rel="icon" type="image/ico" href="../pic/milara.png">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Mada:wght@900&family=Righteous&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/cssCustome.css" media="screen" />
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  	  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
+		<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css" />
+  	   <title> ByS!D!M@Dمن سيربح المليون</title>
+<script>
+
+	 $(function () {
+			$("#dialog").dialog({
+				modal: true,
+				autoOpen: false,
+				title: "Help",
+				width: 600,
+				height: 500,
+			}).prev(".ui-dialog-titlebar").css("background","#04195A");
+
+			$(".help").click(function () {
+		     	$('#dialog').dialog('open');
+			});
+
+			$("#alphBnt").click(function () {
+				 var $divs = $("div.row");
+			    var alphabeticallyOrderedDivs = $divs.sort(function (a, b) {
+			        return $(a).find("strong").text() < $(b).find("strong").text();
+			    });
+			    $("#players").html(alphabeticallyOrderedDivs);
+			});
+		});
+	 function Player(id,name,gender,score){
+ 							this.id=id;
+ 							this.name=name;
+ 							this.gender=gender;
+ 							this.score=score;
+ 					}
+
+ 	function renderPlayer(player , pid){
+		if( player.gender === 'f') src = "icons/weman.gif"
+		else src="icons/man.gif"
+		if (player.id === pid)
+		return "<br/><div class='row myRow' id='"+ player.id +"'> <div class='col-md-4'><img  class='avatar' src='"+ src+ "'></img> </div><br/><br/><div class='col-md-4' style='text-align:center;'>" + player.name + " </div> <div class='col-md-2'><strong>$" + player.score + " </strong></div></div> ";
+		else
+		return "<br/><div class='row'  id='"+ player.id +"'> <div class='col-md-4'><img  class='avatar' src='"+ src+ "'></img> </div><br/><br/><div class='col-md-4' style='text-align:center;'>" + player.name + " </div> <div class='col-md-2'><strong>$" + player.score + " </strong></div></div> ";
+ 	}
+
+ 	function getPlayers(){
+ 			var rowOutput = "";
+ 			var playersItems = document.getElementById("players");
+ 			var myArray = JSON.parse(window.localStorage.getItem('myArray'));
+			var playerID = window.localStorage.getItem('PlayerID');
+ 			for(i=0; i< myArray.length ; i++)
+ 			{
+ 				var p = JSON.parse(window.localStorage.getItem(myArray[i]));
+ 					rowOutput +=renderPlayer(p , playerID);
+ 			}
+ 			playersItems.innerHTML = rowOutput;
+			//updateScore("9908767");
+ 	}
+
+	function savePlayer( idd , name , gender , scoreN){
+			id=idd;
+			score=scoreN;
+			player=new Player(id,name,gender,score);
+			arr=JSON.parse(window.localStorage.getItem('myArray'));
+			var playerJosn = JSON.stringify(player);
+			window.localStorage.setItem(id,playerJosn);
+	}
+
+	function updateScore(scoreNum){
+		var playID = window.localStorage.getItem('PlayerID');
+		var play = JSON.parse(window.localStorage.getItem(playID));
+        Number(scoreNum);
+		play.score = scoreNum;
+		savePlayer(play.id , play.name , play.gender , play.score);
+	}
+ 	</script>
+
+ </head>
+ <body onload="getPlayers();">
+ 		<div data-role="page"  class="background" >
+
+ 			 <nav class="navbar navbar-default">
+ 					<div class="container-fluid">
+ 					<div class="navbar-header">
+ 						<img src="icons/logo.png" height="50" width="50"/>
+ 						
+ 					</div>
+ 					  <ul class="nav navbar-nav">
+  <li><a href="../../index.html"  rel="external" title="Home"><span class="glyphicon glyphicon-home"></span>-HOMEPAGE</a></li>             
+
+<li><a href="welcome.html"  rel="external" title="Home">🎮-RESTART</a></li>
+			<li><a  href="scores.html"  rel="external" title="Scores"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span>-SCORES-🥇 </a></li>
+			<li><a  class="help" title="How to play"><span class="glyphicon glyphicon-info-sign"></span>-HELP✔</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="loginpage.html" title="Log in"><span class="glyphicon glyphicon-log-in"></span>-Log In 🔓</a></li>
+            </ul>
+          </div>
+    </nav>
+
+ 			<div data-role="content" data-cache="false" >
+ 				<label >🥇-Best Scores</label>
+				<a id="alphBnt" class="centerLink" data-transition="slide-down"> <img src="icons/sort.svg" class="next" /> </a>
+				<br/>
+ 				<div class='score' id="players">
+
+ 				</div>
+
+ 			</div>
+
+
+<center>
+    <p style="font-family: 'Mada', sans-serif;font-size:16px;text-align:center;border:2px;border-radius:0px;color:#000000;background-color:#ffffff">
+        
+        <svg width="13" height="10" viewBox="0 0 100 100">
+            <path fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+            <animateTransform 
+              attributeName="transform" 
+              type="scale" 
+              values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+              dur="1s" 
+              repeatCount="indefinite">      
+            </animateTransform>
+          </svg>
+        
+        
+          -⚙ BY S!D!M@D™ |جميع الحقوق محفوظة ⛔
+        </p>
+      </div>
+</center>
+
+
+
+
+
+ 		</div>
+
+
+
+
+
+	<!----------------------------------------------------------- dialog -------------------------!-->
+	<br/><br/><br/><br/>
+<div  id="dialog" style="display: none;font-family: 'Readex Pro', sans-serif;background-color:#031634;color:#ffffff" align = "center" >
+		 <div>
+		  <center>
+			<h1>
+			  المساعده
+			</h1>
+			<p>
+			  1. طريقة لعب لعبة من سيربح المليون<br>
+		      ( في البداية يطرح جوج قرداحي (مقدم البرنامج) سؤال السرعة علي المتاسبقين، وذلك لفرزهم واختيار واحد منهم، بحيث يقع الاختيار علي أول من يجيب علي السؤال بشكل صحيح، ثم تبدأ رحلة المتسابق إلي المليون! يحاول المتسابق الإجابة علي 15 سؤال بالتتابع (سنتطرق للأسئلة في الفقرة 2)، وفي البداية تكون الأسئلة سهلة، وتتدرج في الصعوبة حتي تصل للقمة عند سؤال المليون! وهناك محطتين عند السؤال الخامس (ب1,000 ريال سعودي) وعند السؤال العاشر (ب32.000 ريال سعودي) (بمعني أن المتسابق لا يمكن أن يخسرهم إذا وصل لهم)، هناك أيضاً وسائل المساعدة (سنتطرق لها في الفقرة 3)،
+			</p><br>
+		    <p>
+			  2. أسئلة لعبة من سيربح المليون <br>
+			  عددها 15 سؤال  وهي من مجالات مختلفة ومتعددة، بعضها يتعلق بالشعر العربي، وأخري بالسينما والأفلام والفن، وأيضاً التاريخ العربي والإسلامي والعالمي، والعواصم والبلدان، والعلوم الطبيعية، والرياضة وكرة القدم والألعاب، وتقريباً لا يوجد مجال من مجالات المعرفة لم تتعرض له، مما يتطلب من المتاسبقين أن يكونوا واسعي الإطلاع والثقافة، ومحظوظين أيضاً لبلوغ المليون!
+			</p><br>
+		    <p>3. وسائل المساعدة في لعبة من سيربح المليون <br>
+			  كما هو معروف، فهناك ثلاث وسائل مساعدة تستخدم مرة واحدة، وهي:<br> 1) حذف إجابتين: يتم حذف إجابتين بشكل عشوائي، وتتبقي إجابتين إحداهما صحيحة والأخري خاطئة.<br> 2) الاتصال بصديق: يتصل المتسابق بأحد معارفه، ويستشيره بخصوص الإجابة الصحيحة للسؤال خلال 30 ثانية فقط!<br> 3) مساعدة الجمهور: يقوم الجمهور بالتصويت من خلال جهاز إلكتروني، وتعرض نتائج التصويت أمام المتسابق ويختار بناء علي التصويت أو لا. تبقي وسائل المساعدة ضرورية ولاغني عنها للتقدم في لعبة من سيربح المليون، والوصول إلي المليون
+		    </p>
+		  </center>
+		</div>
+	
+
+
+<center>
+    <p style="font-family: 'Mada', sans-serif;font-size:16px;text-align:center;border:2px;border-radius:0px;color:#000000;background-color:#f3ab65">
+        
+        <svg width="13" height="10" viewBox="0 0 100 100">
+            <path fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+            <animateTransform 
+              attributeName="transform" 
+              type="scale" 
+              values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+              dur="1s" 
+              repeatCount="indefinite">      
+            </animateTransform>
+          </svg>
+        
+        
+          -⚙ BY S!D!M@D™ |جميع الحقوق محفوظة ⛔
+        </p>
+      </div>
+</center>
+
+
+
+</div>
+
+
+  </body>
+</html>

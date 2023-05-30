@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>👑-S!D!M@D-Log In</title>
+  <link rel="icon" type="image/ico" href="../pic/milara.png">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Mada:wght@900&family=Righteous&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+          <link rel="stylesheet" type="text/css" href="stylesheets/cssCustome.css" media="screen" />
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+          <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script>
+            $(document).ready(function() {
+                $("#gobtn").click(function(){
+                var name=document.getElementById("username").value;
+                var pass=document.getElementById("password").value;
+                if(name=="sidimad" && pass=="sidi")
+                    {
+                        window.open("adminpage.html","_self");
+                        document.getElementById("errorspan").textContent="";
+                    }
+                else
+                    {
+                        document.getElementById("username").value="";
+                        document.getElementById("password").value="";
+                        document.getElementById("errorspan").textContent="Invalid Username or Password !";
+                        document.getElementById("errorspan").style="color:white";
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div data-role="page" id="login" class="abackground" >
+          <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                  <img style="background-color: #031634;font-family: 'Righteous', cursive;font-size:16px;color:#ffffff;" src="icons/logo.png" height="50" width="50"/>
+                 
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li style="background-color: #031634;font-family: 'Righteous', cursive;font-size:16px;color:#ffffff;"><a href="welcome.html" rel="external" title="Home"> 🏠-Homepage <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+              </ul>
+            </div>
+          </nav>
+
+        <div data-role="content" data-cache="false">
+
+          <label style="font-family: 'Righteous', cursive;font-size:20px;text-align:center;color:#ffffff;text-decoration: underline wavy #f3ab65 5px;">🔑-ADMIN LOGIN</label>
+            <input id="username" type="text" class="form-control" name="User Name" placeholder="username" style="background-color:#031634;border-color:#f3ab65;color:white;height:50px; text-align: center;font-family: 'Righteous', cursive;color:#ffffff;font-size:20px;text-decoration: underline wavy #f3ab65 1px;" >
+            <input id="password" type="password" class="form-control" name="password" placeholder="Password" style="background-color:#031634;border-color:#f3ab65;color:white;height:50px; text-align: center;font-family: 'Righteous', cursive;color:#ffffff;font-size:20px;text-decoration: underline wavy #f3ab65 1px;" >
+
+          <br/><br/>
+          <a class="centerLink" id="gobtn"> <img src="icons/next.svg" class="helpicon" /> </a>
+            <br/><br/><br/>
+              <label id="errorspan" class="error"/>
+         </div>
+
+
+<hr style=" border:1px solid #f3ab65;border-radius:5px;color:#ffffff; width:auto;background: #031634">  </hr> 
+
+
+   
+   
+<center>
+  
+        
+<h1 style="text-decoration: red underline;width:100%;text-align:center;font-family: 'Mada', sans-serif;border-bottom: 2px solid #e60e23;font-size:26px;border:2px;border-radius:0px;color:#ffffff;background-color:transparent;">
+        <svg width="13" height="10" viewBox="0 0 100 100">
+            <path fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+            <animateTransform 
+              attributeName="transform" 
+              type="scale" 
+              values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+              dur="1s" 
+              repeatCount="indefinite">      
+            </animateTransform>
+          </svg>
+        
+        
+          -⚙ BY S!D!M@D™ |جميع الحقوق محفوظة ⛔
+        </h1>
+      </div>
+</center>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+    </body>
+</html>

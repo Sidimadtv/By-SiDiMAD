@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        
+        <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>👑-S!D!M@D-ن سيربح المليون</title>
+  <link rel="icon" type="image/ico" href="../pic/milara.png">
+<link rel="stylesheet" href="stylesheets/style.css" type="text/css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Mada:wght@900&family=Righteous&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
+        <link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css"
+        rel="stylesheet" type="text/css" />
+        <script src="Javascript/mainscript.js"></script>
+        <script src="Javascript/canvasjs.min.js"></script>
+        <link rel="stylesheet" href="stylesheets/Calling.css"/>
+        <script type="text/javascript" src="Javascript/call.js"></script>
+        <!--<script type="text/javascript" src="Javascript/jquery-1.12.4.js"></script>-->
+        <script type="text/javascript" src="Javascript/circular-countdown.js"></script>
+    </head>
+    <body>
+        <div data-role="page" class="background">
+            <header>
+                    <audio src="sound/background.mp3" autoplay loop id="myAudio"></audio>
+                    <audio src="sound/right.mp3" id="winAudio"></audio>
+                    <audio src="sound/wrong.mp3" id="loseAudio"></audio>
+                    <audio id="CallingAudio"></audio>
+                    <audio id="fansAudio" src="sound/Fans.mp3"></audio>
+                    <a href="#nav-panel"><img src="icons/money-bag-with-dollar-symbol.svg" class="option"></a>
+                    <a href="scores.html" rel="external" onclick="cancelplay()"><img src="icons/exit.svg" class="option" align="right"></a>
+                    <img src="icons/speaker.svg" class="option" align="right" id="volumeChange" data-swap='icons/mute.svg' data-src='icons/speaker.svg'>
+                    <center>
+                    <img src="icons/call-volume.svg" class="helpicon" data-swap="" data-src="" id="call">
+                    <img src="icons/50-speed-limit-sign.svg" class="helpicon" id="half">
+                    <img src="icons/multiple-users-silhouette.svg" class="helpicon" id="fans">
+                    </center>
+                    <center>
+                        <div id="loseDiv"  style="visibility:hidden ;width: 800px;" >
+                            <img id="cheque" style="height: 400px;width: 800px;"/>
+                        </div>
+                        
+                        <div style="visibility:hidden;margin:0 auto;" id="helpdiv" >
+                        <div id="background">
+                            <div id="firstFriend" onclick="callFirst()">
+                                <div id="Image">
+                                    <center><img id="imgFriend" src="icons/man.svg" > </center></div>
+                                <div id="Phone">
+                                    <center><img id="imgPhone" src="icons/speech-bubble.svg" ></center> </div>
+                                <div id="info"> 
+                                <center><span id="Name">أحمد مدحت</span></center>
+                                  <center><span id="Nationality">مصر</span></center>
+                                </div>
+                            </div>
+                            <div id="secondFriend" onclick="callSecond()">
+                                <div id="Image">
+                                    <center><img id="imgFriend" src="icons/telemarketer.svg" > </center></div>
+                                <div id="Phone">
+                                    <center><img id="imgPhone" src="icons/speech-bubble.svg" ></center> </div>
+                                <div id="info"> 
+                                <center><span id="Name">جيهان كلوخ</span></center>
+                                  <center><span id="Nationality">المغرب</span></center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timer" id="timerdiv" style="visibility:hidden;position:center;"></div>
+				    </center>
+                </header>
+            <div class="myblock" id="maindiv">
+                <center>
+                    <div class="questionbox" id="questiontext"></div>
+                    <div class="ansbox">
+                        <div data-inline="true" data-type="horizontal">
+                            <button class="ansitem" data-inline="true" id="btn1"></button>
+                            <button class="ansitem" data-inline="true" id="btn2"></button>
+                        </div>
+                        <div data-inline="true" data-type="horizontal">
+                            <button class="ansitem" data-inline="true" id="btn3"></button>
+                            <button class="ansitem" data-inline="true" id="btn4"></button>
+                        </div>
+                    </div>
+               </div>
+
+
+
+           
+           
+
+
+
+ <div data-role="panel" data-display="push" id="nav-panel" data-dismissible=	"true" style="font-family: 'Mada', sans-serif;font-size:16px;text-align:center;color:#000000;background-color:transparent">
+                <ul id="levels" data-role="listview">
+                        <li data-icon="delete"><a href="#" data-rel="close">💡-EARNINGS</a></li>
+                        <li id="lvl15" class="stage">15. $1,000,000</li>
+                        <li id="lvl14">14. $500,000</li>
+                        <li id="lvl13">13. $250,000</li>
+                        <li id="lvl12">12. $125,000</li>
+                        <li id="lvl11">11. $64,000</li>
+                        <li id="lvl10" class="stage">10. $32,000</li>
+                        <li id="lvl9">9. $16,000</li>
+                        <li id="lvl8">8. $8,000</li>
+                        <li id="lvl7">7. $4,000</li>
+                        <li id="lvl6">6. $2,000</li>
+                        <li id="lvl5" class="stage">5. $1,000</li>
+                        <li id="lvl4">4. $500</li>
+                        <li id="lvl3">3. $300</li>
+                        <li id="lvl2">2. $200</li>
+                        <li id="lvl1">1. $100</li>
+                    </ul>
+                
+            </div>
+            <div  id="chartContainer" style="height: 200px; display: none; width: 300px; background-color:#031634"></div>
+      
+<hr style=" border:1px solid #f3ab65;border-radius:5px;color:#ffffff; width:auto;background: #031634">  </hr> 
+
+
+   
+   
+<center>
+  
+        
+<h1 style="text-decoration: red underline;width:100%;text-align:center;font-family: 'Mada', sans-serif;border-bottom: 2px solid #e60e23;font-size:26px;border:2px;border-radius:0px;color:#ffffff;background-color:transparent;">
+        <svg width="13" height="10" viewBox="0 0 100 100">
+            <path fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+            <animateTransform 
+              attributeName="transform" 
+              type="scale" 
+              values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+              dur="1s" 
+              repeatCount="indefinite">      
+            </animateTransform>
+          </svg>
+        
+        
+          -⚙ BY S!D!M@D™ |جميع الحقوق محفوظة ⛔
+        </h1>
+      </div>
+</center>
+
+  </div>
+   
+
+
+ 
+
+
+ </body>
+</html>
