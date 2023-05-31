@@ -1,0 +1,27 @@
+{
+	"name": "SVG to image",
+	"short_name": "SVG to image",
+	"description": "Convert SVGs to images. Useful for creating PWA icons from SVGs.",
+	"start_url": "./",
+	"scope": "./",
+	"display": "standalone",
+	"background_color": "black",
+	"theme_color": "black",
+	"display_override": [
+		"window-controls-overlay"
+	],
+	"icons": [
+		{
+			"src": "./icon.png",
+			"type": "image/png",
+			"sizes": "512x512",
+			"purpose": "maskable any"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "./icon.png",
+			"sizes": "512x512"
+		}
+	]
+}

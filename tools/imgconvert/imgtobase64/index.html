@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Image to Base64</title>
+</head>
+<style type="text/css">
+    .size{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    .container {
+        display: grid;
+    }
+
+</style>
+<body style="display: grid;justify-content: space-around;">
+    <h1>Image Url To Base64</h1>
+    <div class="container">
+        <input id="inp" type="file">
+        <img id="img" height="150" style="display: none">
+
+        <h2>Or</h2>
+        <input type="data" name="data" id="kitas" value="http://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" class="size" style="width: 80%;">
+        <button onclick="ho()" class="size">convert</button>
+        <textarea id="datas" style="width: 273px; height: 201px;margin-top:20px;"></textarea>
+        <a id="hr" rel="noopener noreferrer" style="display: none">Open File</a>
+    </div>
+    <script type="text/javascript">
+        function readFile() {
+  
+  if (!this.files || !this.files[0]) return;
+    
+  const FR = new FileReader();
+    
+  FR.addEventListener("load", function(evt) {
+    document.querySelector("#img").src         = evt.target.result;
+    document.querySelector("#img").style.displa = "block";
+    document.querySelector("#datas").textContent = evt.target.result;
+  }); 
+    
+  FR.readAsDataURL(this.files[0]);
+  
+}
+
+document.querySelector("#inp").addEventListener("change", readFile);
+
+        function ho(){
+            getBase64FromUrl(document.getElementById('kitas').value)
+            .then(res=>{
+                document.getElementById('datas').value = res;
+                document.getElementById('hr').setAttribute('href',res)
+                document.getElementById('hr').style.display = "block";
+                document.querySelector("#img").src = res
+                document.querySelector("#img").style.displa = "block";
+                console.log(res)
+            })
+        }
+        const getBase64FromUrl = async (url) => {
+          const data = await fetch(url);
+          const blob = await data.blob();
+          return new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(blob); 
+            reader.onloadend = () => {
+              const base64data = reader.result;   
+              resolve(base64data);
+          }
+      });
+      }
+
+// getBase64FromUrl('https://lh3.googleusercontent.com/i7cTyGnCwLIJhT1t2YpLW-zHt8ZKalgQiqfrYnZQl975-ygD_0mOXaYZMzekfKW_ydHRutDbNzeqpWoLkFR4Yx2Z2bgNj2XskKJrfw8').then(console.log)
+</script>
+</body>
+
+</html>

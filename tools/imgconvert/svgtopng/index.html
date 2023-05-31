@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="color-scheme" content="dark light" />
+	<meta name="robots" content="all" />
+	<meta name="theme-color" content="black" />
+	<meta name="description" content="Convert SVGs to images. Useful for creating PWA icons from SVGs." />
+
+	<base href="./" />
+
+	<link rel="manifest" href="./manifest.webmanifest" />
+	<link rel="icon" href="./icon.svg" />
+	<link rel="apple-touch-icon" href="./icon.png" />
+
+	<title>SVG to image</title>
+
+	<style>
+		:root {
+			overflow: hidden;
+		}
+
+		body {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 1rem;
+
+			display: grid;
+			place-items: center;
+
+			position: fixed;
+			inset: env(titlebar-area-height, 2rem) 0 0;
+			overflow-x: hidden;
+			overscroll-behavior-block: none;
+
+			font-family: system-ui;
+		}
+
+		titlebar {
+			box-sizing: border-box;
+			position: fixed;
+			display: flex;
+			gap: .4rem;
+			align-items: center;
+			padding-inline: .3rem;
+			overflow: hidden;
+
+			top: env(titlebar-area-y, 0);
+			left: env(titlebar-area-x, 0);
+			height: env(titlebar-area-height, 2rem);
+			width: env(titlebar-area-width, 100%);
+
+			app-region: drag;
+			-webkit-app-region: drag;
+
+			background-color: black;
+			color: white;
+		}
+
+		titlebar img.icon {
+			height: calc(env(titlebar-area-height, 2rem) - .2rem);
+			aspect-ratio: 1;
+		}
+
+		titlebar select {
+			-webkit-app-region: no-drag;
+			app-region: no-drag;
+
+			color-scheme: dark;
+
+			outline: none;
+			border-radius: .4em;
+			padding: .2em .3em;
+			border: none;
+		}
+
+		titlebar select option {
+			font-size: 1.1em;
+		}
+
+		drop-zone {
+			display: grid;
+			align-items: center;
+			block-size: 100%;
+			inline-size: 100%;
+			padding: .5rem;
+			box-sizing: border-box;
+			border: 3px dashed slateBlue;
+			border-radius: 1rem;
+			background-color: color-mix(in srgb, slateBlue 15%, transparent);
+			text-align: center;
+			line-height: 2em;
+		}
+
+		label {
+			padding: .5em .7em;
+			margin-inline-start: .3rem;
+			background-color: slateBlue;
+			color: white;
+			border-radius: .5rem;
+			cursor: pointer;
+			text-align: center;
+
+			white-space: nowrap;
+		}
+
+	</style>
+
+	<script type="module">
+		document.body.addEventListener("dragover", (/** @type {DragEvent} */ event) => {
+			event.preventDefault();
+		});
+
+		const convertToImage = async (/** @type {File} */ file) => {
+
+			let svg;
+			if (file?.type === "image/svg+xml") {
+				svg = await file.text();
+			} else {
+				console.log(file);
+				window.alert("Please drop an SVG file.");
+				return;
+			}
+
+			const /** @type {HTMLCanvasElement} */ canvas = document.createElement("canvas");
+			const /** @type {CanvasRenderingContext2D} */ ctx = canvas.getContext("2d");
+			canvas.width = canvas.height = +document.querySelector("select[name=imageResolution]").value;
+
+			{
+				// Firefox requires a width and height attribute on the SVG element
+				const /** @type {SVGElement} */ svgElement = new DOMParser().parseFromString(svg, "image/svg+xml").documentElement;
+
+				for (const [side, viewBoxIndex] of [["width", 2], ["height", 3]]) {
+					svgElement.setAttribute(side,
+						svgElement.getAttribute("viewBox")?.trim().split(/\s/)[viewBoxIndex]
+						||
+						window.parseInt(svgElement.getAttribute(side))
+						||
+						canvas[side]
+					);
+				}
+
+				svg = svgElement.outerHTML;
+			}
+
+			const /** @type {HTMLImageElement} */ image = new Image();
+			await new Promise((/** @type {() => void)} */ resolve) => {
+				image.addEventListener("load", resolve);
+				image.src = "data:image/svg+xml;charset=utf-8," + window.encodeURIComponent(svg);
+			});
+			ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+			const /** @type {string} */ imageType = document.querySelector("select[name=imageType]").value;
+			const /** @type {string} */ dataURL = canvas.toDataURL("image/" + imageType);
+
+			const /** @type {HTMLAnchorElement} */ a = document.createElement("a");
+			a.href = dataURL;
+			a.download = file.name.replace(/\.svg$/, "." + imageType);
+			document.body.appendChild(a);
+
+			a.click();
+			a.remove();
+		};
+
+		document.body.addEventListener("drop", (/** @type {InputEvent} */event) => {
+			event.preventDefault();
+			convertToImage(event.dataTransfer.files?.[0]);
+		});
+
+		document.querySelector("input[type=file]").addEventListener("input", async function () {
+			convertToImage(this.files?.[0]);
+			this.value = null;
+		});
+
+		{ /// service worker, update & PWA
+
+			const registerServiceWorker = () => {
+				navigator.serviceWorker?.register("./service-worker.js", { scope: "./", updateViaCache: "all" });
+			};
+			registerServiceWorker();
+
+			navigator.serviceWorker?.addEventListener("message", async (/** @type {MessageEvent} */ { data }) => {
+				if (data.message === "updateAvailable") {
+					registerServiceWorker();
+				}
+			});
+
+			{
+				const checkReadyState = async () => {
+					if (document.readyState === "complete" && navigator.onLine) {
+						(await navigator.serviceWorker?.ready)?.active.postMessage({ message: "checkForUpdate" });
+					}
+				};
+				checkReadyState();
+				document.addEventListener("readystatechange", checkReadyState);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<noscript>
+		Please enable JavaScript to view this site.
+		<hr />
+	</noscript>
+
+	<titlebar>
+		<img src="./icon.svg" class="icon" alt="a slateblue circle with the text 'SVG'">
+		<span>SVG to image &bull; resolution:</span>
+		<select name="imageResolution">
+			<option value="16">16px</option>
+			<option value="32">32px</option>
+			<option value="64">64px</option>
+			<option value="128">128px</option>
+			<option value="144">144px</option>
+			<option value="180">180px</option>
+			<option value="192">192px</option>
+			<option value="256">256px</option>
+			<option value="512" selected>512px</option>
+		</select>
+		<span>&bull; image type:</span>
+		<select name="imageType">
+			<option value="png" selected>PNG</option>
+			<option value="jpeg">JPEG</option>
+			<option value="webp">WebP</option>
+		</select>
+	</titlebar>
+
+	<drop-zone>
+		<div>
+			Drop an SVG here or
+			<label>
+				<input hidden type="file" accept="image/svg+xml" />
+				<span>select an SVG from your computer.</span>
+			</label>
+		</div>
+	</drop-zone>
+</body>
+
+</html>
