@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>S!D!M@D Web TV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="icon" type="image/ico" href="images/logo.ico">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Tajawal:wght@600&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css2?family=Mada:wght@900&family=Righteous&display=swap" rel="stylesheet">
+  
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+
+    
+   <style>
+   
+.sidimad-sticker {
+  width: 12.1em;
+  height: 12.1em;
+  background : transparent;
+ 
+font-family: 'Righteous', cursive;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 14px;
+  text-decoration: none;
+  text-indent: -999999px;
+}
+
+.sidimad-sticker.fixed {
+  position: fixed;
+}
+
+.sidimad-sticker:hover, .sidimad-sticker:active {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.sidimad-sticker:before, .sidimad-sticker:after {
+ 
+  position: absolute;
+  display: block;
+  width: 15.38em;
+  height: 1.54em;
+
+  top: 3.23em;
+  right: -3.23em;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sidimad-sticker:before {
+  content: "";
+
+ 
+  padding: .38em 0;
+
+  
+  background-color: #a00;
+
+  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+
+  /* Add a drop shadow */
+  -webkit-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+
+  pointer-events: auto;
+}
+
+.sidimad-sticker:after {
+  /* Set the text from the data-ribbon attribute */
+  content: attr(data-ribbon);
+
+  /* Set the text properties */
+  color: #f3ab65;
+  font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.54em;
+  text-decoration: none;
+  text-shadow: 0 -.08em rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-indent: 0;
+
+  /* Set the layout properties */
+  padding: .15em 0;
+  margin: .15em 0;
+
+  /* Add "stitching" effect */
+  border-width: .08em 0;
+  border-style: dotted;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.sidimad-sticker.left-top, .sidimad-sticker.left-bottom {
+  right: auto;
+  left: 0;
+}
+
+.sidimad-sticker.left-bottom, .sidimad-sticker.right-bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.sidimad-sticker.left-top:before, .sidimad-sticker.left-top:after, .sidimad-sticker.left-bottom:before, .sidimad-sticker.left-bottom:after {
+  right: auto;
+  left: -3.23em;
+}
+
+.sidimad-sticker.left-bottom:before, .sidimad-sticker.left-bottom:after, .sidimad-sticker.right-bottom:before, .sidimad-sticker.right-bottom:after {
+  top: auto;
+  bottom: 3.23em;
+}
+
+.sidimad-sticker.left-top:before, .sidimad-sticker.left-top:after, .sidimad-sticker.right-bottom:before, .sidimad-sticker.right-bottom:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width             : 13px;
+  -webkit-app-region: no-drag;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color  : #e60e23;
+  -webkit-app-region: no-drag;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background        : #f3ab65;
+  -webkit-app-region: no-drag;
+
+border-radius : 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+      
+    </style>       
+
+
+
+
+
+
+  <body>
+   
+
+ <a
+      class="sidimad-sticker right-top fixed"
+      href=../index.html
+      data-ribbon="🏠-HOMEPAGE"
+      title="🏠-HOMEPAGE"
+   
+      >🏠-HOMEPAGE</a
+    >
+
+
+   
+   
+<center>
+  
+        
+<h1 style="text-decoration: red underline;width:100%;text-align:center;font-family: 'Mada', sans-serif;border-bottom: 2px solid #e60e23;font-size:26px;border:2px;border-radius:0px;color:#ffffff;background-color:#031634;">
+        <svg width="13" height="10" viewBox="0 0 100 100">
+            <path fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+            <animateTransform 
+              attributeName="transform" 
+              type="scale" 
+              values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+              dur="1s" 
+              repeatCount="indefinite">      
+            </animateTransform>
+          </svg>
+        
+        
+          -⚙ BY S!D!M@D™ |جميع الحقوق محفوظة ⛔
+        </h1>
+      </div>
+</center>
+
+
+    <div id="left">
+        <h3></h3>
+        <ul id="menu">
+            <li>
+                <p>جاري تحميل قائمة القنوات...</p>
+            </li>
+        </ul>
+    </div>
+    <div class="toggle"></div>
+    <div id="control">
+        <div id="menuicon" title="Toggle tools menu">
+        </div>
+        <div id="player" title="Play M3U8 Link videos">
+        </div>
+        <input id="inputlink" type="text" placeholder="قم بلصق الرابط m3u هنا...">
+      
+      
+        <div id="favorite" title="قائمة المفضلة">
+        </div>
+        <div id="channelist">
+            <h3>Favorite</h3>
+            <ul id="channelcontent">
+                <li>
+                    <p>Please click like to collect</p>
+                </li>
+            </ul>
+        </div>
+        <div id="epdetail" title="Content detail">
+        </div>
+        <div id="epcontent">
+        </div>
+    </div>
+    <div id="right">
+        <div id="div1">
+            <!-- The element where the player will be placed -->
+            <video id="video1" class="video-js vjs-big-play-centered" controls preload="auto" poster="Loading..." autoplay="true" data-setup='{"playbackRates": [0.5, 1.0, 1.5, 2.0 ,4.0]}'>
+                <source src="https://f8e7y4c6.ssl.hwcdn.net/andflixhd/index.m3u8" type="application/x-mpegURL" />
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+  
+
+
+
+  </div>
+  
+
+
+
+
+
+  <script src="../js/comprehensive.js"></script>
+    <script src="https://vjs.zencdn.net/7.14.3/video.min.js"></script>
+    <script>
+        let menuHeight = document.getElementById('menu');
+        let screenHeight = window.innerHeight;
+        menuHeight.style.height = screenHeight - 60 + 'px';
+        $("#menu").css({
+            "overflow-y": "auto",
+            "height": menuHeight
+        });
+        $("li p").mouseover(function() {
+            $(this).children("a").css({
+                "color": "#000"
+            })
+        })
+        $("li p").mouseleave(function() {
+            $(this).children("a").css({
+                "color": "#fff"
+            })
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
