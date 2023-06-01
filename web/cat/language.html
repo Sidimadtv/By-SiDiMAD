@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>S!D!M@D Web TV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <link rel="icon" type="image/ico" href="../images/logo.png">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&family=Tajawal:wght@600&display=swap" rel="stylesheet">
+
+ <link href="https://fonts.googleapis.com/css2?family=Mada:wght@900&family=Righteous&display=swap" rel="stylesheet">
+  
+    
+    <link href="../css/main.css" rel="stylesheet" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    body {
+        background-image: url("../images/bg.jpg");
+    }
+    
+    #menu {
+        overflow-y: scroll !important;
+    }
+</style>
+
+ 
+   <style>
+   
+.sidimad-sticker {
+  width: 12.1em;
+  height: 12.1em;
+  background : transparent;
+ 
+font-family: 'Righteous', cursive;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+  font-size: 14px;
+  text-decoration: none;
+  text-indent: -999999px;
+}
+
+.sidimad-sticker.fixed {
+  position: fixed;
+}
+
+.sidimad-sticker:hover, .sidimad-sticker:active {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.sidimad-sticker:before, .sidimad-sticker:after {
+ 
+  position: absolute;
+  display: block;
+  width: 15.38em;
+  height: 1.54em;
+
+  top: 3.23em;
+  right: -3.23em;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sidimad-sticker:before {
+  content: "";
+
+ 
+  padding: .38em 0;
+
+  
+  background-color: #a00;
+
+  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+
+  /* Add a drop shadow */
+  -webkit-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+
+  pointer-events: auto;
+}
+
+.sidimad-sticker:after {
+  /* Set the text from the data-ribbon attribute */
+  content: attr(data-ribbon);
+
+  /* Set the text properties */
+  color: #f3ab65;
+  font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.54em;
+  text-decoration: none;
+  text-shadow: 0 -.08em rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-indent: 0;
+
+  /* Set the layout properties */
+  padding: .15em 0;
+  margin: .15em 0;
+
+  /* Add "stitching" effect */
+  border-width: .08em 0;
+  border-style: dotted;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.sidimad-sticker.left-top, .sidimad-sticker.left-bottom {
+  right: auto;
+  left: 0;
+}
+
+.sidimad-sticker.left-bottom, .sidimad-sticker.right-bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.sidimad-sticker.left-top:before, .sidimad-sticker.left-top:after, .sidimad-sticker.left-bottom:before, .sidimad-sticker.left-bottom:after {
+  right: auto;
+  left: -3.23em;
+}
+
+.sidimad-sticker.left-bottom:before, .sidimad-sticker.left-bottom:after, .sidimad-sticker.right-bottom:before, .sidimad-sticker.right-bottom:after {
+  top: auto;
+  bottom: 3.23em;
+}
+
+.sidimad-sticker.left-top:before, .sidimad-sticker.left-top:after, .sidimad-sticker.right-bottom:before, .sidimad-sticker.right-bottom:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+      
+    </style>       
+
+
+
+
+
+
+  <body>
+   
+
+ <a
+      class="sidimad-sticker right-top fixed"
+    
+      data-ribbon="🏠-HOMEPAGE"
+      title="🏠-HOMEPAGE"
+     href=../index.html
+      >🏠-HOMEPAGE</a
+    >
+
+
+   
+   
+<center>
+  
+        
+<h1 style="text-decoration: red underline;width:100%;text-align:center;font-family: 'Mada', sans-serif;border-bottom: 2px solid #e60e23;font-size:26px;border:2px;border-radius:0px;color:#ffffff;background-color:#031634;">
+        <svg width="13" height="10" viewBox="0 0 100 100">
+            <path fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+            <animateTransform 
+              attributeName="transform" 
+              type="scale" 
+              values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+              dur="1s" 
+              repeatCount="indefinite">      
+            </animateTransform>
+          </svg>
+        
+        
+          -⚙ BY S!D!M@D™ |جميع الحقوق محفوظة ⛔
+        </h1>
+      </div>
+</center>
+
+
+    <div id="left">
+        <h3>Select Languages</h3>
+        <ul id="menu">
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=aka&title=Akan">Akan</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=sqi&title=Albanian">Albanian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=amh&title=Amharic">Amharic</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ara&title=Arabic">Arabic</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=hye&title=Armenian">Armenian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=aii&title=Assyrian Neo-Aramaic">Assyrian Neo-Aramaic</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=aze&title=Azerbaijani">Azerbaijani</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=bak&title=Bashkir">Bashkir</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ben&title=Bengali">Bengali</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=bho&title=Bhojpuri">Bhojpuri</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=bos&title=Bosnian">Bosnian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=bul&title=Bulgarian">Bulgarian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=mya&title=Burmese">Burmese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=cat&title=Catalan">Catalan</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=zho&title=Chinese">Chinese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=hrv&title=Croatian">Croatian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ces&title=Czech">Czech</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=dan&title=Danish">Danish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=nld&title=Dutch">Dutch</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=eng&title=English">English</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=est&title=Estonian">Estonian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=fao&title=Faroese">Faroese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=fin&title=Finnish">Finnish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=fra&title=French">French</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=glg&title=Galician">Galician</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=kat&title=Georgian">Georgian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=deu&title=German">German</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=heb&title=Hebrew">Hebrew</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=hin&title=Hindi">Hindi</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=hun&title=Hungarian">Hungarian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=isl&title=Icelandic">Icelandic</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ind&title=Indonesian">Indonesian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=iku&title=Inuktitut">Inuktitut</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ita&title=Italian">Italian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=jpn&title=Japanese">Japanese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=jav&title=Javanese">Javanese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=kan&title=Kannada">Kannada</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=kaz&title=Kazakh">Kazakh</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=khm&title=Khmer">Khmer</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=kin&title=Kinyarwanda">Kinyarwanda</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=kor&title=Korean">Korean</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=kur&title=Kurdish">Kurdish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=kir&title=Kyrgyz">Kyrgyz</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=lao&title=Lao">Lao</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=lav&title=Latvian">Latvian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=lit&title=Lithuanian">Lithuanian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ltz&title=Luxembourgish">Luxembourgish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=mkd&title=Macedonian">Macedonian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=msa&title=Malay (macrolanguage)">Malay (macrolanguage)</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=mal&title=Malayalam">Malayalam</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=mlt&title=Maltese">Maltese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=cmn&title=Mandarin Chinese">Mandarin Chinese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=mri&title=Maori">Maori</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=mar&title=Marathi">Marathi</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=nan&title=Min Nan Chinese">Min Nan Chinese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ell&title=Modern Greek (1453-)">Modern Greek (1453-)</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=mon&title=Mongolian">Mongolian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=cnr&title=Montenegrin">Montenegrin</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=nep&title=Nepali (macrolanguage)">Nepali (macrolanguage)</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=nob&title=Norwegian Bokmål">Norwegian Bokmål</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=pan&title=Panjabi">Panjabi</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=pus&title=Pashto">Pashto</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=fas&title=Persian">Persian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=pol&title=Polish">Polish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=por&title=Portuguese">Portuguese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ron&title=Romanian">Romanian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=rus&title=Russian">Russian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=srp&title=Serbian">Serbian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=sin&title=Sinhala">Sinhala</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=slk&title=Slovak">Slovak</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=slv&title=Slovenian">Slovenian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=som&title=Somali">Somali</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=spa&title=Spanish">Spanish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=sun&title=Sundanese">Sundanese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=swe&title=Swedish">Swedish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=tgl&title=Tagalog">Tagalog</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=tam&title=Tamil">Tamil</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=tel&title=Telugu">Telugu</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=tha&title=Thai">Thai</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=tur&title=Turkish">Turkish</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=tuk&title=Turkmen">Turkmen</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=ukr&title=Ukrainian">Ukrainian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=urd&title=Urdu">Urdu</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=uzb&title=Uzbek">Uzbek</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=vie&title=Vietnamese">Vietnamese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=fry&title=Western Frisian">Western Frisian</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=yue&title=Yue Chinese">Yue Chinese</a></p>
+            </li>
+            <li>
+                <p><a href="../sidi/sidimadlanguage.html?tab=undefined&title=Others">Others</a></p>
+            </li>
+        </ul>
+    </div>
+    <div id="right">
+        <div id="div1">
+            <img src="../images/index.png" />
+        </div>
+    </div>
+    <script>
+        let menuHeight = document.getElementById('menu');
+        let screenHeight = window.innerHeight;
+        menuHeight.style.height = screenHeight - 60 + "px";
+        $("#menu").css({
+            "overflow-y": "auto",
+            "height": menuHeight
+        });
+        $("li p").mouseover(function() {
+            $(this).children("a").css({
+                "color": "#000"
+            })
+        })
+        $("li p").mouseleave(function() {
+            $(this).children("a").css({
+                "color": "#fff"
+            })
+        })
+    </script>
+</body>
+
+</html>
