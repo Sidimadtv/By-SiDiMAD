@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-248R2VS61S"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-248R2VS61S");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="This website generates quotes and was created by OsamaAsasfeh."
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Qoute-Generator)/OsamaAsasfeh</title>
+    <link rel="icon" type="image/png" href="logo32px.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:ital,wght@0,100;0,200;0,700;1,300&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
+    <!-- <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=jacinto.design"> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#333" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+  </head>
+  <body>
+    <!-- hadder -->
+    <header class="header">
+      <a href="#default" class="logo" aria-label="Go to homepage"
+        >Qoute-Generator</a
+      >
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <!-- <li><a href="#work">Our Work</a></li> -->
+        <li>
+          <select class="active" name="language" id="language">
+            <option value="Arabic"><a class="ar-select">عربي</a></option>
+            <option value="En"><a class="en-select">EN</a></option>
+          </select>
+        </li>
+
+        <li>
+          <a
+            href="https://github.com/OsamaAsasfeh"
+            aria-label="Go to my GitHub profile"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/osama-al-asasfeh/"
+            aria-label="Go to my LinkedIn profile"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <div class="quote-body">
+      <div class="quote-container" id="quote-container">
+        <!-- Qoute -->
+        <div class="qoute-text">
+          <i class="fas fa-quote-right"> </i>
+          <br />
+          <span id="quote"></span>
+          <!-- Author -->
+          <div class="quote-author">
+            <span id="author"></span>
+          </div>
+          <!-- Buttons -->
+          <div class="button-container">
+            <button
+              class="twitter-button"
+              id="twitter"
+              aria-label="Share on Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button class="new-quote" id="copy" aria-label="Copy to Clipboard">
+              حفظ
+            </button>
+
+            <button
+              class="new-quote"
+              id="new-quote"
+              aria-label="Get a new quote"
+            >
+              اقتباس
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loader" id="loader"></div>
+    <!-- Loader -->
+
+    <!-- Script -->
+    <script type="module" src="script.js"></script>
+    <!-- <script type="module" defer src="arQuotes.js"></script> -->
+  </body>
+</html>
