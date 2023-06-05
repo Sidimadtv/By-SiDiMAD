@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css" />
+    <title>Make Google Drive Link Downloadable</title>
+</head>
+
+<body>
+    <main class="convert vh-100 d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row ">
+                <div class="cover mx-auto">
+                    <h1 class="text-center"></h1>
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Convert Google Drive Link to a downloadable Link</h4>
+                        <p>This project has no error checking. The shareable URL has to be in this format:
+                        <pre><code>https://drive.google.com/file/d/<span class="fw-bold text-primary">FileID</span>/view?usp=sharing</code></pre>
+                        </p>
+
+                    </div>
+                    <form id="gdrive-form">
+                        <div class="input-group">
+                            <input class="form-control" id="gdrive-link" name="gdriveLink" type="text"
+                                placeholder="Paste Google Drive Link here" required />
+                            <input class="btn btn-outline-secondary" type="submit" value="Convert" />
+                        </div>
+                    </form>
+                    <div id="link-placeholder-wrapper" class="input-group mt-3 d-none">
+                        <input id="link-placeholder" class="form-control"
+                            placeholder="The new link will be shown here" />
+                        <a id="copy-result" class="btn btn-outline-primary">Copy <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                                <path
+                                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+                                <path
+                                    d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+                            </svg></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
