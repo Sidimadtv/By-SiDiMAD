@@ -1,0 +1,685 @@
+<!doctype html>
+<html>
+<head>
+   
+  <script type='text/javascript'>
+ 
+var urlTotal,nextPageToken,postsDatePrefix=!1,accessOnly=!1,useApiV3=!1,apiKey="",blogId="",postsOrPages=["pages","posts"],jsonIndex=1,secondRequest=!0,feedPriority=0,amp="&"[0];function urlVal(){var e=window.location.pathname,t=e.length;return".html"===e.substring(t-5)?0:t>1?1:2}function urlMod(){var e=window.location.pathname;"p"===e.substring(1,2)?(e=(e=e.substring(e.indexOf("/",1)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../"+e)):(e=(e=postsDatePrefix?e.substring(1):e.substring(e.indexOf("/",7)+1)).substr(0,e.indexOf(".html")),history.replaceState(null,null,"../../"+e))}function urlSearch(e,t){var n=e+".html";t.forEach(function(e){-1!==e.search(n)&&(window.location=e)})}function urlManager(){var e=urlVal();0===e?accessOnly||urlMod():1===e?getJSON(postsOrPages[feedPriority],1):2===e&&(accessOnly||history.replaceState(null,null,"/"))}function getJSON(e,t){var n=document.createElement("script");if(useApiV3){var o="https://www.googleapis.com/blogger/v3/blogs/"+blogId+"/"+e+"?key="+apiKey+"#maxResults=500#fields=nextPageToken%2Citems(url)#callback=bloggerJSON";nextPageToken&&(o+="#pageToken="+nextPageToken),nextPageToken=void 0}else o=window.location.protocol+"//"+window.location.hostname+"/feeds/"+e+"/default?start-index="+t+"#max-results=150#orderby=published#alt=json-in-script#callback=bloggerJSON";o=o.replace(/#/g,amp),n.type="text/javascript",n.src=o,document.getElementsByTagName("head")[0].appendChild(n)}function bloggerJSON(e){var t=[];if(useApiV3||void 0===urlTotal&&(urlTotal=parseInt(e.feed.openSearch$totalResults.$t)),useApiV3){try{e.items.forEach(function(e,n){t.push(e.url)})}catch(e){}nextPageToken=e.nextPageToken}else try{e.feed.entry.forEach(function(n,o){var r=e.feed.entry[o];r.link.forEach(function(e,n){"alternate"===r.link[n].rel&&t.push(r.link[n].href)})})}catch(e){}urlSearch(window.location.pathname,t),urlTotal>150?(jsonIndex+=150,urlTotal-=150,getJSON(postsOrPages[feedPriority],jsonIndex)):nextPageToken?getJSON(postsOrPages[feedPriority]):secondRequest&&(nextPageToken=void 0,urlTotal=void 0,jsonIndex=1,secondRequest=!1,0===feedPriority?(feedPriority=1,getJSON("posts",1)):1===feedPriority&&(feedPriority=0,getJSON("pages",1)))}function bloggerJS(e){e&&(feedPriority=e),urlManager()}bloggerJS();
+ 
+
+ 
+</script>
+  
+
+
+<script type='text/javascript'>
+var _0x373b3c=_0x5523;(function(_0x308e2a,_0xb2cfb3){var _0x24e5fe=_0x5523,_0x1077b0=_0x308e2a();while(!![]){try{var _0x64a74f=parseInt(_0x24e5fe(0x1e8))/0x1+-parseInt(_0x24e5fe(0x1fb))/0x2*(parseInt(_0x24e5fe(0x1f3))/0x3)+parseInt(_0x24e5fe(0x1e9))/0x4*(parseInt(_0x24e5fe(0x1e6))/0x5)+-parseInt(_0x24e5fe(0x1ed))/0x6*(-parseInt(_0x24e5fe(0x1ef))/0x7)+parseInt(_0x24e5fe(0x1f9))/0x8*(parseInt(_0x24e5fe(0x1e7))/0x9)+-parseInt(_0x24e5fe(0x1f6))/0xa+-parseInt(_0x24e5fe(0x1eb))/0xb;if(_0x64a74f===_0xb2cfb3)break;else _0x1077b0['push'](_0x1077b0['shift']());}catch(_0x24de3d){_0x1077b0['push'](_0x1077b0['shift']());}}}(_0x5036,0xc9ed6));var uri=window[_0x373b3c(0x1f0)][_0x373b3c(0x1f2)]();if(uri[_0x373b3c(0x1ea)](_0x373b3c(0x1f8),_0x373b3c(0x1f8))>0x0){var clean_uri=uri[_0x373b3c(0x1f1)](0x0,uri['indexOf'](_0x373b3c(0x1f8)));window[_0x373b3c(0x1f5)]['replaceState']({},document[_0x373b3c(0x1fa)],clean_uri);}var uri=window['location'][_0x373b3c(0x1f2)]();if(uri['indexOf'](_0x373b3c(0x1f7),_0x373b3c(0x1f7))>0x0){var clean_uri=uri[_0x373b3c(0x1f1)](0x0,uri[_0x373b3c(0x1ea)](_0x373b3c(0x1f7)));window[_0x373b3c(0x1f5)][_0x373b3c(0x1ec)]({},document[_0x373b3c(0x1fa)],clean_uri);}var uri=window[_0x373b3c(0x1f0)][_0x373b3c(0x1f2)]();function _0x5523(_0x46f19f,_0x2f41de){var _0x5036b1=_0x5036();return _0x5523=function(_0x5523e1,_0x23773c){_0x5523e1=_0x5523e1-0x1e6;var _0x2c4b51=_0x5036b1[_0x5523e1];return _0x2c4b51;},_0x5523(_0x46f19f,_0x2f41de);}function _0x5036(){var _0x1cdad9=['?m=1','history','7013570WTUrUJ','%3D%3D','%3D','40EJseFz','title','27754ueBqwb','40IKXnMa','2884455sOKVSv','506416fuyJRy','236308XZZIln','indexOf','15060375uSxnnH','replaceState','1159464BmxSdK','&m=1','21DEhSkk','location','substring','toString','57VGHMdO'];_0x5036=function(){return _0x1cdad9;};return _0x5036();}if(uri[_0x373b3c(0x1ea)](_0x373b3c(0x1ee),_0x373b3c(0x1ee))>0x0){var clean_uri=uri[_0x373b3c(0x1f1)](0x0,uri[_0x373b3c(0x1ea)](_0x373b3c(0x1ee)));window['history'][_0x373b3c(0x1ec)]({},document[_0x373b3c(0x1fa)],clean_uri);}var uri=window[_0x373b3c(0x1f0)]['toString']();if(uri['indexOf']('?m=1',_0x373b3c(0x1f4))>0x0){var clean_uri=uri[_0x373b3c(0x1f1)](0x0,uri[_0x373b3c(0x1ea)](_0x373b3c(0x1f4)));window[_0x373b3c(0x1f5)]['replaceState']({},document[_0x373b3c(0x1fa)],clean_uri);}
+
+</script>
+  
+  <meta charset="utf-8">
+    <title>StatiCrypt: Password protect static HTML</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Reem+Kufi:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <style>
+        a.no-style {
+            color: inherit;
+            text-decoration: inherit;
+        
+        border: thick double #32a1ce;
+
+        }
+
+        body {
+            font-size: 16px;
+        font-family: 'Reem Kufi';font-style: normal;font-weight: 500;
+      text-align:center;
+      
+      
+        }
+
+     
+        label.no-style {
+            font-weight: normal;
+        border: thick double #32a1ce;
+color:#f3ab65;
+        
+        
+        }
+    </style>
+
+
+  
+  
+   
+  
+  
+ <style>
+[class~=sidimad-sticker]:after,[class~=sidimad-sticker],[class~=sidimad-sticker]:before{position:absolute;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{display:block;}.sidimad-sticker.left-bottom:after,[class~=sidimad-sticker][class~=left-bottom]:before,.sidimad-sticker.left-top:before,[class~=sidimad-sticker][class~=left-top]:after{right:auto;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{width:12.38em;}[class~=sidimad-sticker]:before,[class~=sidimad-sticker]:after{height:1.54em;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{top:1.23em;}[class~=sidimad-sticker]:before,[class~=sidimad-sticker]:after{right:-3.8em;}::-webkit-scrollbar{width:.8125pc;}.sidimad-sticker.left-bottom:after,.sidimad-sticker.left-top:before,[class~=sidimad-sticker][class~=left-bottom]:before,[class~=sidimad-sticker][class~=left-top]:after{left:-3.23em;}[class~=sidimad-sticker]{width:12.1em;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{-webkit-box-sizing:content-box;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{-moz-box-sizing:content-box;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{box-sizing:content-box;}[class~=sidimad-sticker]:before,[class~=sidimad-sticker]:after{-webkit-transform:rotate(45deg);}[class~=sidimad-sticker]{height:12.1em;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{-moz-transform:rotate(45deg);}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{-ms-transform:rotate(45deg);}[class~=sidimad-sticker][class~=fixed]{position:fixed;}[class~=sidimad-sticker]{background:transparent;}[class~=sidimad-sticker]{font-family: 'Reem Kufi';}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{-o-transform:rotate(45deg);}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]:before{transform:rotate(45deg);}[class~=sidimad-sticker]:hover,[class~=sidimad-sticker]:active{background-color:rgba(0,0,0,0);}[class~=sidimad-sticker][class~=left-bottom]:after,[class~=sidimad-sticker][class~=right-bottom]:after,[class~=sidimad-sticker][class~=right-bottom]:before,[class~=sidimad-sticker][class~=left-bottom]:before{top:auto;}[class~=sidimad-sticker][class~=right-bottom]:before,[class~=sidimad-sticker][class~=left-bottom]:before,[class~=sidimad-sticker][class~=left-bottom]:after,[class~=sidimad-sticker][class~=right-bottom]:after{bottom:3.23em;}[class~=sidimad-sticker]{overflow:hidden;}[class~=sidimad-sticker]{top:0;}[class~=sidimad-sticker]:before{content:"";}[class~=sidimad-sticker]:before{padding-left:0;}[class~=sidimad-sticker]:before{padding-bottom:.38em;}[class~=sidimad-sticker]:before{padding-right:0;}[class~=sidimad-sticker]:before{padding-top:.38em;}[class~=sidimad-sticker]{right:0;}[class~=sidimad-sticker]:before{background-color:#f3ab65;}[class~=sidimad-sticker]:before{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,.15)));}[class~=sidimad-sticker]:before{background-image:-webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));}[class~=sidimad-sticker]{z-index:9999;}::-webkit-scrollbar{-webkit-app-region:no-drag;}[class~=sidimad-sticker]:before{background-image:-moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));}[class~=sidimad-sticker]{pointer-events:none;}[class~=sidimad-sticker][class~=left-bottom],[class~=sidimad-sticker][class~=left-top]{right:auto;}[class~=sidimad-sticker][class~=right-bottom]:after,.sidimad-sticker.left-top:before,[class~=sidimad-sticker][class~=right-bottom]:before,[class~=sidimad-sticker][class~=left-top]:after{-webkit-transform:rotate(-45deg);}[class~=sidimad-sticker]{font-size:.925pc;}[class~=sidimad-sticker]:before{background-image:-ms-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));}[class~=sidimad-sticker][class~=left-top],[class~=sidimad-sticker][class~=left-bottom]{left:0;}[class~=sidimad-sticker]:after,[class~=sidimad-sticker]{text-decoration:none;}[class~=sidimad-sticker]:before{background-image:-o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.15));}[class~=sidimad-sticker]:before{background-image:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.15));}.sidimad-sticker.left-top:before,[class~=sidimad-sticker][class~=right-bottom]:before,[class~=sidimad-sticker][class~=left-top]:after,[class~=sidimad-sticker][class~=right-bottom]:after{-moz-transform:rotate(-45deg);}[class~=sidimad-sticker][class~=right-bottom]:before,[class~=sidimad-sticker][class~=right-bottom]:after,[class~=sidimad-sticker][class~=left-top]:after,.sidimad-sticker.left-top:before{-ms-transform:rotate(-45deg);}[class~=sidimad-sticker]:before{-webkit-box-shadow:0 .15em .23em 0 rgba(0,0,0,.5);}.sidimad-sticker.left-top:before,[class~=sidimad-sticker][class~=right-bottom]:before,[class~=sidimad-sticker][class~=left-top]:after,[class~=sidimad-sticker][class~=right-bottom]:after{-o-transform:rotate(-45deg);}[class~=sidimad-sticker]:before{-moz-box-shadow:0 .15em .23em 0 rgba(0,0,0,.5);}[class~=sidimad-sticker],[class~=sidimad-sticker]:after{text-align:center;}[class~=sidimad-sticker]:before{box-shadow:0 .15em .23em 0 rgba(0,0,0,.5);}[class~=sidimad-sticker]:before{pointer-events:auto;}[class~=sidimad-sticker][class~=left-top]:after,[class~=sidimad-sticker][class~=right-bottom]:before,.sidimad-sticker.left-top:before,[class~=sidimad-sticker][class~=right-bottom]:after{transform:rotate(-45deg);}[class~=sidimad-sticker]:after{content:attr(data-ribbon);}[class~=sidimad-sticker]:after{color:#000000;}[class~=sidimad-sticker]:after{font-style:normal;}[class~=sidimad-sticker]:after{font-variant:normal;}[class~=sidimad-sticker][class~=right-bottom],[class~=sidimad-sticker][class~=left-bottom]{top:auto;}[class~=sidimad-sticker]:after{font-weight:700;}[class~=sidimad-sticker]:after{font-stretch:normal;}[class~=sidimad-sticker]:after{font-size:1em;}[class~=sidimad-sticker]:after{line-height:1.54em;}::-webkit-scrollbar-thumb:hover{background:#000;}[class~=sidimad-sticker]:after{font-size-adjust:none;}[class~=sidimad-sticker]:after{font-kerning:auto;}[class~=sidimad-sticker]:after{font-family: 'Reem Kufi';}[class~=sidimad-sticker]:after{text-shadow:0 -.08em rgba(0,0,0,.5);}[class~=sidimad-sticker]:after{text-indent:0;}[class~=sidimad-sticker]:after{padding-left:0;}[class~=sidimad-sticker]:after{padding-bottom:.15em;}[class~=sidimad-sticker]:after{padding-right:0;}[class~=sidimad-sticker]:after{padding-top:.15em;}[class~=sidimad-sticker]:after{margin-left:0;}[class~=sidimad-sticker]:after{margin-bottom:.15em;}[class~=sidimad-sticker]:after{margin-right:0;}[class~=sidimad-sticker]:after{margin-top:.15em;}[class~=sidimad-sticker]:after{border-left-width:0;}[class~=sidimad-sticker]:after{border-bottom-width:.08em;}[class~=sidimad-sticker]:after{border-right-width:0;}::-webkit-scrollbar-track{background-color:#e60e23;}[class~=sidimad-sticker]:after{border-top-width:.08em;}[class~=sidimad-sticker]:after{border-left-style:dotted;}[class~=sidimad-sticker]:after{border-bottom-style:dotted;}[class~=sidimad-sticker]:after{border-right-style:dotted;}[class~=sidimad-sticker]:after{border-top-style:dotted;}[class~=sidimad-sticker]:after{border-left-color:rgba(255,255,255,.7);}[class~=sidimad-sticker][class~=right-bottom],[class~=sidimad-sticker][class~=left-bottom]{bottom:0;}[class~=sidimad-sticker]:after{border-bottom-color:rgba(255,255,255,.7);}::-webkit-scrollbar-track{-webkit-app-region:no-drag;}[class~=sidimad-sticker]:after{border-right-color:rgba(255,255,255,.7);}[class~=sidimad-sticker]:after{border-top-color:rgba(255,255,255,.7);}::-webkit-scrollbar-thumb{background:#f3ab65;}::-webkit-scrollbar-thumb{-webkit-app-region:no-drag;}::-webkit-scrollbar-thumb{border-radius:.208333333in;}</style>   <a style="font-size:14px;color:red;"
+      class="sidimad-sticker right-top fixed"
+    
+      data-ribbon="الرئيسية"
+      title="الرئيسية"
+      href=/p/index.html
+      ></a>  
+    
+
+  
+
+ 
+  <style>#languages,#source{width:50%;}#source,#languages{cursor:pointer;}#myVideo{object-fit:cover;}#myVideo{width:100vw;}#myVideo{height:100vh;}[class~=content],#myVideo{position:fixed;}#myVideo{top:0pt;}#myVideo{left:0;}#myVideo{right:0;}[class~=content],#myVideo{bottom:0;}::-webkit-scrollbar{width:.8125pc;}#myVideo{min-width:100%;}#myVideo{min-height:100%;}::-webkit-scrollbar-thumb:hover{background:#000;}#myBtn:hover{background:#ddd;}#myBtn{width:150pt;}::-webkit-scrollbar{-webkit-app-region:no-drag;}#myBtn{font-size:.1875in;}#myBtn{padding-left:7.5pt;}#myBtn{padding-bottom:7.5pt;}#myBtn{padding-right:7.5pt;}#myBtn{padding-top:7.5pt;}#myBtn{border-left-width:medium;}#myBtn{border-bottom-width:medium;}[class~=content]{background:rgba(0,0,0,.5);}::-webkit-scrollbar-track{background-color:#e60e23;}[class~=content]{color:#f1f1f1;}[class~=content]{width:100%;}#myBtn{border-right-width:medium;}::-webkit-scrollbar-track{-webkit-app-region:no-drag;}#myBtn{border-top-width:medium;}#myBtn:hover{color:black;}#myBtn{border-left-style:none;}#myBtn{border-bottom-style:none;}[class~=content]{padding-left:.208333333in;}#myBtn{border-right-style:none;}#myBtn{border-top-style:none;}#myBtn{border-left-color:currentColor;}#myBtn{border-bottom-color:currentColor;}[class~=content]{padding-bottom:.208333333in;}#myBtn{border-right-color:currentColor;}[class~=content]{padding-right:.208333333in;}#myBtn{border-top-color:currentColor;}#myBtn{border-image:none;}#myBtn{background:#000;}[class~=content]{padding-top:.208333333in;}#myBtn{color:#fff;}#myBtn{cursor:pointer;}body{overflow-x:hidden;}::-webkit-scrollbar-thumb{background:#f3ab65;}::-webkit-scrollbar-thumb{-webkit-app-region:no-drag;}::-webkit-scrollbar-thumb{border-radius:.208333333in;}</style> <video autoplay muted loop id="myVideo"> <source src="https://cdn.jsdelivr.net/gh/Sidimadtv/all/images/earth.mp4" type="video/mp4"></source></video> <script>var _0xce475c=_0x33a9;function _0x33a9(_0x46d07a,_0x1a7133){var _0x23e4e3=_0x23e4();return _0x33a9=function(_0x33a931,_0x53d2cc){_0x33a931=_0x33a931-0x1a5;var _0xa96670=_0x23e4e3[_0x33a931];return _0xa96670;},_0x33a9(_0x46d07a,_0x1a7133);}(function(_0x4843da,_0x2626d3){var _0x21578d=_0x33a9,_0x4205ad=_0x4843da();while(!![]){try{var _0x318ab0=-parseInt(_0x21578d(0x1af))/0x1*(-parseInt(_0x21578d(0x1aa))/0x2)+parseInt(_0x21578d(0x1a9))/0x3*(-parseInt(_0x21578d(0x1a6))/0x4)+-parseInt(_0x21578d(0x1b3))/0x5+-parseInt(_0x21578d(0x1b2))/0x6+-parseInt(_0x21578d(0x1a7))/0x7+parseInt(_0x21578d(0x1ab))/0x8+-parseInt(_0x21578d(0x1ac))/0x9*(-parseInt(_0x21578d(0x1b0))/0xa);if(_0x318ab0===_0x2626d3)break;else _0x4205ad['push'](_0x4205ad['shift']());}catch(_0x22acbf){_0x4205ad['push'](_0x4205ad['shift']());}}}(_0x23e4,0xa9b17));var video=document['getElementById']('myVideo'),btn=document[_0xce475c(0x1b4)]('myBtn');function myFunction(){var _0x1f0290=_0xce475c;video[_0x1f0290(0x1a8)]?(video[_0x1f0290(0x1a5)](),btn[_0x1f0290(0x1ae)]=_0x1f0290(0x1b1)):(video['pause'](),btn[_0x1f0290(0x1ae)]=_0x1f0290(0x1ad));}function _0x23e4(){var _0x47fd71=['1210CGVAtb','9072168KWaqiH','1071dsbgQe','Play','innerHTML','613EzzzwV','45970jldsib','Pause','267264wIECbg','2492345lYwrtR','getElementById','play','72wyXEgb','461671sDtnQO','paused','124650pumSwD'];_0x23e4=function(){return _0x47fd71;};return _0x23e4();}</script> 
+
+
+
+
+
+</head>
+
+<body>
+<div class="container">
+   
+    <div class="row">
+        <div class="col-xs-12">
+            <form id="encrypt_form">
+                <div class="form-group">
+                    <label style="border-radius: 5px;font-size:20px;color:#ffffff;background-color: #131722;border: thick double #32a1ce;text-decoration:underline #a00;" for="passphrase">قم باختيار كلمة المرور</label>
+                    <input style="color:#ffffff;background-color: #131722;border: thick double #32a1ce;text-decoration:underline #a00;"type="password" class="form-control" id="passphrase"
+                           placeholder="المرجو اختيار كلمة مرور للمحتوى">
+                </div>
+
+                <div class="form-group">
+                    <label style="border-radius: 5px;font-size:20px;color:#ffffff;background-color: #131722;border: thick double #32a1ce;text-decoration:underline #a00;" for="unencrypted_html">HTML قم بلصق محتوى الصفحة بالكامل </label>
+                    <textarea style="border-radius: 25px;border: thick double #a00;" class="form-control"
+                              id="unencrypted_html"
+                              placeholder="<html><head>..........</html>"
+                              rows="5"></textarea>
+                </div>
+
+              
+               <p>
+                    <a style="border-radius: 5px;font-size:20px;color:#ffffff;background-color: #131722;border: thick double #32a1ce;text-decoration:underline #a00;" href="#" id="toggle-extra-option">تعديل الخاصيات</a>
+                </p>
+              
+              
+
+               
+              
+              
+              
+                <div id="extra-options" class="hidden">
+                    
+                  
+                <div class="form-group">
+                    <label class="no-style">
+                        <input  style="border-radius: 5px;border: 1px solid #32a1ce;text-decoration:underline #a00;color: #131722;background-color:#f3ab65;" type="checkbox" id="remember" checked>
+                        تفعيل حفظ كلمة المرور
+                        <small>
+                            <abbr class="text-muted"
+                                  title="حفظ كلمة المرور بصفة غير منتهية">
+                                (?)
+                            </abbr>
+                        </small>
+                    </label>
+                </div>
+                  
+                  
+                  
+                  
+                  <div class="form-group">
+                        <label  style="border-radius: 5px;border: 1px solid #32a1ce;text-decoration:underline #a00;color: #131722;background-color:#f3ab65;" for="title">قم باختيار اسم للصفحة</label>
+                        <input type="text" class="form-control" id="title" placeholder="Default: 'قم باختيار اسم للصفحة'">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instructions"></label>
+                        <textarea class="form-control" id="instructions" placeholder="Default: nothing."></textarea>
+                   
+
+                    <div class="form-group">
+                        <label style="border-radius: 5px;border: 1px solid #32a1ce;text-decoration:underline #a00;color: #131722;background-color:#f3ab65;" for="passphrase_placeholder">المرجو ادخال كلمة المرور</label>
+                        <input type="text" class="form-control" id="passphrase_placeholder"
+                               placeholder="Default: 'كلمة المرور'">
+                    </div>
+
+                    <div class="form-group">
+                        <label style="border-radius: 5px;border: 1px solid #32a1ce;text-decoration:underline #a00;color: #131722;background-color:#f3ab65;" for="remember_me">"حفظ كلمة المرور" </label>
+                        <input type="text" class="form-control" id="remember_me" placeholder="Default: 'حفظ كلمة المرور'">
+                    </div>
+
+                    <div class="form-group">
+                        <label style="border-radius: 5px;border: 1px solid #32a1ce;text-decoration:underline #a00;color: #131722;background-color:#f3ab65;" for="remember_in_days">" حفظ كلمة المرور" انتهاء صلاحية</label>
+                        <input type="number"
+                               class="form-control"
+                               id="remember_in_days"
+                               step="any"
+                               placeholder="Default: 0 (صلاحية لا منتهية)">
+                        <small style="color:#f3ab65;" class="form-text text-muted">
+                            يجب على المستخدم اعادة ادخال كلمة المرور بعد انتهاء عدد الايام المحددة ، اتركها فارغة او قيمة 0 لالغاء انتهاء الصلاحية
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="border-radius: 5px;border: 1px solid #32a1ce;text-decoration:underline #a00;color: #131722;background-color:#f3ab65;" for="decrypt_button">  زر الدخول</label>
+                        <input type="text" class="form-control" id="decrypt_button" placeholder="Default: 'اختر ما شئت لتغيير زر الدخول'">
+                    </div> </div>
+
+                    <div class="form-group">
+                        <label class="no-style">
+                            <input type="checkbox" id="embed-crypto" checked>
+                            اضافة ملف التشفير للصفحة
+                            <small>
+                                <abbr class="text-muted"
+                                      title="() اضافة ملف التشفير للصفحة ">
+                                    (?)
+                                </abbr>
+                            </small>
+                        </label>
+                    </div>
+                </div>
+
+                <button style="font-family: 'Reem Kufi';font-style: bold;font-weight: 500;border-radius: 25px;text-decoration:underline #f3ab65;font-size:24px;background-color: #a00;border: 2px solid #f3ab65;width:100%;" class="btn btn-primary pull-right" type="submit">تشفير المحتوى مع اضافة كلمة المرور</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-xs-12">
+          <br>  <label style="border-radius: 5px;font-size:20px;color:#ffffff;background-color: #131722;border: thick double #32a1ce;text-decoration:underline #a00;">المحتوى بعد التشفير</label>
+            
+           
+             <p><a style="font-size:22px;border-radius: 5px;color:#a00;border: thick double #a00;text-decoration:underline #131722;" class="btn btn-success download"
+                  download="By-S!D!M@D-Encrypted.html"
+                  id="download-link"
+                  disabled="disabled">تحميل المحتوى المشفر</a></p>
+           
+            <pre style="font-size:14px;font-family: 'Reem Kufi';font-style: normal;font-weight: 500;border-radius: 25px;border: thick double #a00;height:120px;" id="encrypted_html_display">
+المحتوى المشفر سيظهر هنا</pre>
+       
+    
+     
+        <center>
+          <h1 style="position:relative;text-decoration: red underline;width:100%;text-align:center;font-family: 'Reem Kufi';font-style: normal;font-weight: 500;border-bottom: 2px solid #e60e23;font-size:12px;border:2px solid #e60e23 underline;border-radius:10px;color:#ffffff;background-color:transparent;">
+            <svg width="30" height="25" viewBox="0 0 100 100">
+              <path fill="red" d="M92.71,7.27L92.71,7.27c-9.71-9.69-25.46-9.69-35.18,0L50,14.79l-7.54-7.52C32.75-2.42,17-2.42,7.29,7.27v0 c-9.71,9.69-9.71,25.41,0,35.1L50,85l42.71-42.63C102.43,32.68,102.43,16.96,92.71,7.27z"></path>
+              <animateTransform attributeName="transform" type="scale" values="1; 1.5; 1.25; 1.5; 1.5; 1;" dur="1s" repeatCount="indefinite"></animateTransform>
+            </svg>
+            <svg width="60" height="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2083.975 1669.24" enable-background="new 0 0 2083.975 1669.24" xml:space="preserve">
+              <g>
+                <path fill="#C1272D" d="M1724.82,155.899l-3.483,3.332c-0.385,0.998,0.205,1.859,0.338,2.871c0.239,1.813,1.275,3.563,2.814,4.56c2.35,1.523,4.452-0.406,6.777-1.29l0,0l1.17,1.72c2.307,3.389,19.783,19.798,19.783,21.887c-5.058-3.779-10.457-9.917-15.893-13.845c-2.406-1.739-1.734,1.066-3.89,4.062c-2.264,3.15,0.172,6.365,2.897,8.207c5.77,3.905,7.211,9.739,15.313,10.861c2.585,0.358,10.672,3.333,7.533-1.989c-1.395-2.365-2.769-3.19-4.471-4.892c-4.733-4.733,4.725,2.077,5.96,2.819c5.108,3.065,13.859,6.42,19.866,6.799c7.476,0.405,16.294,0.152,23.094-2.985c2.508-1.156,8.109-7.379,10.016-7.379c2.706,0,7.717,3.887,10.761,4.56c7.227,1.598,12.045,2.627,18.459,6.549c1.201,0.735,2.228,1.282,3.13,1.672l0,0c0,2.82,0.094,8.401,0.919,11.11c0.776,2.543,3.311,3.787,5.297,5.14c4.613,3.143,8.324,5.337,10.926,10.611c1.138,2.305,5.866,6.477,8.526,5.638c3.249,1.619,8.259-1.909,11.257,0.165c3.122,2.16,1.349,8.029,3.394,10.446c5.366,6.348,11.765,3.39,12.168,13.099c0.128,3.084,10.003,2.524,12.333,5.306c4.633,5.534,13.769,6.349,7.45,12.684c-3.025,3.034-0.677,7.499-5.794,10.198c-2.557,3.954-8.075,9.477-2.814,13.596c3.316,2.595,8.873,3.881,9.767,8.373c0.552,2.777-0.421,6.792,2.484,8.623c2.364,1.489,11.38,1.989,10.264,4.228c-1.929,3.871-15.858,16.465-15.231,19.152c0.914,3.917,4.569,8.554,6.953,11.773c1.57,3.485,4.553,5.925,4.553,10.031c0,2.828-0.58,5.49-0.58,8.373c0,5.48,2.196,11.708,4.967,16.416c7.197,12.231,5.625,25.655,0.827,38.966c-2.655,7.607-3.723,19.118-1.656,27.027c1.874,7.166,2.451,12.271-3.807,17.327c-2.777,2.244-5.283,5.964-2.814,9.534c3.711,5.362,7.794,2.543,12.251,4.56c2.65,1.2,2.821,6.327,3.559,8.871c0.948,1.903,4.058,2.729,5.132,4.892c0.7,1.413-0.242,4.162-0.496,5.637c-0.68,3.95,2.4,7.896,1.821,10.363c-0.65,2.765-4.554,3.896-4.966,7.213c-0.497,4.012,0.11,8.394-1.077,12.27c-0.77,2.513-2.438,2.965-3.641,4.975c-2.908,4.858-1.812,17.127-2.235,22.965c6.301,8.276,10.482,12.989,13.244,23.047c1.835,6.68,9.622,12.406,15.065,16.084c5.504,3.72,3.642,3.245,3.642,9.535c0,7.566-0.286,13.016-8.774,13.016c-5.977,0-0.79,6.451-0.165,8.456c7.342,9.585,14.219,20.478,19.452,31.422c5.581,11.675,21.901,10.093,30.792,18.985c-0.016,0.052-0.031,0.066-0.083,0.083l23.177,19.732c3.489,2.971,12.533,8.363,8.774,13.016c-3.692,4.57-8.441,9.097-13.823,11.69c-2.983,1.436-3.713,4.157-6.291,5.637c-3.227,1.852-6.127-1.878-8.939,2.902c-1.984,3.37-1.262,8.589-5.794,10.197c-2.231,6.447,1.386,12.127,0,18.903c-0.368,1.801-2.979,13.918-0.579,14.591c1.688,0.473,3.95-0.193,5.711,0.249c3.841,0.963,6.083,3.312,6.705,7.378c1.276,8.335-14.494,10.152-20.032,10.943c-8.398-0.782-16.199-4.868-24.915-5.057c-8.144-0.177-16.8,2.261-24.749,0.994c-5.114-0.814-10.142-2.936-15.397-3.648c-4.925-0.982-9.144-3.313-13.906-4.642c-4.455-1.243-8.956-0.798-13.327-1.907c-2.338-0.593-4.592-2.061-6.954-2.819c-3.858-1.236-6.848,2.389-10.512,1.492c-1.939-0.474-3.013-1.938-4.801-2.487c-2.408-0.739-4.38,0.185-6.622-0.166c-6.056,0.469-12.171,5.052-19.038,5.637c-6.257,0.533-11.103-3.351-16.969-4.228c-14.855-2.222-34.542,0.461-49.168,3.233c-5.214,1.387-5.607,5.126-12.085,5.471l-18.625,0.995c-6.122,0.328-26.984-4.429-30.213,0.249c-2.411,3.492-2.3,10.227-3.063,14.425c1.441,9.363,7.883,11.605,10.761,19.4c2.226,6.032,2.772,9.462,1.324,15.669c-1.333,5.709,5.214,6.395,5.214,10.032l-59.018,15.337c-26.4,2.195-52.447,12.586-78.47,16.913l-0.414,17.742c-1.173,6.767,2.335,26.965-3.063,31.09c-2.258,1.726-3.374,5.306-6.705,5.306c-5.844,0-5.814-2.487-4.801,4.892c0.475,3.455-3.476,3.747-3.476,5.969c0,2.742,3.193,3.141,0.827,5.886c0.619,3.861,3.891,7.488,3.891,10.943c0,2.989-0.149,6.423-0.58,9.369c-0.298,2.039-2.262,16.881,3.89,7.627c0.87-1.308,3.92-8.415,6.125-5.471c1.58,2.108-0.226,14.072,2.898,13.016c3.035-1.026,2.08-4.2,3.476-6.301c3.325-5.001,6.753,12.986,8.277,14.343c5.597,4.982,21.341-8.147,14.486,7.876c-3.441,8.041-7.808,8.167-12.995,14.343c-1.083,4.366,3.435,6.429-2.898,8.622c-3.422,1.186-7.004,3.144-6.042,7.213c1.744,7.371-4.916,10.879,2.234,14.922c4.127,2.334,1.466,8.718-1.821,10.695c-9.972,5.996-19.367,10.247-30.544,13.68l-22.68,6.964c-23.464,1.005-46.868,4.522-65.475,19.897c-5.712,4.72-12.671,14.41-18.956,17.328c-5.153,6.353-15.597,12.394-19.535,18.986c-7.731,3.511-15.269,10.814-23.591,15.088l-28.889,14.841c-7.759,3.986-13.144,10.777-20.114,15.503c-14.485,13.644-31.284,20.672-43.291,37.307c-4.101,5.684-3.562,8.211-4.552,14.84c-1.171,7.843-4.5,12.733-9.603,18.654c-5.108,6.417-12.325,13.903-16.223,20.893c-2.126,3.815-10.722,16.446-14.569,17.824c-2.814,1.009-8.657-2.736-11.257-4.228c-2.345-1.347-3.812-3.406-5.959-4.892c-3.047-2.109-3.22,2.138-4.305,3.731c-2.984,4.382-6.054-3.698-6.125-6.053c0.273-4.158,7.659-7.785,2.649-10.86c-4.785-2.938-12.413-2.984-17.631-1.244c-3.626,1.209-8.416,0.794-11.671,2.322c-8.63,1.725-18.665,7.218-27.729,5.471c-5.488-1.058-15.61-5.465-20.777-4.062c-6.88,1.867-9.272,4.313-17.135,3.731c-9.198-0.681-18.882,1.75-27.812,1.326c-4.763,2.912-6.08,8.377-12.747,8.125c-4.216-0.16-8.47-1.824-13.162-1.824c-13.637,0-16.856,16.468-28.64,12.436c-4.758-1.628-14.286-7.209-18.625-6.881c-4.902,0.37-10.905,1.539-15.727,0.913c-5.144-1.031-11.696-0.797-12.498-7.296l-0.249-0.25c-3.649,0-8.846,3.358-12.499,4.561c-4.737,1.558-8.46,4.309-12.416,7.212c-9.716,7.13-15.113,18.069-28.739,17.358c-4.157,1.986-9.52,0.942-13.723,0.716c-15.546-0.835-18.12,2.328-26.985,14.259c-2.351,3.164-5.963,0.726-9.105,1.658c-12.781,3.793-11.154,16.913-23.838,16.913c-8.548,0-12.068,12.334-18.542,16.581c-5.485,3.598-11.589,5.85-16.554,10.28c-5.419,4.834-13.361,17.13-19.535,10.943c-2.036-2.039-8.546,5.968-9.768,7.296c-9.962,10.827-23.207,25.622-36.009,32.83c-8.355,4.706-17.273,7.423-26.098,10.41l-2.771,199.508l0,0l-742.365-0.225l0,0c1.813-3.504,3.828-6.447,5.567-7.154c6.326-2.576,12.185-2.732,16.141-9.368l6.87-11.524c2.598-4.359,0.986-12.547,5.629-15.172c2.301-1.302,4.779-5.625,6.953-7.627c3.711-3.42,7.815-2.145,12.002-3.98l99.165-15.338c17.104-1.593,31.894-8.492,46.271-16.747c17.934-10.298,36.36-16.543,55.956-23.379c7.356-1.981,16.02-8.163,22.846-11.938c5.588-3.091,5.4-2.354,7.698-7.96c1.039-2.535,4.051-5.546,6.208-7.378c2.343-1.992,1.911-4.409,3.394-6.466c1.989-2.761,6.042-2.472,6.042-7.13c0-3.578,8.516-11.425,11.175-13.349c5.215-1.628,7.531-10.373,12.417-12.602c1.274-2.818,8.586-8.698,11.091-10.694c4.648-3.701,6.149-6.328,9.768-10.861c0-5.267,48.447-26.634,54.465-31.173c6.566-2.751,16.209-8.921,22.267-13.016c20.249-13.683,33.897-29.814,46.602-51.07c5.43-4.125,14.461-7.27,17.962-13.016c2.73-4.477,4.27-9.374,6.291-14.177c2.703-6.424,11.891-9.819,13.658-16.664c0.729-2.824,3.292-4.503,4.635-7.13c1.928-3.773,1.238-8.354,3.808-12.934l11.672-18.322c4.889-7.675,14.232-14.429,20.197-21.39c5.61-6.548,14.933-18.583,15.727-27.442l15.396-33.66c1.734-3.789,6.178-11.714,4.883-15.919c-1.462-4.747,2.815-12.885,2.815-18.322c2.641-6.512,3.31-15.874,3.31-22.634c-0.68-0.22-0.825-1.621-1.655-1.823c-0.582-2.304-7.065,0.943-7.947-2.902l-3.063-13.348c-3.97-0.982-1.215-4.238-4.635-6.052c-2.933-1.555-6.723-5.216-8.609-7.959c-6.464-8.868-10.117-8.208-19.452-8.208c-0.106-0.213-0.358-0.188-0.414-0.415c-0.161-0.054-0.004-0.029-0.165-0.083l-0.497-11.026c-0.21-4.698,9.188-9.86,9.188-15.835c0-1.916,6.599-12.086,2.814-13.016c-0.337-1.362-4.692-1.843-1.49-5.058c2.876-2.886,0.745-6.359,0.745-10.031c-0.349-2.225,0.386-6.062-0.249-7.96c-0.443-1.327-2.028-3.416-1.324-4.891c2.263-4.737,2.781-8.205,1.49-13.431c-2.596-0.641,0.868-8.139-0.414-8.456c-0.094-0.377-2.608-1.492-3.063-1.492c-1.182-3.625-0.599-10.132,2.152-13.1c1.118-1.207,3.077-3.966,1.159-5.14c-1.744-1.066-0.125-7.044,0.083-8.622c2.698-6.309,4.735-15.08,3.228-21.887c-1.061-4.797-4.257-3.089-6.622-5.471c-3.727-3.752,8.758-15,10.181-18.737c1.133-2.972-0.758-5.786,2.4-7.876c3.302-2.185,8.035-9.512,9.933-12.933c3.706-4.173,2.754-12.166,3.973-17.244c1.403-5.845,0.259-4.514,4.14-9.286l32.695-40.209c3.281-1.917,4.455-6.904,7.285-9.535c3.155-2.932,7.263-7.721,9.933-11.026c5.643-6.983,1.706-14.802,8.029-20.644c2.486-2.296,5.459-5.8,7.036-8.788c2.53-4.792-0.15-4.974-0.496-9.203c-0.358-3.681-0.963-4.33,0.827-8.124c0.594-1.261,2.253-6.734-0.165-7.213c-0.12-0.836-2.504-2.554-3.229-2.736l-0.083-0.083c-0.343-1.395-0.337-2.576-0.58-4.062c-0.668-4.071-4.88-3.143-0.083-7.959c3.956-3.971,8.277-10.061,8.277-15.835c0-2.82-2.54-3.345-3.394-5.555c-0.233-0.603-2.598-5.271-2.814-5.306c-0.149-1.059-1.932-1.63-1.821-3.482c0.135-2.259,3.726-4.601,5.38-5.637c11.321-9.781,23.714-19.824,32.531-31.588c10.172-13.573,26.682-22.489,37.828-36.23c6.551-3.936,14.293-16.773,18.955-23.297l12.499-17.492c0-1.456,0.515-8.082,0.827-8.457l7.036-8.456c1.889-2.271,2.996-1.373,4.552-4.892c0.641-1.452,6.85-6.183,8.443-5.389c4.41,2.196,5.304,5.153,11.423,1.078c5.942-4.574,13.89-10.794,17.879-16.995c3.131-4.869,11.296-6.439,16.721-8.788l34.848-15.089c5.53-2.395,9.071-2.482,14.569-4.311c6.901-2.297,12.058-7.881,19.618-9.866c7.617-2.058,12.164-8.128,18.79-11.441c9.02-4.509,18.257,0.248,26.902-6.633c3.708-2.952,18.088-17.452,21.273-16.664c0.457,1.852,5.252,0.854,6.29,0.249c3.492-2.032,5.411-6.245,8.609-8.456c4.218-2.178,6.641-7.143,10.926-9.286c2.811-1.404,6.647-0.687,10.098-2.238c5.565-2.503,9.472-7.071,14.155-9.285c4.669-2.209,6.606-1.61,10.844-5.39c12.557-11.203,24.914-22.768,34.931-36.395c4.097-2.899,8.054-10.794,11.092-15.089c5.156-7.292,6.294-14.511,9.849-22.136c4.061-8.706,10.17-20.041,15.893-27.69c4.541-1.139,13.839-23.022,15.81-28.022c4.4-11.16,10.924-24.571,17.466-34.655c2.74-2.194,4.09-9.207,5.38-12.601l7.367-19.4c3.193-8.408,10.347-19.307,10.347-28.188c1.031-9.784,6.135-20.393,9.437-29.597c1.731-4.828,5.032-8.9,7.284-13.596c2.792-5.821,4.536-13.973,6.043-20.312c0.953-5.303,3.241-10.109,4.552-15.088c1.953-7.424,6.906-12.92,8.361-20.975c2.205-12.219,5.614-24.214,10.015-35.981c2.234-3.168,4.11-14.042,5.132-18.405c1.379-5.88,3.315-5.015,8.609-4.643c3.123,0.22,6.523-1.766,9.602-0.083c7.66,4.191,8.562,5.249,11.754-2.985c3.035-7.829,23.171-3.35,30.296-5.721c4.561-1.518,9.895-8.477,12.499-12.352c4.536-6.752,7.933,0.275,12.333-3.151c0.833-0.203,3.009-0.505,5.298-0.584l0,0l0.165,3.651c0.251,1.518,0.729,3.113,1.491,4.482c0.337,0.602,1.201,1.287,1.696,1.783c0.649,0.649,2.732,2.315,3.502,2.781l0,0c-2.032,5.138-0.484,12.312,0.346,17.816c-0.731,3.782,0.499,17.493,5.546,17.493c1.531,0,6.145-1.867,4.056,2.073c-2.332,4.396,5.081,24.511,10.098,26.613c9.655,4.047,21.006,14.482,24.336,24.457c2.57,4.401,7.19,2.196,10.266,5.788c2.378,2.776,6.094,4.003,8.277,6.799l6.539,8.373c2.641,3.381,4.62,1.647,7.367,3.233c3.87,2.237,7.546,6.388,11.257,9.286c4.237,3.307,13.349,10.378,19.038,9.286c7.849-1.506,13.492,3.918,21.771,4.56c8.224,0.645,17.151,4.238,25.246,5.886c6.026,1.227,10.748,1.216,16.058-2.155c7.972-5.063,19.375-4.682,28.392-6.964c4.152-1.05,7.992-2.795,11.589-5.058c5.329-3.35,8.508-0.775,13.658-2.404c-0.229,0.106,9.768-6.269,9.768-2.156c0,9.37,18.102,11.686,23.757,6.881c3.317-2.817,2.491-15.127,5.546-14.757c4.891,0.591,15.05,3.827,18.791,6.964c2.853,2.394,5.798,5.969,9.767,5.969c7.115,0,9.668,5.195,16.308,4.56c7.575-0.723,13.266,4.101,22.349,1.823c5.153-2.028,11.65-4.726,17.052-5.555c4.042-0.62,9.858-0.87,12.333-4.808c0.946-1.507,2.563-5.674,4.139-6.053c2.468-0.591,4.22,1.07,6.705-0.829c7.807-5.969,9.482-11.475,12.664-20.395c1.113-2.113,1.915-4.349,2.566-6.467c0.265-0.86,0.639-4.791,1.241-4.892v-0.165c1.771-0.254,4.473-0.581,5.216,1.244c0.665,1.635-1.289,3.109-1.159,4.974c0.091,1.297,0.529,3.097,0.249,4.394c-0.426,1.972-2.024,2.977-1.158,5.39c0.273,0.764,1.056,1.692,1.49,2.487C1724.711,152.174,1724.821,154.564,1724.82,155.899L1724.82,155.899L1724.82,155.899z" />
+                <g>
+                  <path fill="#006233" d="M1013.139,1127.258l72.616-223.511L895.647,765.649h234.974l72.667-223.667l72.667,223.667h234.968L1320.82,903.747l72.617,223.511l-190.151-138.132L1013.139,1127.258z M1243.826,959.679l58.984,42.848l-22.526-69.332L1243.826,959.679z M1126.291,933.195l-22.525,69.332l58.983-42.848L1126.291,933.195z M1141.772,885.544l61.515,44.687l61.516-44.687l-23.471-72.244h-76.089L1141.772,885.544z M1042.323,813.3l58.913,42.796l13.905-42.796H1042.323z M1291.436,813.3l13.903,42.796l58.911-42.796H1291.436z M1225.851,765.649l-22.563-69.449l-22.563,69.449H1225.851z" />
+                </g>
+              </g>
+            </svg> -⚙ BY S!D!M@D™ |جميع الحقوق محفوظة <svg width="30" height="24" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--noto" preserveAspectRatio="xMidYMid meet">
+              <path d="M4.51 58.36S1.64 79.32 13.84 97.8c10 15.14 25.92 25.31 48.06 25.78c20.96.44 36.4-6.84 48.23-21.29c15.92-19.45 13.45-40.92 13.45-43.64c0-4.66-8.62 21.02-8.62 21.02l-24.28 31.6l-35.59 6.49s-28.44-12.47-28.61-13.14c-.17-.67-21.97-46.26-21.97-46.26z" fill="#474c4f"></path>
+              <path d="M64.81 4.36C26.31 4.13 3.4 34.85 4.51 62.88c1.11 28.04 22.92 57.63 59.63 57.19c36.71-.45 58.63-31.05 59.46-58.03S101.3 4.59 64.81 4.36zm.45 105.47c-21.58.89-48.73-16.24-48.06-45.62c.67-29.37 22.93-45.92 45.62-46.51c17.13-.45 47.62 11.79 47.62 47.17c-.01 28.51-24.92 44.13-45.18 44.96z" fill="#606265"></path>
+              <path d="M10.1 44.93c-.4 1.69-.61 3.49 1.05 4.1c1.66.61 2.53-1.83 3.05-3.4c.52-1.57 6.77-14.58 16.27-22.34c10.33-8.44 23.2-11.34 25.03-11.86s3-1.78 2.7-2.88c-.35-1.31-2.25-1.26-3.75-1.05c-1.26.19-14.08 1.4-27.35 12.23c-12.82 10.46-16.57 23.37-17 25.2z" fill="#9a9a9a"></path>
+              <path d="M48.15 59.74c.23-1.73 2.04-9.74 6.25-13.27c8.87-7.45 18.14-3.04 20.91 1.92c2.55 4.56 1 8.75 5.16 9.79c4.16 1.04 8.61.27 9.93-2.42c1.74-3.55-.15-9.14-.95-10.07c-.81-.92-24.1-10.83-24.1-10.83s-17.78 9.47-17.78 9.81s-1.39 16.05-1.39 16.05l1.97-.98z" fill="#474c4f"></path>
+              <path d="M33.22 74.81s1.08 7.9 7.7 15.82c5.23 6.26 13.96 9.33 23.27 9.23C86.4 99.61 91.1 82.48 91.1 80.28S75.97 91.31 75.97 91.31l-13.74-2.19l-29.01-14.31z" fill="#474c4f"></path>
+              <path d="M63.15 28.74c-16.39-.07-32.31 11.32-30.94 38.21c1.5 29.44 25.17 30.37 31.4 30.48c13.16.23 26.09-8.31 27.82-18.01c1.41-7.87-3-8.77-6.58-8.77s-5.66.46-7.74 5.08C75.04 80.35 71.23 86 63.84 85.77s-15.82-4.73-15.7-23.09s9.69-22.08 16.58-21.97c7.36.12 10.41 2.83 12.43 5.79c2.04 2.99 2.57 7.1 5.52 7.71c2.77.58 8.3.15 8.41-1.81s-2.41-23.54-27.93-23.66z" fill="#606265"></path>
+              <path d="M54.63 35.16c1.98 1.85-2.95 3.46-7.23 7.84s-6 9.72-7.74 8.96c-2.54-1.12-1.32-7.63 3.87-12.83s9.57-5.39 11.1-3.97z" fill="#9a9a9a"></path>
+              <path d="M76.13 84.9c1.71 1.2 6.01-2.44 7.75-4.79c1.74-2.35 4.09-5.57 1.39-6.88c-2.7-1.31-4.44 1.13-6.01 4.53c-1.23 2.65-5.49 5.48-3.13 7.14z" fill="#9a9a9a"></path>
+            </svg>
+        </center>
+       
+        </div>
+    </div>
+</div>
+<br> 
+
+<script src="https://cdn.jsdelivr.net/gh/Sidimadtv/Sidi/cry/lib/kryptojs-3.1.9-1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/Sidimadtv/Sidi/cry/editor.js"></script>
+
+<script id="cryptoEngine">
+    window.cryptoEngine = ((function(){
+  const exports = {};
+  
+/**
+ * Salt and encrypt a msg with a password.
+ * Inspired by https://github.com/adonespitogo
+ */
+function encrypt(msg, hashedPassphrase) {
+  var iv = CryptoJS.lib.WordArray.random(128 / 8);
+
+  var encrypted = CryptoJS.AES.encrypt(msg, hashedPassphrase, {
+    iv: iv,
+    padding: CryptoJS.pad.Pkcs7,
+    mode: CryptoJS.mode.CBC,
+  });
+
+  // iv will be hex 16 in length (32 characters)
+  // we prepend it to the ciphertext for use in decryption
+  return iv.toString() + encrypted.toString();
+}
+exports.encrypt = encrypt;
+
+/**
+ * Decrypt a salted msg using a password.
+ * Inspired by https://github.com/adonespitogo
+ *
+ * @param {string} encryptedMsg
+ * @param {string} hashedPassphrase
+ * @returns {string}
+ */
+function decrypt(encryptedMsg, hashedPassphrase) {
+  var iv = CryptoJS.enc.Hex.parse(encryptedMsg.substr(0, 32));
+  var encrypted = encryptedMsg.substring(32);
+
+  return CryptoJS.AES.decrypt(encrypted, hashedPassphrase, {
+    iv: iv,
+    padding: CryptoJS.pad.Pkcs7,
+    mode: CryptoJS.mode.CBC,
+  }).toString(CryptoJS.enc.Utf8);
+}
+exports.decrypt = decrypt;
+
+/**
+ * Salt and hash the passphrase so it can be stored in localStorage without opening a password reuse vulnerability.
+ *
+ * @param {string} passphrase
+ * @param {string} salt
+ * @returns string
+ */
+function hashPassphrase(passphrase, salt) {
+  // we hash the passphrase in two steps: first 1k iterations, then we add iterations. This is because we used to use 1k,
+  // so for backwards compatibility with remember-me/autodecrypt links, we need to support going from that to more
+  // iterations
+  var hashedPassphrase = hashLegacyRound(passphrase, salt);
+
+  return hashSecondRound(hashedPassphrase, salt);
+}
+exports.hashPassphrase = hashPassphrase;
+
+/**
+ * This hashes the passphrase with 1k iterations. This is a low number, we need this function to support backwards
+ * compatibility.
+ *
+ * @param {string} passphrase
+ * @param {string} salt
+ * @returns {string}
+ */
+function hashLegacyRound(passphrase, salt) {
+  return CryptoJS.PBKDF2(passphrase, salt, {
+    keySize: 256 / 32,
+    iterations: 1000,
+  }).toString();
+}
+exports.hashLegacyRound = hashLegacyRound;
+
+/**
+ * Add a second round of iterations. This is because we used to use 1k, so for backwards compatibility with
+ * remember-me/autodecrypt links, we need to support going from that to more iterations.
+ *
+ * @param hashedPassphrase
+ * @param salt
+ * @returns {string}
+ */
+function hashSecondRound(hashedPassphrase, salt) {
+  return CryptoJS.PBKDF2(hashedPassphrase, salt, {
+    keySize: 256 / 32,
+    iterations: 14000,
+    hasher: CryptoJS.algo.SHA256,
+  }).toString();
+}
+exports.hashSecondRound = hashSecondRound;
+
+function generateRandomSalt() {
+  return CryptoJS.lib.WordArray.random(128 / 8).toString();
+}
+exports.generateRandomSalt = generateRandomSalt;
+
+function getRandomAlphanum() {
+    var possibleCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    var byteArray;
+    var parsedInt;
+
+    // Keep generating new random bytes until we get a value that falls
+    // within a range that can be evenly divided by possibleCharacters.length
+    do {
+        byteArray = CryptoJS.lib.WordArray.random(1);
+        // extract the lowest byte to get an int from 0 to 255 (probably unnecessary, since we're only generating 1 byte)
+        parsedInt = byteArray.words[0] & 0xff;
+    } while (parsedInt >= 256 - (256 % possibleCharacters.length));
+
+    // Take the modulo of the parsed integer to get a random number between 0 and totalLength - 1
+    var randomIndex = parsedInt % possibleCharacters.length;
+
+    return possibleCharacters[randomIndex];
+}
+
+/**
+ * Generate a random string of a given length.
+ *
+ * @param {int} length
+ * @returns {string}
+ */
+function generateRandomString(length) {
+    var randomString = '';
+
+    for (var i = 0; i < length; i++) {
+      randomString += getRandomAlphanum();
+    }
+
+    return randomString;
+}
+exports.generateRandomString = generateRandomString;
+
+function signMessage(hashedPassphrase, message) {
+  return CryptoJS.HmacSHA256(
+    message,
+    CryptoJS.SHA256(hashedPassphrase).toString()
+  ).toString();
+}
+exports.signMessage = signMessage;
+
+  return exports;
+})())
+</script>
+
+<script id="codec">
+    window.codec = ((function(){
+  const exports = {};
+  /**
+ * Initialize the codec with the provided cryptoEngine - this return functions to encode and decode messages.
+ *
+ * @param cryptoEngine - the engine to use for encryption / decryption
+ */
+function init(cryptoEngine) {
+  // TODO: remove on next major version bump. This is a hack to make the salt available in all functions here in a
+  //  backward compatible way (not requiring to  change the password_template).
+  const backwardCompatibleSalt = '##SALT##';
+
+  const exports = {};
+
+  /**
+   * Top-level function for encoding a message.
+   * Includes password hashing, encryption, and signing.
+   *
+   * @param {string} msg
+   * @param {string} password
+   * @param {string} salt
+   * @param {boolean} isLegacy - whether to use the legacy hashing algorithm (1k iterations) or not
+   *
+   * @returns {string} The encoded text
+   */
+  function encode(msg, password, salt, isLegacy = false) {
+    // TODO: remove in the next major version bump. This is to not break backwards compatibility with the old way of hashing
+    const hashedPassphrase = isLegacy
+        ? cryptoEngine.hashLegacyRound(password, salt)
+        : cryptoEngine.hashPassphrase(password, salt);
+    const encrypted = cryptoEngine.encrypt(msg, hashedPassphrase);
+    // we use the hashed password in the HMAC because this is effectively what will be used a password (so we can store
+    // it in localStorage safely, we don't use the clear text password)
+    const hmac = cryptoEngine.signMessage(hashedPassphrase, encrypted);
+
+    return hmac + encrypted;
+  }
+  exports.encode = encode;
+
+  /**
+   * Top-level function for decoding a message.
+   * Includes signature check and decryption.
+   *
+   * @param {string} signedMsg
+   * @param {string} hashedPassphrase
+   * @param {string} backwardCompatibleHashedPassword
+   *
+   * @returns {Object} {success: true, decoded: string} | {success: false, message: string}
+   */
+  function decode(signedMsg, hashedPassphrase, backwardCompatibleHashedPassword = '') {
+    const encryptedHMAC = signedMsg.substring(0, 64);
+    const encryptedMsg = signedMsg.substring(64);
+    const decryptedHMAC = cryptoEngine.signMessage(hashedPassphrase, encryptedMsg);
+
+    if (decryptedHMAC !== encryptedHMAC) {
+      // TODO: remove in next major version bump. This is to not break backwards compatibility with the old 1k
+      //  iterations in PBKDF2 - if the key we try isn't working, it might be because it's a remember-me/autodecrypt
+      //  link key, generated with 1k iterations. Try again with the updated iteration count.
+      if (!backwardCompatibleHashedPassword) {
+        return decode(
+            signedMsg,
+            cryptoEngine.hashSecondRound(hashedPassphrase, backwardCompatibleSalt),
+            hashedPassphrase
+        );
+      }
+
+      return { success: false, message: "Signature mismatch" };
+    }
+
+    // TODO: remove in next major version bump. If we're trying to double hash for backward compatibility reasons,
+    //  and the attempt is successful, we check if we should update the stored password in localStorage. This avoids
+    //  having to compute the upgrade each time.
+    if (backwardCompatibleHashedPassword) {
+      if (window && window.localStorage) {
+        const storedPassword = window.localStorage.getItem('staticrypt_passphrase');
+
+        // check the stored password is actually the backward compatible one, so we don't save the new one and trigger
+        // the "remember-me" by mistake, leaking the password
+        if (storedPassword === backwardCompatibleHashedPassword) {
+          window.localStorage.setItem('staticrypt_passphrase', hashedPassphrase);
+        }
+      }
+    }
+
+    return {
+      success: true,
+      decoded: cryptoEngine.decrypt(encryptedMsg, hashedPassphrase),
+    };
+  }
+  exports.decode = decode;
+
+  return exports;
+}
+exports.init = init;
+
+  return exports;
+})())
+</script>
+
+<script id="formater">
+    window.formater = ((function(){
+  const exports = {};
+  /**
+ * Replace the placeholder tags (between '{tag}') in the template string with provided data.
+ *
+ * @param {string} templateString
+ * @param {Object} data
+ *
+ * @returns string
+ */
+function renderTemplate(templateString, data) {
+    return templateString.replace(/{\s*(\w+)\s*}/g, function (_, key) {
+        if (data && data[key] !== undefined) {
+            return data[key];
+        }
+
+        return "";
+    });
+}
+exports.renderTemplate = renderTemplate;
+
+
+  return exports;
+})())
+</script>
+
+<script>
+    var encode = codec.init(cryptoEngine).encode;
+
+    // enable CKEDIRTOR
+    CKEDITOR.replace('instructions');
+
+    var htmlToDownload;
+
+    /**
+     * Extract js code from <script> tag and return it as a string
+     *
+     * @param  id
+     * @returns 
+     */
+    var getScriptAsString = function (id) {
+        return document.getElementById(id)
+            .innerText.replace(/window\.\w+ = /, '');
+    }
+
+    /**
+     * Register something happened - this uses a simple Supabase function to implement a counter, and allows use to drop
+     * google analytics.
+     *
+     * @param  action
+     */
+    function trackEvent(action) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://zlgpaemmniviswibzuwt.supabase.co/rest/v1/rpc/increment_analytics', true);
+        xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8')
+        xhr.setRequestHeader('apikey', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsZ3BhZW1tbml2aXN3aWJ6dXd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjkxMjM0OTcsImV4cCI6MTk4NDY5OTQ5N30.wNoVDHG7F6INx-IPotMs3fL1nudfaF2qvQDgG-1PhNI')
+        xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpsZ3BhZW1tbml2aXN3aWJ6dXd0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjkxMjM0OTcsImV4cCI6MTk4NDY5OTQ5N30.wNoVDHG7F6INx-IPotMs3fL1nudfaF2qvQDgG-1PhNI')
+        xhr.send(
+            JSON.stringify({
+                action_input: action
+            }
+        ));
+    }
+
+    /**
+     * Fill the password prompt template with data provided.
+     * @param data
+     */
+    var setFileToDownload = function (data) {
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://cdn.jsdelivr.net/gh/Sidimadtv/Sidi/cry/lib/pa.html', true);
+        request.onload = function () {
+            var renderedTmpl = formater.renderTemplate(request.responseText, data);
+
+            var downloadLink = document.querySelector('a.download');
+            downloadLink.href = 'data:text/html,' + encodeURIComponent(renderedTmpl);
+            downloadLink.removeAttribute('disabled');
+
+            htmlToDownload = renderedTmpl;
+        };
+        request.send();
+    };
+
+    /**
+     * Download crypto-js lib to embed it in the generated file, update the file when done.
+     * @param data
+     */
+    var setFileToDownloadWithEmbeddedCrypto = function (data) {
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://cdn.jsdelivr.net/gh/Sidimadtv/Sidi/cry/lib/kryptojs-3.1.9-1.min.js', true);
+        request.onload = function () {
+            data['crypto_tag'] = '<script>' + request.responseText + '</scr' + 'ipt>';
+            setFileToDownload(data);
+        };
+        request.send();
+    };
+
+    // register page load
+    window.onload = function () {
+        trackEvent('show_index');
+    };
+
+    /**
+     * Handle form submission.
+     */
+    document.getElementById('encrypt_form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        trackEvent('generate_encrypted');
+
+        // update instruction textarea value with CKEDITOR content
+        // (see https://stackoverflow.com/questions/3147670/ckeditor-update-textarea)
+        CKEDITOR.instances['instructions'].updateElement();
+
+        var unencrypted = document.getElementById('unencrypted_html').value,
+            passphrase = document.getElementById('passphrase').value;
+
+        var salt = cryptoEngine.generateRandomSalt();
+        var encryptedMsg = encode(unencrypted, passphrase, salt);
+
+        var decryptButton = document.getElementById('decrypt_button').value,
+            instructions = document.getElementById('instructions').value,
+            isRememberEnabled = document.getElementById('remember').checked,
+            pageTitle = document.getElementById('title').value.trim(),
+            passphrasePlaceholder = document.getElementById('passphrase_placeholder').value.trim(),
+            rememberDurationInDays = document.getElementById('remember_in_days').value || 0,
+            rememberMe = document.getElementById('remember_me').value;
+
+        var data = {
+            crypto_tag: '<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js" integrity="sha384-lp4k1VRKPU9eBnPePjnJ9M2RF3i7PC30gXs70+elCVfgwLwx1tv5+ctxdtwxqZa7" crossorigin="anonymous"></scr' + 'ipt>',
+            decrypt_button: decryptButton ? decryptButton : 'الدخول',
+            encrypted: encryptedMsg,
+            instructions: instructions ? instructions : '',
+            is_remember_enabled: isRememberEnabled ? 'true' : 'false',
+            js_codec: getScriptAsString('codec'),
+            js_crypto_engine: getScriptAsString('cryptoEngine'),
+            passphrase_placeholder: passphrasePlaceholder ? passphrasePlaceholder : 'كلمة المرور',
+            remember_duration_in_days: rememberDurationInDays.toString(),
+            remember_me: rememberMe ? rememberMe : 'حفظ كلمة المرور',
+            salt: salt,
+            title: pageTitle ? pageTitle : 'المرجو ادخال كلمة المرور',
+        };
+
+        document.getElementById('encrypted_html_display').textContent = encryptedMsg;
+
+        if (document.getElementById("embed-crypto").checked) {
+            setFileToDownloadWithEmbeddedCrypto(data);
+        } else {
+            setFileToDownload(data);
+        }
+    });
+
+    document.getElementById('toggle-extra-option')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('extra-options').classList.toggle('hidden');
+        });
+
+    var isConceptShown = false;
+    document.getElementById('toggle-concept')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+
+            isConceptShown = !isConceptShown;
+
+            document.getElementById('toggle-concept-sign').innerText = isConceptShown ? '▼' : '►';
+
+            document.getElementById('concept').classList.toggle('hidden');
+        });
+
+
+    /**
+     * Browser specific download code.
+     */
+    document.getElementById('download-link')
+        .addEventListener('click', function (e) {
+            // only register the click event if there is actually a generated file
+            if (htmlToDownload) {
+                trackEvent('download_encrypted');
+            }
+
+            var isIE = (navigator.userAgent.indexOf("MSIE") !== -1) || (!!document.documentMode === true); // >= 10
+            var isEdge = navigator.userAgent.indexOf("Edge") !== -1;
+
+            // download with MS specific feature
+            if (htmlToDownload && (isIE || isEdge)) {
+                e.preventDefault();
+                var blobObject = new Blob([htmlToDownload]);
+                window.navigator.msSaveOrOpenBlob(blobObject, 'By-S!D!M@D-Encrypted.html');
+            }
+
+            return true;
+        })
+</script>
+
+</body>
+</html>
